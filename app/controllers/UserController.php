@@ -19,8 +19,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		$user = new User;
-		return View::make('user/create',compact('user'));
+		return View::make('user/create');
 	}
 
 	/**
@@ -87,7 +86,26 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$inputs = Input::all();		
+
+		$rules = array(
+			'username' 	=> 'required|between:3,12'
+		);
+
+		$validation = Validator::make($inputs, $rules);
+
+		if ($validation->fails())
+		{			
+			Input::flashExcept('password');
+			return Redirect::route('user.profile')->withErrors($validation);
+		}
+
+		$user = User::findOrFail($id);
+		
+		$user->fill($inputs);
+		$user->save();
+		
+		return Redirect::route('user.profile')->with('profile-message','Update!');
 	}
 
 	/**
@@ -113,12 +131,23 @@ class UserController extends \BaseController {
 			'password' => Input::get('password'),
 			'confirmed' => 0);
 		
-		if( Auth::attempt($credentials) ){
-			return Redirect::intended('/')->with('message', 'Welcome back user :) !');
+		if( Auth::attempt($credentials,true) ){
+			return Redirect::intended('/');
 		}else{
 			Input::flashExcept('password');
 			return Redirect::intended('/')->with('error','The login or the password you entered is not correct :/');			
 		}
+	}
+	/**
+	 * Redirect to the homepage with a login message
+	 *
+	 * @return Response
+	 */
+	public function loginPage()
+	{
+		Auth::logout();
+
+		return Redirect::route('homepage')->with('message', 'Please use the sidebar form to log you in <span class="text-right glyphicon glyphicon-hand-up"></span>');
 	}
 
 	/**
@@ -130,6 +159,46 @@ class UserController extends \BaseController {
 	{
 		Auth::logout();
 		return Redirect::intended('/');			
+	}
+
+	/**
+	 * profileGeneral
+	 *
+	 * @return Response
+	 */
+	public function profileGeneral()
+	{
+		return View::make('user/profile/general')->nest('child','user/profile/child/submenu',array('submenu' => 'general'));;
+	}
+
+	/**
+	 * profileParties
+	 *
+	 * @return Response
+	 */
+	public function profileParties()
+	{
+		return View::make('user/profile/parties')->nest('child','user/profile/child/submenu',array('submenu' => 'parties'));
+	}
+
+	/**
+	 * profileNotifications
+	 *
+	 * @return Response
+	 */
+	public function profileNotifications()
+	{
+		return View::make('user/profile/notifications')->nest('child','user/profile/child/submenu',array('submenu' => 'notifications'));
+	}
+
+	/**
+	 * profileSecurity
+	 *
+	 * @return Response
+	 */
+	public function profileSecurity()
+	{
+		return View::make('user/profile/security')->nest('child','user/profile/child/submenu',array('submenu' => 'security'));
 	}
 
 }

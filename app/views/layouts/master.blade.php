@@ -19,11 +19,17 @@
         <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="{{ URL::to('/')}}">Guestgame</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav nav-pills">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="">{{ link_to_route('party.create','New',null,array('class'=>'')) }}</li>
                         <li class=""><a href="#">Notifications <span class="badge">42</span></a></li>
                     </ul>
                     @if( Auth::check() )
@@ -31,15 +37,13 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <span class="glyphicon glyphicon-user"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><li>{{ link_to_route('user.profile', 'Profile') }}</li></li>
                                 <li class="divider"></li>
                                 <li>{{ link_to_route('user.logout', 'Logout') }}</li>
-                                <li><a href="#">Separated link</a></li>
                             </ul>
                         </li>
                     </ul>
+
                     @else
                     {{ Form::open(array('route' => 'user.login','class' => 'navbar-form navbar-right') ) }}
                     <div class="form-group">
@@ -52,8 +56,8 @@
                     {{ link_to_route('user.register', 'Register', array(), array('class' => 'btn btn-success')) }}
                     {{ Form::close() }}
                     @endif
-
                 </div>
+                <!--/.navbar-collapse -->
             </div>
         </nav>
         @if( Session::has('message') )

@@ -8,5 +8,9 @@ class Party extends Eloquent{
         return $this->belongsTo('Address');
     }
 
+    public function users()
+    {
+        return $this->belongsToMany('User');
+    }
 }
 

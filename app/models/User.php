@@ -5,6 +5,8 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+    protected $guarded = array('id', 'password');
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -18,6 +20,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password');
+
+
+    public function parties()
+    {
+        return $this->belongsToMany('Party');
+    }
+
 
 	/**
 	 * Get the unique identifier for the user.

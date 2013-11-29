@@ -20,7 +20,7 @@ class PartyController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('party/new');
 	}
 
 	/**
@@ -30,7 +30,8 @@ class PartyController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		dd(Input::all());
+		return 'party.store';		
 	}
 
 	/**
