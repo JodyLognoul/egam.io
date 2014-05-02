@@ -4,6 +4,258 @@
 		"selected_items":
 		[
 			[
+				"HTML-s",
+				"HTML-script	HTML-script"
+			],
+			[
+				"scr",
+				"script"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"URL",
+				"URL-route	URL-route"
+			],
+			[
+				"if",
+				"if	blade-if"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"Sc",
+				"Schema-drop	Schema-drop"
+			],
+			[
+				"while",
+				"while	while …"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"INput",
+				"Input-file	Input-file"
+			],
+			[
+				"Form",
+				"Form-file	Form-file"
+			],
+			[
+				"con",
+				"cons	consolelog"
+			],
+			[
+				"picture",
+				"picture-0"
+			],
+			[
+				"input",
+				"inputs"
+			],
+			[
+				"a",
+				"attachTo"
+			],
+			[
+				"att",
+				"attachTo"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"pro",
+				"proxy"
+			],
+			[
+				"plus",
+				"plusElemClass"
+			],
+			[
+				"re",
+				"refreshTarget"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"ta",
+				"targetClass"
+			],
+			[
+				"tar",
+				"target"
+			],
+			[
+				"append",
+				"appendPlusElem"
+			],
+			[
+				"row",
+				"rowClass"
+			],
+			[
+				"pa",
+				"parent"
+			],
+			[
+				"new",
+				"newElem"
+			],
+			[
+				"ele",
+				"elem"
+			],
+			[
+				"idd",
+				"middle"
+			],
+			[
+				"img",
+				"imgClass"
+			],
+			[
+				"get",
+				"getOptions"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"In",
+				"InputPicturePreview"
+			],
+			[
+				"Input",
+				"Input-all	Input-all"
+			],
+			[
+				"Forn",
+				"Form-open	Form-open"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"HTML",
+				"HTML-image	HTML-image"
+			],
+			[
+				"btn",
+				"btn-primary"
+			],
+			[
+				"Noti",
+				"Notify"
+			],
+			[
+				"Not",
+				"Notification"
+			],
+			[
+				"noti",
+				"notification"
+			],
+			[
+				"notic",
+				"notification"
+			],
+			[
+				"sec",
+				"section"
+			],
+			[
+				"part",
+				"party"
+			],
+			[
+				"com",
+				"compact"
+			],
+			[
+				"globa",
+				"global"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"Request",
+				"Request-is	Request-is"
+			],
+			[
+				"Requ",
+				"Request-cookie	Request-cookie"
+			],
+			[
+				"Red",
+				"Redirect-route	Redirect-route"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"Re",
+				"Redirect-route	Redirect-route"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"par",
+				"party_id"
+			],
+			[
+				"bo",
+				"border-top-right-radius"
+			],
+			[
+				"HTM",
+				"HTML-image	HTML-image"
+			],
+			[
 				"Inp",
 				"Input-all	Input-all"
 			],
@@ -24,10 +276,6 @@
 				"margin-top"
 			],
 			[
-				"ma",
-				"margin-top"
-			],
-			[
 				"Redi",
 				"Redirect-route	Redirect-route"
 			],
@@ -44,10 +292,6 @@
 				"Session-put	Session-put"
 			],
 			[
-				"Form",
-				"Form-button	Form-button"
-			],
-			[
 				"pass",
 				"password"
 			],
@@ -60,10 +304,6 @@
 				"View-make	View-make"
 			],
 			[
-				"URL",
-				"URL-full	URL-full"
-			],
-			[
 				"link",
 				"link_to_route"
 			],
@@ -72,28 +312,12 @@
 				"compact"
 			],
 			[
-				"part",
-				"parties"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"font",
-				"font-family"
-			],
-			[
 				"bac",
 				"background-color"
 			],
 			[
 				"gmap",
 				"gmapString"
-			],
-			[
-				"in",
-				"input"
 			],
 			[
 				"init",
@@ -112,28 +336,12 @@
 				"position"
 			],
 			[
-				"padd",
-				"padding-top"
-			],
-			[
 				"span",
 				"span3"
 			],
 			[
-				"min",
-				"min-width"
-			],
-			[
 				"W",
 				"width"
-			],
-			[
-				"marg",
-				"margin-top"
-			],
-			[
-				"op",
-				"opacity"
 			],
 			[
 				"text",
@@ -156,20 +364,12 @@
 				"header"
 			],
 			[
-				"par",
-				"part3"
-			],
-			[
 				"wr",
 				"writeLines"
 			],
 			[
 				"file",
 				"fileContent"
-			],
-			[
-				"res",
-				"result"
 			],
 			[
 				"l10n",
@@ -188,10 +388,6 @@
 				"Form	Laravel: Form::submit()"
 			],
 			[
-				"bo",
-				"bold"
-			],
-			[
 				"comm",
 				"comm-subsection	Comment - Subsection comment"
 			],
@@ -206,10 +402,6 @@
 			[
 				"max",
 				"max-width"
-			],
-			[
-				"if",
-				"if	@if"
 			],
 			[
 				"i",
@@ -292,14 +484,6 @@
 				"container"
 			],
 			[
-				"pa",
-				"padding"
-			],
-			[
-				"re",
-				"relative"
-			],
-			[
 				"clea",
 				"clearTimeout"
 			],
@@ -324,254 +508,46 @@
 				"timestamp"
 			],
 			[
-				"Noti",
-				"notification"
-			],
-			[
 				"fore",
 				"foreach	foreach …"
 			],
 			[
 				"is_",
 				"is_array"
-			],
-			[
-				"user_",
-				"user_id"
-			],
-			[
-				"m",
-				"msg"
-			],
-			[
-				"Aut",
-				"Auth	Laravel: Auth::user()"
-			],
-			[
-				"add",
-				"address"
-			],
-			[
-				"Input",
-				"Input	Laravel: Input::old()"
-			],
-			[
-				"org",
-				"original"
-			],
-			[
-				"HTML",
-				"HTML	Laravel: HTML::link_to_asset()"
-			],
-			[
-				"geo",
-				"geocode"
-			],
-			[
-				"v",
-				"View"
-			],
-			[
-				"mode",
-				"modelSelected"
-			],
-			[
-				"t",
-				"this	$(this)"
-			],
-			[
-				"fun",
-				"function"
-			],
-			[
-				"model",
-				"model"
-			],
-			[
-				"hei",
-				"height"
-			],
-			[
-				"padin",
-				"padding-bottom"
-			],
-			[
-				"place",
-				"place-holder"
-			],
-			[
-				"inscr",
-				"inscrit"
-			],
-			[
-				"where",
-				"where_email"
-			],
-			[
-				"valid",
-				"validation"
-			],
-			[
-				"HTMl",
-				"HTML	Laravel: HTML::image()"
-			],
-			[
-				"pre",
-				"prepend"
-			],
-			[
-				"In",
-				"Input	Laravel: Input::old()"
-			],
-			[
-				"has",
-				"hash"
-			],
-			[
-				"prin",
-				"print_r"
-			],
-			[
-				"va",
-				"validation"
-			],
-			[
-				"Au",
-				"Auth	Laravel: Auth::user()"
-			],
-			[
-				"show",
-				"showPassword"
-			],
-			[
-				"bi",
-				"birthday"
-			],
-			[
-				"no",
-				"normal"
-			],
-			[
-				"fon",
-				"font-weight"
-			],
-			[
-				"dis",
-				"display"
-			],
-			[
-				"home",
-				"homepage"
-			],
-			[
-				"ret",
-				"return"
-			],
-			[
-				"us",
-				"user_data"
-			],
-			[
-				"for",
-				"for	for …"
-			],
-			[
-				"Red",
-				"Redirect	Laravel: Redirect::to_route()"
-			],
-			[
-				"si",
-				"sizeof"
-			],
-			[
-				"var",
-				"var_dump"
-			],
-			[
-				"p",
-				"provider"
-			],
-			[
-				"H",
-				"HTML	Laravel: HTML::image()"
-			],
-			[
-				"bod",
-				"border-radius"
-			],
-			[
-				"da",
-				"dark"
-			],
-			[
-				"ce",
-				"center"
-			],
-			[
-				"ba",
-				"background-color"
-			],
-			[
-				"sign",
-				"signup"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/controllers/PartyController.php",
-			"settings":
-			{
-				"buffer_size": 1200,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/views/layouts/master.blade.php",
 			"settings":
 			{
-				"buffer_size": 4029,
+				"buffer_size": 7559,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes.php",
+			"file": "app/views/event/index-master.blade.php",
 			"settings":
 			{
-				"buffer_size": 1683,
+				"buffer_size": 5692,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/party/new.blade.php",
+			"file": "public/js/app/event/index/main.js",
 			"settings":
 			{
-				"buffer_size": 2605,
+				"buffer_size": 472,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/css/main.sass",
+			"file": "public/js/app/event/index/app.js",
 			"settings":
 			{
-				"buffer_size": 956,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/user/profile/parties.blade.php",
-			"settings":
-			{
-				"buffer_size": 1100,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/user/create.blade.php",
-			"settings":
-			{
-				"buffer_size": 1178,
+				"buffer_size": 261,
 				"line_ending": "Unix"
 			}
 		}
@@ -585,6 +561,82 @@
 			[
 				"rein",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"cop",
+				"File: Copy Path From Project"
+			],
+			[
+				"path",
+				"File: Copy Path From Project"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rien",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"font",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"hint",
+				"JSHint"
+			],
+			[
+				"comme",
+				"Toggle Block Comment"
+			],
+			[
+				"toggle",
+				"Bookmarks: Toggle"
+			],
+			[
+				"comm",
+				"Toggle Block Comment"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"dashs",
+				"DashDoc: invoke Dash with selected word (syntax-sensitive)"
+			],
+			[
+				"dah",
+				"DashDoc: invoke Dash with selected word"
 			],
 			[
 				"art route",
@@ -603,14 +655,6 @@
 				"Laravel Artisan: Routes"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
 				"REIN",
 				"Indentation: Reindent Lines"
 			],
@@ -619,16 +663,8 @@
 				"Indentation: Reindent Lines"
 			],
 			[
-				"re",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"",
 				"CTags: Rebuild Tags"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"SassBeautify",
@@ -645,10 +681,6 @@
 			[
 				"linter",
 				"Preferences: SublimeLinter Settings – Default"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"remv",
@@ -677,10 +709,6 @@
 			[
 				"package",
 				"Package Control: Upgrade Package"
-			],
-			[
-				"rien",
-				"Print Entire File"
 			],
 			[
 				"remove ",
@@ -823,10 +851,6 @@
 				"Gist: Open Gist"
 			],
 			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
 				"copy",
 				"File: Copy as Tag style"
 			],
@@ -903,7 +927,7 @@
 				"Set Syntax: Java"
 			]
 		],
-		"width": 575.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -920,144 +944,161 @@
 	},
 	"file_history":
 	[
-		"/var/www/dev/gg-mobile-first/app/models/Party.php",
-		"/var/www/dev/gg-mobile-first/app/models/User.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_29_124751_create_party_user_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/PartyUserTableSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/DatabaseSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_28_061820_create_user_table.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/parties.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/notifications.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/security.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/general.blade.php",
-		"/var/www/dev/gg-mobile-first/public/css/main.sass",
-		"/var/www/dev/gg-mobile-first/app/views/user/create.blade.php",
-		"/var/www/dev/gg-mobile-first/app/controllers/UserController.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/child/submenu.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile/master.blade.php",
-		"/var/www/dev/gg-mobile-first/app/controllers/PartyController.php",
-		"/var/www/dev/gg-mobile-first/app/routes.php",
-		"/var/www/dev/gg-mobile-first/app/views/user/profile.blade.php",
-		"/var/www/dev/gg-mobile-first/app/filters.php",
-		"/var/www/dev/gg-mobile-first/public/css/vendor/bootstrap/bootstrap.min.css",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/UserTableSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/config/auth.php",
-		"/var/www/dev/gg-mobile-first/app/views/layouts/master.blade.php",
-		"/var/www/dev/gg-mobile-first/app/models/UserBase.php",
-		"/var/www/dev/gg-mobile-first/app/views/party/index.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/party/show.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/default/tables.blade.php",
-		"/var/www/dev/gg-mobile-first/app/models/Address.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_094759_create_address_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_094807_create_party_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/PartyTableSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/views/default/homepage.blade.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/create_party_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/create_address_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_100724_all.php",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/AddressTableSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_084018_create_party_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_060505_create_address_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27__create_party_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_084018_create_address_table.php",
-		"/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_060505_create_party_table.php",
-		"/var/www/dev/gg-mobile-first/app/views/layout/master.blade.php",
-		"/var/www/dev/gg-mobile-first/app/layout/master.blade.php",
-		"/var/www/dev/gg-mobile-first/app/views/layout.blade.php",
-		"/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Routing/Generators/ControllerGenerator.php",
-		"/var/www/dev/gg-mobile-first/app/database/seeds/UserSeeder.php",
-		"/var/www/dev/gg-mobile-first/app/config/database.php",
-		"/var/www/dev/gg-mobile-first/app/views/hello.php",
-		"/var/www/dev/gg-mobile-first/public/css",
-		"/var/www/dev/gg-mobile-first/public/main.sass",
-		"/var/www/dev/gg-mobile-first/Guardfile",
-		"/var/www/dev/gg-mobile-first/.gitignore",
-		"/var/www/dev/gg-mobile-first/.gitattributes",
-		"/var/www/dev/gg-mobile-first/readme.md",
-		"/var/www/dev/gg-mobile-first/public/index.php",
-		"/home/jody/Bureau/KSV - Donation Page",
-		"/var/www/dev/laravel4/test",
-		"/etc/apache2/apache2.conf",
-		"/var/www/dev/laravel4/README",
-		"/var/www/dev/laravel4/app/views/default/homepage.blade.php",
-		"/var/www/dev/laravel4/public/app/styles/second.scss",
-		"/var/www/dev/laravel4/public/app/styles/second.sass",
-		"/var/www/dev/laravel4/app/views/users/users.blade.php",
-		"/var/www/dev/laravel4/app/routes.php",
-		"/var/www/dev/laravel4/app/models/User.php",
-		"/var/www/dev/laravel4/app/config/database.php",
-		"/var/www/dev/laravel4/public/app/styles/main.scss",
-		"/var/www/dev/laravel4/Guardfile",
-		"/var/www/dev/laravel4/public/Gruntfile.js",
-		"/var/www/dev/laravel4/public/dist/styles/e0bf506b.main.css",
-		"/var/www/dev/laravel4/app/views/hello.php",
-		"/var/www/dev/laravel4/public/index.php",
-		"/var/www/dev/laravel4/public/app/index.html",
-		"/var/www/dev/laravel4/app/views/users.blade.php",
-		"/var/www/dev/laravel4/app/database/migrations/2013_10_22_132015_create_user_table.php",
-		"/var/www/dev/laravel4/app/views/layout.blade.php",
-		"/var/www/dev/laravel4/app/controllers/HomeController.php",
-		"/var/www/dev/ksvwebsite/wp-content/Guardfile",
-		"/tmp/fz3temp-1/wp-config.php",
-		"/tmp/fz3temp-1/wp-settings.php",
-		"/var/www/dev/ksvwebsite/.htaccess",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/style.php",
-		"/var/www/dev/ksvwebsite/wp-content/ksv-website.sublime-project",
-		"/var/www/dev/ksvwebsite/wp-content/ksv-website.sublime-workspace",
-		"/var/www/dev/ksvwebsite/wp-content/index.php",
-		"/var/www/dev/ksvwebsite/wp-admin/widgets.php",
-		"/var/www/dev/ksvwebsite/wp-includes/widgets.php",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/footer.php",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/option-tree/includes/ot-functions-admin.php",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/option-tree/theme-options.php",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/functions.php",
-		"/var/www/dev/ksvwebsite/wp-content/themes/DonateNow/functions/functions-slider.php",
-		"/var/www/dev/me/Gruntfile.js",
-		"/var/www/dev/me/app/styles/style.sass",
-		"/var/www/dev/me/.gitignore",
-		"/var/www/dev/me/dist/images/8c36240c.road2.jpg",
-		"/home/jody/.config/sublime-text-2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/var/www/dev/me/app/index.html",
-		"/var/www/dev/me/app/styles/main.scss",
-		"/var/www/dev/me/app/scripts/main.js",
-		"/var/www/dev/me/app/scripts/app.js",
-		"/var/www/dev/me/me.sublime-project",
-		"/var/www/dev/me/me.sublime-workspace",
-		"/var/www/dev/bada55/app/index.html",
-		"/var/www/dev/bada55/app/styles/main.css",
-		"/var/www/dev/bada55/Guardfile",
-		"/var/www/dev/bada55/app/styles/main.sass",
-		"/home/jody/index.html",
-		"/var/www/dev/bada55/file.haml",
-		"/var/www/dev/bada55/css/style.sass",
-		"/var/www/dev/bada55/index.html",
-		"/var/www/dev/bada55/file.jade",
-		"/home/jody/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-		"/var/www/dev/bada55/css/normalize.css",
-		"/var/www/dev/bada55/public/imgs/ini",
-		"/var/www/dev/bada55/css/style.scss",
-		"/var/www/dev/bada55/style/style.sass",
-		"/var/www/dev/bada55/script.js",
-		"/var/www/dev/bada55/style/style.scss",
-		"/home/jody/Documents/untitled.haml",
-		"/home/jody/Documents/toust.html",
-		"/var/www/dev/laravel/public/venera/assets/css/corr.css",
-		"/var/www/dev/laravel/public/js/gmap/gmapString.js",
-		"/home/jody/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
-		"/var/www/dev/laravel/public/js/gaby.js",
-		"/var/www/dev/laravel/public/js/test.js",
-		"/home/jody/Téléchargements/test.html",
-		"/var/www/dev/laravel/public/app/components/bootstrap-timepicker/js/bootstrap-timepicker.js"
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/mainListParty.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/mainListNotification.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/mainUpdateNotification.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/models/Party.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/collections/Notifications.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/collections/Parties.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/views/Notification.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/views/Notifications.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/views/Parties.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/views/Party.js",
+		"/Users/jody/Documents/Work/Guestgame/old-public/app/scripts/views/PartyDetail.js",
+		"/private/var/www/dev/gg-mobile-first/public/js/tmp_vendor/jquery.min.js",
+		"/Users/jody/Documents/Work/Guestgame/public/app/scripts/mainListParty.js",
+		"/Users/jody/Documents/Work/Guestgame/public/js/game/main.js",
+		"/Users/jody/Documents/Work/Guestgame/public/js/watchUnreadNotifications.js",
+		"/Users/jody/Documents/Work/Guestgame/public/js/party/main.js",
+		"/private/var/www/dev/gg-mobile-first/public/js/tmp_vendor/require.js",
+		"/private/var/www/dev/gg-mobile-first/gg-mobile-first.sublime-project",
+		"/private/var/www/dev/gg-mobile-first/public/css/main.sass",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/EventController.php",
+		"/private/var/www/dev/gg-mobile-first/app/routes.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/new.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/layouts/master.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/index-list.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/index-grid.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/index-master.blade.php",
+		"/private/var/www/dev/gg-mobile-first/bower.json",
+		"/private/var/www/dev/gg-mobile-first/.bowerrc",
+		"/private/var/www/dev/gg-mobile-first/public/js/.bowerrc",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/UserController.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/index.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/notification/index.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/event/show.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/user/childs/modalGuestsEvent.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_094807_create_event_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/tests/EventControllerTest.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/EventTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/public/js/vendor/datetimepicker/jquery.datetimepicker.js",
+		"/private/var/www/dev/gg-mobile-first/public/css/vendor/datetimepicker/jquery.datetimepicker.css",
+		"/Users/jody/Downloads/bootstrap-combined.min.css",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/AddressTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaCreateTableEventArgs.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/Event.php",
+		"/private/var/www/dev/gg-mobile-first/composer.json",
+		"/private/var/www/dev/gg-mobile-first/app/config/app.php",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/NotificationController.php",
+		"/private/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php",
+		"/private/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/BaseController.php",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/HomeController.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/DatabaseSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_12_04_095057_create_notification_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/User.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/Notification.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/Address.php",
+		"/private/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/EventUserTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/NotificationTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_094759_create_address_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_29_124751_create_event_user_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_27_094807_create_party_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/controllers/PartyController.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/party/new.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/party/index.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/Party.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/PartyTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/tests/PartyControllerTest.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/user/create.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_29_124751_create_party_user_table.php",
+		"/Users/jody/Desktop/albums.html",
+		"/Users/jody/Desktop/albums.htm,",
+		"/private/var/www/dev/gg-mobile-first/public/js/NewPicturePreview.js",
+		"/private/var/www/dev/gg-mobile-first/public/js/vendor/bootstrap/inputfile.js",
+		"/private/var/www/dev/gg-mobile-first/public/css/vendor/bootflat/css/bootflat.css",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/PartyUserTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/party/show.blade.php",
+		"/private/var/www/dev/gg-mobile-first/app/views/user/profile/general.blade.php",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2014_02_11_083603_create_pictures_table.php",
+		"/private/var/www/dev/gg-mobile-first/app/models/Picture.php",
+		"/private/var/www/dev/gg-mobile-first/public/uploads/7hKEFNKv/1618184_10202087612726163_1529336321_o.jpg",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/private/var/www/dev/gg-mobile-first/public/js/input-picture-preview.js",
+		"/private/var/www/dev/gg-mobile-first/public/js/twbs-tooltip.js",
+		"/private/var/www/dev/gg-mobile-first/public/js/main.js",
+		"/Users/jody/Library/Caches/Cleanup At Startup/Transmit/4F7C051D-6093-40A7-92FF-9442F1EF2238/style.css",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/README.md",
+		"/private/var/www/dev/gg-mobile-first/public/js/vendor/jquery/jquery.min.js",
+		"/Users/jody/Library/Caches/Cleanup At Startup/Transmit/541D6AE1-E1A8-4BE4-9371-23232111A5FD/donation.php",
+		"/private/var/www/dev/gg-mobile-first/app/ioc/Notify.php",
+		"/private/var/www/dev/gg-mobile-first/app/ioc/notify.php",
+		"/private/var/www/dev/gg-mobile-first/Guardfile",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/User/dd.sublime-snippet",
+		"/private/etc/apache2/extra/httpd-vhosts.conf",
+		"/Users/jody/Library/Caches/Cleanup At Startup/Transmit/4DA63E6E-5C4E-4B63-86FF-795F38B155DA/wp-config.php",
+		"/private/var/www/dev/gg-mobile-first/gg-mobile-first.sublime-workspace",
+		"/private/var/www/dev/gg-mobile-first/app/database/seeds/UserTableSeeder.php",
+		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_11_28_061820_create_user_table.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/classes/abstracts/abstract-wc-product.php",
+		"/private/var/www/dev/ksvwebsite/ksv-local.sublime-project",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates/single-product/price.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates/cart/cart.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/woocommerce-functions.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/assets/js/frontend/single-product.js",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.js",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates/single-product.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates/content-single-product.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/classes/integrations/google-analytics/class-wc-google-analytics.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/classes/class-wc-product-variation.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/classes/class-wc-product-variable.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/classes/class-wc-product-grouped.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/MODIFS",
+		"/private/var/www/dev/ksvwebsite/wp-content/our partners.html",
+		"/private/etc/apache2/httpd.conf",
+		"/private/var/www/dev/ksvwebsite/wp-content/plugins/shatner-name-your-own-price-for-woocommerce/name_price_wc_plugin.php",
+		"/private/var/www/dev/ksvwebsite/wp-config.php",
+		"/private/var/www/dev/ksvwebsite/wp-content/TEST.html",
+		"/private/var/www/dev/ksvwebsite/ksvwebsite-LOCAL.sublime-workspace",
+		"/Users/jody/Downloads/ksv (2).sql",
+		"/Volumes/192.168.2.101/wp-content/plugins/newsletter/header.php",
+		"/Volumes/192.168.2.101/wp-content/plugins/woocommerce/templates/content-single-product.php",
+		"/Volumes/192.168.2.101/wp-content/plugins/shatner-name-your-own-price-for-woocommerce/templates/single-product/price.php",
+		"/Volumes/192.168.2.101/wp-content/plugins/woocommerce/templates/single-product/price.php",
+		"/Volumes/192.168.2.101/wp-content/TEST.html",
+		"/Volumes/192.168.2.101/wp-content/ksvwebsite.sublime-project",
+		"/Users/jody/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
+			"/private/var/www/dev/gg-mobile-first/app",
+			"/private/var/www/dev/gg-mobile-first",
+			"/private/var/www/dev/gg-mobile-first/app",
+			"/private/var/www/dev/gg-mobile-first/app/models",
+			"/private/var/www/dev/gg-mobile-first/app/database",
+			"/private/var/www/dev/gg-mobile-first",
+			"/private/var/www/dev/ksvwebsite",
+			"/private/var/www/dev/ksvwebsite/wp-content",
+			"/private/var/www/dev/ksvwebsite/wp-content/plugins/woocommerce/templates",
+			"/private/var/www/dev/ksvwebsite/wp-content",
+			"/private/var/www/dev/ksvwebsite",
+			"/private/var/www/dev/ksvwebsite/wp-content",
+			"/private/var/www/dev/ksvwebsite",
+			"<project>",
+			"/private/var/www/dev/ksvwebsite",
+			"/Users/jody/Desktop/BACKUP-ksvwebsite",
+			"/Volumes/192.168.2.101/wp-content",
 			"/var/www/dev/ksvwebsite/wp-content/plugins/easy-wordpress-donations",
 			"<project>",
 			"/var/www/dev/ksvwebsite",
@@ -1116,141 +1157,143 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Description",
-			"description",
-			"Description",
-			"description",
-			"Description",
-			"description",
-			"Description",
-			"description",
-			"Description",
-			"name",
-			"Name",
-			"name",
-			"Name",
-			"Username",
-			"username",
-			"parties",
-			"Parties",
-			"parties",
-			"Parties",
-			"notifications",
-			"parties",
-			"loginpage",
-			"<button type=\"button\" class=\"btn btn-default navbar-btn\"></button>",
-			" \">",
-			"<button type=\"button\" class=\"btn btn-default navbar-btn\">button>",
-			"<button type=\"button\" class=\"btn btn-default navbar-btn\">button>		",
-			"330px",
-			"block",
-			"message",
-			".form-signin",
-			"$currentUser",
-			"login",
-			"eot",
-			"help-block ",
-			"span",
-			"help-block",
-			"40px",
-			"}",
-			";",
-			"{",
-			";",
-			"elementum",
-			"/*",
-			"address_id",
-			"			'",
-			"=>",
-			"));",
-			"party_id",
-			"city",
-			"' ",
-			"cp",
-			"str_no",
-			" 'str_name",
-			"=> '",
-			"('",
-			"party_date",
-			"'description'",
-			"Party::create(",
-			"Party",
-			"AddressTableSeeder",
-			"}}",
-			"PartyTableSeeder",
-			"User",
-			"photo",
-			"class=\"col-",
-			"class=\"",
-			"<div class=\"row\"></div>",
-			"iron",
-			":",
-			"ind",
-			"autoprefixer",
-			"connect:",
-			"server",
-			"dist:",
-			"copy:style",
-			"ind",
-			"concurrent:server",
-			"ind",
-			"concurrent",
-			"autoprefixer",
-			"compass:server",
-			"color:red",
-			"_ind",
-			"ind_",
-			"our",
-			"130px",
-			".header-right",
-			"app/views/",
-			".header-right {",
-			"#header ",
-			"header",
-			"user",
-			"#logo",
-			";",
-			"vertical-align:middle;",
-			"function mt_logo_ind",
-			"center",
-			"function mt_logo_ind",
-			"button",
-			"Button",
-			"button",
-			"wpb_wpb_button",
-			"form",
-			"span",
-			"h1",
-			"\"",
-			"./",
+			"amd",
+			"btn b",
+			"=\"",
+			"glyphicon ",
+			"@if",
+			"redire",
+			"<?",
 			"url",
-			"GOOD",
-			"mt_colors_homepage",
-			"option_tree[mt_colors_homepage]",
-			"colors",
-			"\"color",
-			"h1",
-			"function mt_logo_ind",
-			"function mt_logo",
-			"mt_logo_ind",
-			".footer_widget_midle h2, \n.footer_widget_midle div h2, \n.footer_widget_midle div div h2 {\n    font-size: 16px!important;\n}",
-			".footer_widget_midle",
-			"widget_h_3",
-			"mt_logo_ind",
-			"/* INDIV */",
-			"mt_logo_ind",
-			"style_1",
-			"function mt_logo(",
-			"span",
-			"function_footer_widget_areas",
-			"if ("
+			"route",
+			"list",
+			"party",
+			"party.",
+			"party",
+			"guest",
+			"$party",
+			"11:14",
+			"event_date",
+			"			'eventdate-day'		=> '',\n			'eventdate-month'	=> '',\n			'eventdate-year'	=> '',\n",
+			"today",
+			"A0D468",
+			"33AAFF",
+			"#33AAFF",
+			"8CC152",
+			"178FE5",
+			"ff8000",
+			"background",
+			"</i> ",
+			"datetimepicker",
+			"bootstrap-datetimepicker-widget",
+			"lou",
+			"datetimepicker1",
+			"User",
+			"User::find(1);",
+			"My",
+			"required",
+			"maxplaces",
+			"create",
+			"shouldReceive",
+			"Mocker",
+			"Post",
+			"mock",
+			"Party",
+			"PartyC",
+			"PartyControllerTest",
+			"party",
+			"party-",
+			"party",
+			"party-",
+			"New",
+			"party",
+			"partydate",
+			"party",
+			"party.",
+			"party",
+			"party.",
+			"party",
+			"event->party",
+			"party_date",
+			"party",
+			"party``",
+			"party",
+			"$party",
+			"$parties",
+			"notify",
+			"/private/var/www/dev/gg-mobile-first/app/",
+			"party",
+			"Party",
+			"/private/var/www/dev/",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			" Party",
+			"PartyController",
+			"party",
+			"party_id",
+			"$party",
+			"Party $party",
+			"party",
+			"Party",
+			"part",
+			"modalGuestsParty",
+			"Party",
+			"party",
+			"'party'",
+			"party",
+			"party_date",
+			"party",
+			"Party",
+			"party",
+			"$party",
+			" party ",
+			"party",
+			"parties",
+			"party/",
+			"party.",
+			"partydate",
+			"array('party'",
+			"event_id",
+			"partyid",
+			"Party::",
+			"PartyController",
+			"party",
+			"PartyController",
+			"party",
+			"Party",
+			"parties",
+			"party",
+			"event::",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"Party",
+			"party",
+			"party_id",
+			"party",
+			"Party",
+			"CreatePartyTable"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"http://www2.ksv.org.in",
+			"ksv.local",
 			"\"",
 			"$2",
 			"123",
@@ -1288,139 +1331,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/PartyController.php",
-					"settings":
-					{
-						"buffer_size": 1200,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "app/views/layouts/master.blade.php",
 					"settings":
 					{
-						"buffer_size": 4029,
+						"buffer_size": 7559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1390,
-								1390
+								6774,
+								6774
 							]
 						],
 						"settings":
@@ -1492,7 +1419,7 @@
 							[
 							],
 							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
+							"sublimelinter": true,
 							"sublimelinter_delay": 2.0,
 							"sublimelinter_disable":
 							[
@@ -1519,25 +1446,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 2088.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/routes.php",
+					"buffer": 1,
+					"file": "app/views/event/index-master.blade.php",
 					"settings":
 					{
-						"buffer_size": 1683,
+						"buffer_size": 5692,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								498,
-								498
+								5549,
+								5549
 							]
 						],
 						"settings":
@@ -1609,7 +1536,7 @@
 							[
 							],
 							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
+							"sublimelinter": true,
 							"sublimelinter_delay": 2.0,
 							"sublimelinter_disable":
 							[
@@ -1631,9 +1558,127 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 233.0,
+						"translation.x": 0.0,
+						"translation.y": 1448.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/js/app/event/index/main.js",
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								465,
+								465
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1641,18 +1686,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/party/new.blade.php",
+					"file": "public/js/app/event/index/app.js",
 					"settings":
 					{
-						"buffer_size": 2605,
+						"buffer_size": 261,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								956,
-								956
+								155,
+								155
 							]
 						],
 						"settings":
@@ -1724,7 +1769,7 @@
 							[
 							],
 							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
+							"sublimelinter": true,
 							"sublimelinter_delay": 2.0,
 							"sublimelinter_disable":
 							[
@@ -1746,355 +1791,9 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/css/main.sass",
-					"settings":
-					{
-						"buffer_size": 956,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								829,
-								829
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/user/profile/parties.blade.php",
-					"settings":
-					{
-						"buffer_size": 1100,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								464,
-								464
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/user/create.blade.php",
-					"settings":
-					{
-						"buffer_size": 1178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								105,
-								105
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2107,7 +1806,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -2140,6 +1839,14 @@
 	{
 		"height": 100.0
 	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
 	"output.unsaved_changes":
 	{
 		"height": 100.0
@@ -2155,516 +1862,516 @@
 		"selected_items":
 		[
 			[
-				"usercreate",
-				"app/views/user/create.blade.php"
-			],
-			[
-				"user",
-				"app/models/User.php"
-			],
-			[
-				"party",
-				"app/models/Party.php"
-			],
-			[
-				"partuser",
-				"app/database/migrations/2013_11_29_124751_create_party_user_table.php"
-			],
-			[
-				"parties",
-				"app/views/user/profile/parties.blade.php"
-			],
-			[
-				"sec",
-				"app/views/user/profile/security.blade.php"
-			],
-			[
-				"noti",
-				"app/views/user/profile/notifications.blade.php"
-			],
-			[
-				"main",
-				"public/css/main.sass"
-			],
-			[
-				"usercre",
-				"app/views/user/create.blade.php"
-			],
-			[
-				"gene",
-				"app/views/user/profile/general.blade.php"
-			],
-			[
-				"profilepart",
-				"app/views/user/profile/parties.blade.php"
-			],
-			[
-				"route",
-				"app/routes.php"
-			],
-			[
-				"cre",
-				"app/views/user/create.blade.php"
-			],
-			[
-				"pro",
-				"app/views/user/profile.blade.php"
-			],
-			[
-				"maste",
-				"app/views/layouts/master.blade.php"
-			],
-			[
-				"aut",
-				"app/config/auth.php"
+				"eveinde",
+				"app/views/event/index-master.blade.php"
 			],
 			[
 				"master",
 				"app/views/layouts/master.blade.php"
 			],
 			[
-				"seeduser",
-				"app/database/seeds/UserTableSeeder.php"
-			],
-			[
-				"index",
-				"app/views/party/index.blade.php"
-			],
-			[
-				"seed",
-				"app/database/seeds/DatabaseSeeder.php"
-			],
-			[
-				"migruser",
-				"app/database/migrations/2013_11_28_061820_create_user_table.php"
-			],
-			[
-				"show",
-				"app/views/party/show.blade.php"
-			],
-			[
-				"sass",
+				"main",
 				"public/css/main.sass"
 			],
 			[
-				"partcon",
-				"app/controllers/PartyController.php"
+				"evecon",
+				"app/controllers/EventController.php"
 			],
 			[
-				"seedparty",
-				"app/database/seeds/PartyTableSeeder.php"
+				"con",
+				"app/controllers/UserController.php"
 			],
 			[
-				"migraall",
-				"app/database/migrations/2013_11_27_100724_all.php"
+				"route",
+				"app/routes.php"
 			],
 			[
-				"seedaddres",
+				"evennew",
+				"app/views/event/new.blade.php"
+			],
+			[
+				"mas",
+				"app/views/layouts/master.blade.php"
+			],
+			[
+				"eveninde",
+				"app/views/event/index.blade.php"
+			],
+			[
+				"notifiinde",
+				"app/views/notification/index.blade.php"
+			],
+			[
+				"evinde",
+				"app/views/event/index.blade.php"
+			],
+			[
+				"evensho",
+				"app/views/event/show.blade.php"
+			],
+			[
+				"evensee",
+				"app/database/seeds/EventTableSeeder.php"
+			],
+			[
+				"seedev",
+				"app/database/seeds/EventTableSeeder.php"
+			],
+			[
+				"maste",
+				"app/views/layouts/master.blade.php"
+			],
+			[
+				"evencon",
+				"app/controllers/EventController.php"
+			],
+			[
+				"eventseeder",
+				"app/database/seeds/EventTableSeeder.php"
+			],
+			[
+				"creaevent",
+				"app/database/migrations/2013_11_27_094807_create_event_table.php"
+			],
+			[
+				"createevent",
+				"app/database/migrations/2013_11_27_094807_create_event_table.php"
+			],
+			[
+				"event",
+				"app/tests/EventControllerTest.php"
+			],
+			[
+				"eventcon",
+				"app/controllers/EventController.php"
+			],
+			[
+				"datepickjs",
+				"public/js/vendor/datetimepicker/jquery.datetimepicker.js"
+			],
+			[
+				"datecss",
+				"public/css/vendor/datetimepicker/jquery.datetimepicker.css"
+			],
+			[
+				"createevente",
+				"app/database/migrations/2013_11_27_094807_create_event_table.php"
+			],
+			[
+				"address",
 				"app/database/seeds/AddressTableSeeder.php"
 			],
 			[
-				"seedpar",
+				"eventnew",
+				"app/views/event/new.blade.php"
+			],
+			[
+				"createeve",
+				"app/database/migrations/2013_11_27_094807_create_event_table.php"
+			],
+			[
+				"seedevent",
+				"app/database/seeds/EventTableSeeder.php"
+			],
+			[
+				"eventinde",
+				"app/views/event/index.blade.php"
+			],
+			[
+				"migrateevent",
+				"app/database/migrations/2013_11_27_094807_create_event_table.php"
+			],
+			[
+				"modeeve",
+				"app/models/Event.php"
+			],
+			[
+				"app",
+				"app/config/app.php"
+			],
+			[
+				"party",
+				"app/tests/PartyControllerTest.php"
+			],
+			[
+				"eventco",
+				"app/controllers/EventController.php"
+			],
+			[
+				"composer",
+				"composer.json"
+			],
+			[
+				"dis",
+				"vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php"
+			],
+			[
+				"facade",
+				"vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php"
+			],
+			[
+				"seeder",
+				"app/database/seeds/DatabaseSeeder.php"
+			],
+			[
+				"createparty",
+				"app/database/migrations/2013_11_29_124751_create_party_user_table.php"
+			],
+			[
+				"partynew",
+				"app/views/party/new.blade.php"
+			],
+			[
+				"partinde",
+				"app/views/party/index.blade.php"
+			],
+			[
+				"par",
+				"app/models/Party.php"
+			],
+			[
+				"partyseed",
 				"app/database/seeds/PartyTableSeeder.php"
 			],
 			[
 				"createpar",
-				"app/database/migrations/2013_11_27_060505_create_party_table.php"
+				"app/database/migrations/2013_11_27_094807_create_party_table.php"
 			],
 			[
-				"address",
-				"app/models/Address.php"
+				"viewuser",
+				"app/views/user/create.blade.php"
 			],
 			[
-				"contgr",
-				"vendor/laravel/framework/src/Illuminate/Routing/Generators/ControllerGenerator.php"
+				"usercon",
+				"app/controllers/UserController.php"
+			],
+			[
+				"partycon",
+				"app/controllers/PartyController.php"
+			],
+			[
+				"seed",
+				"app/database/seeds/PartyTableSeeder.php"
+			],
+			[
+				"creaadd",
+				"app/database/migrations/2013_11_27_094759_create_address_table.php"
+			],
+			[
+				"creaparty",
+				"app/database/migrations/2013_11_27_094807_create_party_table.php"
+			],
+			[
+				"partyinde",
+				"app/views/party/index.blade.php"
+			],
+			[
+				"bootfl",
+				"public/css/vendor/bootflat/css/bootflat.css"
+			],
+			[
+				"seedpa",
+				"app/database/seeds/PartyTableSeeder.php"
 			],
 			[
 				"seedpart",
 				"app/database/seeds/PartyTableSeeder.php"
 			],
 			[
-				"migrpar",
-				"app/database/migrations/2013_11_27_060505_create_party_table.php"
+				"partindex",
+				"app/views/party/index.blade.php"
 			],
 			[
-				"creatpart",
-				"app/database/migrations/2013_11_27_060505_create_party_table.php"
+				"partyshow",
+				"app/views/party/show.blade.php"
 			],
 			[
-				"create_part",
-				"app/database/migrations/2013_11_27_060505_create_party_table.php"
+				"",
+				"public/css/main.sass"
 			],
 			[
-				"create_party",
-				"app/database/migrations/2013_11_27_060505_create_party_table.php"
+				"usercontr",
+				"app/controllers/UserController.php"
 			],
 			[
-				"data",
-				"app/config/database.php"
+				"jquer",
+				"public/js/vendor/jquery/jquery.min.js"
 			],
 			[
-				"tables",
-				"app/views/default/tables.blade.php"
+				"input",
+				"public/js/vendor/bootstrap/inputfile.js"
 			],
 			[
-				"home",
-				"app/views/default/homepage.blade.php"
+				"inp",
+				"public/js/vendor/bootstrap/inputfile.js"
 			],
 			[
-				"lay",
-				"app/views/layout.blade.php"
-			],
-			[
-				"gu",
-				"Guardfile"
-			],
-			[
-				"hello",
-				"app/views/hello.php"
-			],
-			[
-				"auth",
-				"app/config/auth.php"
-			],
-			[
-				"secon",
-				"public/app/styles/second.scss"
-			],
-			[
-				"la",
-				"app/views/layout.blade.php"
-			],
-			[
-				"userblade",
-				"app/views/users/users.blade.php"
-			],
-			[
-				"guard",
-				"Guardfile"
-			],
-			[
-				"grunt",
-				"public/Gruntfile.js"
-			],
-			[
-				"main.scss",
-				"public/app/styles/main.scss"
-			],
-			[
-				"viewuser",
-				"app/views/users.blade.php"
-			],
-			[
-				"create_user_",
-				"app/database/migrations/2013_10_22_132015_create_user_table.php"
-			],
-			[
-				"datab",
-				"app/config/database.php"
-			],
-			[
-				"layou",
-				"app/views/layout.blade.php"
-			],
-			[
-				"appview",
-				"app/views/hello.php"
-			],
-			[
-				"control",
-				"app/controllers/HomeController.php"
+				"fileinjs",
+				"public/js/vendor/bootstrap/inputfile.min.js"
 			],
 			[
 				"routes",
 				"app/routes.php"
 			],
 			[
+				"genera",
+				"app/views/user/profile/general.blade.php"
+			],
+			[
+				"partsho",
+				"app/views/party/show.blade.php"
+			],
+			[
+				"parnew",
+				"app/views/party/new.blade.php"
+			],
+			[
+				"mast",
+				"app/views/layouts/master.blade.php"
+			],
+			[
+				"sass",
+				"public/css/main.sass"
+			],
+			[
+				"modepart",
+				"app/models/Party.php"
+			],
+			[
+				"crenot",
+				"app/database/migrations/2013_12_04_095057_create_notification_table.php"
+			],
+			[
+				"parcontr",
+				"app/controllers/PartyController.php"
+			],
+			[
+				"seednati",
+				"app/database/seeds/NotificationTableSeeder.php"
+			],
+			[
+				"creapart",
+				"app/database/migrations/2013_11_27_094807_create_party_table.php"
+			],
+			[
+				"creanoti",
+				"app/database/migrations/2013_12_04_095057_create_notification_table.php"
+			],
+			[
+				"modeadd",
+				"app/models/Address.php"
+			],
+			[
+				"createnoti",
+				"app/database/migrations/2013_12_04_095057_create_notification_table.php"
+			],
+			[
+				"partshow",
+				"app/views/party/show.blade.php"
+			],
+			[
+				"modeuser",
+				"app/models/User.php"
+			],
+			[
+				"partyindex",
+				"app/views/party/index.blade.php"
+			],
+			[
+				"notiindex",
+				"app/views/notification/index.blade.php"
+			],
+			[
+				"notif",
+				"app/database/migrations/2013_12_04_095057_create_notification_table.php"
+			],
+			[
+				"usercont",
+				"app/controllers/UserController.php"
+			],
+			[
+				"nocon",
+				"app/controllers/NotificationController.php"
+			],
+			[
+				"modelno",
+				"app/models/Notification.php"
+			],
+			[
+				"migrnoti",
+				"app/database/migrations/2013_12_04_095057_create_notification_table.php"
+			],
+			[
+				"notiinde",
+				"app/views/notification/index.blade.php"
+			],
+			[
+				"partnew",
+				"app/views/party/new.blade.php"
+			],
+			[
+				"connoti",
+				"app/controllers/NotificationController.php"
+			],
+			[
+				"partcon",
+				"app/controllers/PartyController.php"
+			],
+			[
+				"migrpar",
+				"app/database/migrations/2013_11_27_094807_create_party_table.php"
+			],
+			[
+				"migruse",
+				"app/database/migrations/2013_11_28_061820_create_user_table.php"
+			],
+			[
+				"seeduser",
+				"app/database/seeds/UserTableSeeder.php"
+			],
+			[
+				"viewusercre",
+				"app/views/user/create.blade.php"
+			],
+			[
+				"cart",
+				"plugins/woocommerce/templates/cart/cart.php"
+			],
+			[
+				"price",
+				"plugins/woocommerce/templates/single-product/price.php"
+			],
+			[
+				"donatsty",
+				"wp-content/themes/DonateNow/style.css"
+			],
+			[
 				"donateheader",
 				"wp-content/themes/DonateNow/header.php"
 			],
 			[
-				"footer",
-				"wp-content/themes/DonateNow/footer.php"
+				"wooprice",
+				"wp-content/plugins/shatner-name-your-own-price-for-woocommerce/templates/single-product/price.php"
 			],
 			[
-				"sty",
-				"wp-content/themes/DonateNow/style.css"
+				"contentsingle",
+				"wp-content/plugins/woocommerce/templates/content-single-product.php"
 			],
 			[
-				"function-footer",
-				"wp-content/themes/DonateNow/functions/functions-footer.php"
+				"singlepropri",
+				"plugins/woocommerce/templates/single-product/price.php"
 			],
 			[
-				"widgets",
-				"wp-admin/widgets.php"
+				"singlepro",
+				"plugins/woocommerce/templates/single-product.php"
 			],
 			[
-				".htacc",
-				".htaccess"
+				"header",
+				"themes/DonateNow/header.php"
 			],
 			[
-				"function-slider",
-				"themes/DonateNow/functions/functions-slider.php"
+				"pricephp",
+				"plugins/shatner-name-your-own-price-for-woocommerce/templates/single-product/price.php"
 			],
 			[
-				"st",
-				"app/styles/style.sass"
+				"pric",
+				"plugins/woocommerce/templates/single-product/price.php"
 			],
 			[
-				"inde",
-				"app/index.html"
+				"donatesty",
+				"themes/DonateNow/style.css"
 			],
 			[
-				"s",
-				"css/style.sass"
+				"gen",
+				"app/views/user/profile/general.blade.php"
 			],
 			[
-				"norma",
-				"css/normalize.css"
+				"viewinde",
+				"app/views/user/profile/general.blade.php"
 			],
 			[
-				"corr",
-				"laravel/public/venera/assets/css/corr.css"
+				"modeluser",
+				"app/models/User.php"
 			],
 			[
-				"partysho",
-				"laravel/application/views/party/show.blade.php"
+				"user",
+				"app/models/User.php"
 			],
 			[
-				"gmapgmap",
-				"laravel/public/js/gmap/gmapString.js"
+				"model",
+				"app/models/Party.php"
 			],
 			[
-				"gmap",
-				"laravel/public/js/gmap/gmapString.js"
+				"createuser",
+				"app/database/migrations/2013_11_29_124751_create_party_user_table.php"
 			],
 			[
-				"partynew",
-				"laravel/application/views/party/new.blade.php"
+				"contpart",
+				"app/controllers/PartyController.php"
 			],
 			[
-				"info",
-				"laravel/public/js/google-infobox.js"
+				"modal",
+				"app/views/user/childs/modalGuestsParty.blade.php"
 			],
 			[
-				"homeinde",
-				"laravel/application/views/home/index.blade.php"
+				"conuser",
+				"app/controllers/UserController.php"
 			],
 			[
-				"googleinf",
-				"laravel/public/js/google-infobox.js"
-			],
-			[
-				"gma",
-				"laravel/public/js/gmaps.js"
-			],
-			[
-				"partyshow",
-				"laravel/application/views/party/show.blade.php"
-			],
-			[
-				"prof",
-				"laravel/application/views/user/profile.blade.php"
-			],
-			[
-				"partyjs",
-				"laravel/public/app/scripts/views/Party.js"
-			],
-			[
-				"mainlis",
-				"laravel/public/app/scripts/mainListParty.js"
-			],
-			[
-				"c.css",
-				"laravel/public/venera/assets/css/corr.css"
-			],
-			[
-				"old",
-				"laravel/application/views/old_main.blade.php"
-			],
-			[
-				"partylis",
-				"laravel/application/views/party/list.blade.php"
-			],
-			[
-				"regis",
-				"laravel/application/views/user/register.blade.php"
-			],
-			[
-				"login",
-				"laravel/application/views/user/login.blade.php"
-			],
-			[
-				"profilebla",
-				"laravel/application/views/user/profile.blade.php"
-			],
-			[
-				"homeindex",
-				"laravel/application/views/home/index.blade.php"
-			],
-			[
-				"notilis",
-				"laravel/application/views/notification/list.blade.php"
-			],
-			[
-				"the",
-				"Theme Venera Files/assets/css/theme_venera.css"
-			],
-			[
-				"style",
-				"laravel/public/css/globals/style.scss"
-			],
-			[
-				"main.js",
-				"laravel/public/venera/assets/js/main.js"
-			],
-			[
-				"venermain",
-				"Theme Venera Files/assets/js/main.js"
-			],
-			[
-				"partylist",
-				"laravel/application/views/party/list.blade.php"
-			],
-			[
-				"contrhome",
-				"laravel/application/controllers/home.php"
-			],
-			[
-				"build",
-				"application/migrations/2012_10_15_150917_build_all_schema.php"
+				"laravelform",
+				"vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
 			],
 			[
 				"part",
-				"application/controllers/party.php"
+				"app/models/Party.php"
 			],
 			[
-				"buil",
-				"application/migrations/2012_10_15_150917_build_all_schema.php"
+				"usershow",
+				"app/views/user/show.blade.php"
 			],
 			[
-				"for",
-				"public/css/plugins/bootstrap/forms.css"
+				"gene",
+				"app/views/user/profile/general.blade.php"
 			],
 			[
-				"input",
-				"public/css/globals/input.scss"
+				"modepar",
+				"app/models/Party.php"
 			],
 			[
-				"gloinput",
-				"public/css/globals/input.scss"
-			],
-			[
-				"new",
-				"application/views/party/new.blade.php"
-			],
-			[
-				"form.css",
-				"public/css/plugins/bootstrap/forms.css"
-			],
-			[
-				"grid",
-				"public/css/plugins/bootstrap/grid.css"
-			],
-			[
-				"profilebl",
-				"application/views/user/profile.blade.php"
-			],
-			[
-				"partlis",
-				"application/views/party/list.blade.php"
-			],
-			[
-				"notifibla",
-				"application/views/notification/list.blade.php"
-			],
-			[
-				"viewnoti",
-				"application/views/notification/list.blade.php"
-			],
-			[
-				"trans",
-				"public/js/libs/bootstrap/transitions.js"
-			],
-			[
-				"alert",
-				"public/js/libs/bootstrap/alert.js"
-			],
-			[
-				"langfr",
-				"application/language/fr/message.php"
-			],
-			[
-				"rotue",
-				"bundles/oneauth/libraries/oauth/token/request.php"
-			],
-			[
-				"notifica",
-				"application/controllers/notification.php"
-			],
-			[
-				"register",
-				"application/views/user/register.blade.php"
-			],
-			[
-				"connot",
-				"application/controllers/notification.php"
-			],
-			[
-				"notificlist",
-				"application/views/notification/list.blade.php"
+				"usersho",
+				"app/views/user/show.blade.php"
 			],
 			[
 				"contuser",
-				"application/controllers/user.php"
+				"app/controllers/UserController.php"
 			],
 			[
-				"newblade",
-				"application/views/party/new.blade.php"
+				"userprofile",
+				"app/views/user/profile/general.blade.php"
 			],
 			[
-				"indexblade",
-				"application/views/user/index.blade.php"
+				"index",
+				"app/views/party/index.blade.php"
 			],
 			[
-				"maine",
-				"application/views/main.blade.php"
+				"partin",
+				"app/views/party/index.blade.php"
 			],
 			[
-				"frvla",
-				"application/language/fr/validation.php"
+				"create_ta",
+				"app/database/migrations/2013_11_27_094807_create_party_table.php"
 			],
 			[
-				"frmess",
-				"application/language/fr/message.php"
+				"seedaddre",
+				"app/database/seeds/AddressTableSeeder.php"
 			],
 			[
-				"showblade",
-				"application/views/party/show.blade.php"
+				"seedpar",
+				"app/database/seeds/PartyUserTableSeeder.php"
 			],
 			[
-				"404",
-				"application/views/error/404.php"
-			],
-			[
-				"viewsindex",
-				"application/views/user/index.blade.php"
-			],
-			[
-				"avgr",
-				"public/css/plugins/avgrund.css"
-			],
-			[
-				"contnoti",
-				"application/controllers/notification.php"
-			],
-			[
-				"notificatioblade",
-				"application/views/notification/list.blade.php"
-			],
-			[
-				"noitblade",
-				"application/views/notification/list.blade.php"
+				"partseed",
+				"app/database/seeds/PartyUserTableSeeder.php"
 			]
 		],
 		"width": 0.0
@@ -2676,7 +2383,7 @@
 		[
 			[
 				"",
-				"/var/www/dev/laravel/laravel.sublime-project"
+				"/Users/jody/Documents/Work/General/Backbone/backbonetutorials-gh-pages/examples/modular-backbone/backbone-example.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -2684,7 +2391,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 319.0,
+	"side_bar_visible": true,
+	"side_bar_width": 257.0,
 	"status_bar_visible": true
 }

@@ -2,6 +2,17 @@
 
 class UserController extends \BaseController {
 
+
+	/**
+	 * REceive the pictures from ajax request
+	 *
+	 * @return null
+	 */
+	public function pictureUpload()
+	{
+		dd(Input::file('picture'));
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -35,7 +46,7 @@ class UserController extends \BaseController {
 			'email' 	=> 'required|email|unique:users',
 			'username' 	=> 'required|between:3,12',
 			'password' 	=> 'required|between:6,50',
-		);
+			);
 
 		$validation = Validator::make($inputs, $rules);
 
@@ -64,7 +75,8 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::find($id);
+		return View::make('user.show', compact('user'));
 	}
 
 	/**
@@ -85,12 +97,18 @@ class UserController extends \BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{
-		$inputs = Input::all();		
+	{	
+		// $p = new Picture;
+		// dd($p);
+		for ($i = 0; Input::hasFile('picture-'.$i); $i++) {
+			$file = Input::file('picture-'.$i);
+			$upload_success = $file->move('uploads/'.$id, $file->getClientOriginalName());
+		}
 
+		$inputs = Input::all();
 		$rules = array(
 			'username' 	=> 'required|between:3,12'
-		);
+			);
 
 		$validation = Validator::make($inputs, $rules);
 

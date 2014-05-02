@@ -1,0 +1,16 @@
+{
+	"name": "Bower install",
+	"version": "1.0.0",
+	"dependencies":  {
+		"jquery": 			null,
+		"backbone-amd": 	null,
+		"underscore-amd": 	null,
+		"handlebars": 		null,
+		"requirejs": 		null,
+		"text":				null,
+		"datetimepicker":	null,
+		"moment":			null,
+		"bootstrap":		null,
+		"Bootflat":			null
+	}
+}

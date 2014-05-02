@@ -2,21 +2,26 @@
 
 @section('content')
 
-{{ Form::model(Auth::user(),array('method' => 'PUT','route' => array('user.update',Auth::user()->id),'class' => 'form-profile form-horizontal', 'role' => 'form')) }}
-	@if( Session::has('profile-message') )
-	<div class="alert alert-success alert-dismissable">
-		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		{{ Session::get('profile-message') }}
+{{ Form::model(Auth::user(),array('files' => true ,'method' => 'put','route' => array('user.update',Auth::user()->id),'class' => 'form-profile form-horizontal', 'role' => 'form')) }}
+@if( Session::has('profile-message') )
+<div class="alert alert-success alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	{{ Session::get('profile-message') }}
+</div>
+@endif
+<div class="panel panel-default profile">
+	<div class="panel-heading">
+		<h3>Profile <small>- General</small></h3>
 	</div>
-	@endif
-	<div class="panel panel-default profile">
-		<div class="panel-heading">
-			<h3>Profile <small>- General</small></h3>
-		</div>
-		<div class="panel-body">
+	<div class="panel-body">
 		
 		{{ $child }}		
-		<div class="profile-inputs">			
+		<div class="profile-inputs">
+			
+			<!-- Pictures -->
+			{{ Form::label('name', 'Pictures') }}
+			<div class="row row-profile-pictures"></div>
+			
 			<!-- username -->
 			{{ Form::label('username', 'Username') }}
 			{{ Form::text('username', Input::old('username'), array('class' => 'form-control','placeholder' => 'Username','autofocus' => "")) }}

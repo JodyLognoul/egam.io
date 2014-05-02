@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "/var/www/dev/gg-mobile-first"
+			"path": "/private/var/www/dev/gg-mobile-first"
+		},
+		{
+			"path": "/Users/jody/Documents/Work/Guestgame/old-public"
 		}
 	]
 }

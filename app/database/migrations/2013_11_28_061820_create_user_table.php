@@ -18,7 +18,7 @@ class CreateUserTable extends Migration {
 			$table->increments('id')->unsigned();			// id
 			$table->string('name');							// name
 			$table->string('surname');						// surname
-			$table->date('birthday');						// birthday
+			$table->string('birthday');						// birthday
 			$table->string('username');						// username
 			$table->string('password');						// password
 			$table->timestamp('date_register');				// date_register

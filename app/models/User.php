@@ -22,9 +22,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password');
 
 
+	public function unreadNotificationsQty(){
+		$qty = DB::table('notifications')
+					->where('user_id',$this->id)
+					->where('seen',false)
+					->count();
+		return $qty!=0 ? $qty : '';
+	}
+
     public function parties()
     {
-        return $this->belongsToMany('Party');
+        return $this->belongsToMany('Event');
     }
 
 

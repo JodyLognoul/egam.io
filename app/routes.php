@@ -12,10 +12,14 @@
 */
 
 // Homepage
-Route::get('/', 	array('as' => 'homepage', 		'uses' => 'PartyController@index'));
+Route::get('/', 	array('as' => 'homepage', 		'uses' => 'EventController@index'));
 
-// Party
-Route::resource('party', 'PartyController');
+// Event
+Route::resource('event', 'EventController');
+Route::get('join/{id}', 			array('as' => 'event.join',		 			'uses' => 'EventController@join'));
+// -- API
+Route::controller('api/event', 'EventApiController');
+
 
 // User
 Route::resource('user', 'UserController');
@@ -28,5 +32,15 @@ Route::get('profile/general', 			array('as' => 'user.profile.general', 		'uses' 
 Route::get('profile/parties', 			array('as' => 'user.profile.parties', 		'uses' => 'UserController@profileParties', 'before' => 'auth'));
 Route::get('profile/notifications', 	array('as' => 'user.profile.notifications', 'uses' => 'UserController@profileNotifications', 'before' => 'auth'));
 Route::get('profile/security', 			array('as' => 'user.profile.security', 		'uses' => 'UserController@profileSecurity', 'before' => 'auth'));
+Route::post('picture', 					array('as' => 'user.picture.upload', 		'uses' => 'UserController@pictureUpload'));
+
+// Notification
+Route::resource('notification', 'NotificationController');
+Route::get('notification/{id}/seen', 	array('as' => 'notification.seen', 			'uses' => 'NotificationController@markAsSeen','before' => 'auth'));
 
 
+// Ioc
+App::bind('Notify', function($app)
+{
+    return new NotificationController;
+});

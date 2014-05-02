@@ -19,11 +19,12 @@ class CreateAddressTable extends Migration {
 			
 			// Fields			
 			$table->increments('id');			
-			$table->string('country');						// country
-			$table->string('str_name');						// str_name
-			$table->string('str_no');						// str_no
-			$table->string('cp');							// cp
-			$table->string('city');							// city						
+			$table->string('country')->nullable();						// country
+			$table->string('str_name')->nullable();						// str_name
+			$table->string('str_no')->nullable();						// str_no
+			$table->string('cp')->nullable();							// cp
+			$table->string('city')->nullable();							// city
+			$table->string('full')->nullable();							// city
 
 			// Other
 			$table->timestamps();
