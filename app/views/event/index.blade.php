@@ -43,14 +43,13 @@
 		</div>
 	</div>
 
-
-	<!-- Backbone.js -->
 	<!-- ### Active Filter, Sorting or Progress bar -->
 	<div class="col-md-12 dest-active-filters"></div>
 	
 	<!-- Active Filter, Sorting -->
 	<script class="active-filters-script" type="text/template">
-	<button type="button" class="btn btn-xs <%= buttonClass %>"><%= text %> <i class="glyphicon glyphicon-remove"></i></button>
+	<button type="button" class="btn btn-xs btn-<%= buttonClass %>"><%= text %> <i class="glyphicon glyphicon-remove"></i></button>
+	<span class="badge badge-<%= buttonClass %> pull-right"><%= qty %> event<%if(qty>1){ %><span>s</span><%}%> found</span>
 	</script>
 
 	<!-- Progress bar -->

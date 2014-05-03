@@ -34,9 +34,9 @@ define(['jquery', 'backbone','underscore','moment','collection','viewCollection'
 			this.appendViewProgressbar();
 			this.eventsCollection.fetch().then(function(){
 
-				_this.viewAppendActiveFilterSorting(by, 'sort');
 				_this.eventsCollection.changeSort(by);
 				_this.appendViewEvents(_this.eventsCollection);
+				_this.appendViewActiveFilterSorting(by, 'sort', _this.eventsCollection.length);
 				_this.removeViewProgressbar();
 			});
 
@@ -50,12 +50,12 @@ define(['jquery', 'backbone','underscore','moment','collection','viewCollection'
 				if( by === 'eventdate' ){	// search by event_date
 					var event_date = moment(query).format('YYYY-MM-DD');
 
-					_this.viewAppendActiveFilterSorting(event_date, 'filter.eventdate');
 					filteredEventsCollection = new EventsCollection(_this.eventsCollection.where({ 'event_date': event_date }));
+					_this.appendViewActiveFilterSorting(event_date, 'filter.eventdate',filteredEventsCollection.length);
 
 				}else if(by === 's'){		// search by string
-					_this.viewAppendActiveFilterSorting(query, 'filter.s');
 					filteredEventsCollection = new EventsCollection(_this.eventsCollection.filterByString(query));
+					_this.appendViewActiveFilterSorting(query, 'filter.s',filteredEventsCollection.length);
 				}
 				_this.appendViewEvents(filteredEventsCollection);
 				_this.removeViewProgressbar();
@@ -69,8 +69,8 @@ define(['jquery', 'backbone','underscore','moment','collection','viewCollection'
 		},
 
 		// View ActiveFilterSorting
-		viewAppendActiveFilterSorting: function(by, type){
-			this.viewActivesFilterSorting = new ViewActiveFilterSorting({ model : by }, this, type);
+		appendViewActiveFilterSorting: function(by, type, qty){
+			this.viewActivesFilterSorting = new ViewActiveFilterSorting({ model : by }, this, type, qty);
 			$('.dest-active-filters').empty().append(this.viewActivesFilterSorting.el);
 		},
 		removeViewActiveFilterSorting: function(){

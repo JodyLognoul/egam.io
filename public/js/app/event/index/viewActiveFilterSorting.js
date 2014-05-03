@@ -13,18 +13,20 @@ define(['backbone','handlebars', 'underscore','moment'], function(Backbone, Hand
 			"eventdate"		: "Sorting By Date",
 		},
 		buttonClasses: {
-			"sort": "btn-success",
-			"filter.eventdate": "btn-info",
-			"filter.s": "btn-info",
+			"sort": "success",
+			"filter.eventdate": "info",
+			"filter.s": "info",
 		},
 
 		// Templates
 		template: _.template( $('.active-filters-script').html() ),
 
-		initialize: function(model, router, type){
+		initialize: function(model, router, type, qty){
 			this.router = router;
 			this.type = type;
+			this.qty = qty;
 			this.render();
+			console.log(qty);
 		},
 		events: {
 			'click .btn': 'clear',
@@ -35,7 +37,8 @@ define(['backbone','handlebars', 'underscore','moment'], function(Backbone, Hand
 								this.type === 'filter.eventdate'	? moment(this.model).format("dddd, MMMM Do YYYY") :
 								this.type === 'filter.s'			? 'Contain the text "' + this.model + '"':
 								'undifined (activeFilterSortingView)',
-				buttonClass : this.buttonClasses[this.type]
+				buttonClass : this.buttonClasses[this.type],
+				qty			: this.qty
 			};
 			this.$el.html( this.template( params ) );
 

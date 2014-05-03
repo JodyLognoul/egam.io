@@ -139,14 +139,19 @@ body {
   margin-bottom: 10px; }
 
 .dest-active-filters {
-  padding-left: 0px; }
+  padding-left: 0px;
+  padding-right: 0px; }
   .dest-active-filters .progress {
     height: 10px; }
 
 .active-filters-content {
   margin-bottom: 10px; }
+  .active-filters-content .badge {
+    margin-top: 2px; }
   .active-filters-content .btn,
+  .active-filters-content .badge,
   .active-filters-content .glyphicon {
-    font-size: 10px; }
+    font-size: 10px;
+    font-weight: 400; }
   .active-filters-content .glyphicon {
     top: 2px; }
