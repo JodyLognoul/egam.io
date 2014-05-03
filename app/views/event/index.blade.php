@@ -10,7 +10,6 @@
 	<div class="row filter-bar">
 		<div class="col-md-3">
 			<a href="{{ URL::to('#/filter/s/rue')}}" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-globe"></i></a>
-			<a type="button" class="btn btn-primary"><i class="glyphicon glyphicon-list"></i></a>
 			<a type="button" class="datepicker btn btn-primary"><i class="glyphicon glyphicon-calendar"></i></a>
 			<span class="dropdown">
 				<button type="button" class="btn btn-primary" id="dmfilter" data-toggle="dropdown"><i class="glyphicon glyphicon-filter"></i></button>
