@@ -140,6 +140,8 @@ body {
 
 .dest-active-filters {
   padding-left: 0px; }
+  .dest-active-filters .progress {
+    height: 10px; }
 
 .active-filters-content {
   margin-bottom: 10px; }

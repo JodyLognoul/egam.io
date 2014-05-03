@@ -1,6 +1,6 @@
 // /public/js/app/event/index/router.js
 
-define(['jquery', 'backbone','underscore','moment','collection','collectionView','activeFilterSortingView'], function($, Backbone, _, moment, EventsCollection, EventsView, ActiveFilterSortingView){
+define(['jquery', 'backbone','underscore','moment','collection','viewCollection','viewActiveFilterSorting','viewProgressbar'], function($, Backbone, _, moment, EventsCollection, ViewEvents, ViewActiveFilterSorting, ViewProgressbar){
 
 	var AppRouter = Backbone.Router.extend({
 		routes: {
@@ -20,58 +20,72 @@ define(['jquery', 'backbone','underscore','moment','collection','collectionView'
 		},
 		defaultRoute: function(){
 			var _this = this;
-
+			this.appendViewProgressbar();
 			this.eventsCollection.fetch().then(function(){
 
-				_this.removeActiveFilterSortingView();
+				_this.removeViewActiveFilterSorting();
 				_this.eventsCollection.changeSort('id');
-				_this.appendEventsView(_this.eventsCollection);
-
+				_this.appendViewEvents(_this.eventsCollection);
+				_this.removeViewProgressbar();
 			});
 		},
 		sortRoute: function(dir, by){
 			var _this = this;
-
+			this.appendViewProgressbar();
 			this.eventsCollection.fetch().then(function(){
 
-				_this.appendActiveFilterSortingView(by, 'sort');
+				_this.viewAppendActiveFilterSorting(by, 'sort');
 				_this.eventsCollection.changeSort(by);
-				_this.appendEventsView(_this.eventsCollection);
-
+				_this.appendViewEvents(_this.eventsCollection);
+				_this.removeViewProgressbar();
 			});
 
 		},
 		filterRoute: function(by, query){
 			var filteredEventsCollection, _this = this;
 
+			this.appendViewProgressbar();
 			this.eventsCollection.fetch().then(function(){
 
 				if( by === 'eventdate' ){	// search by event_date
 					var event_date = moment(query).format('YYYY-MM-DD');
 
-					_this.appendActiveFilterSortingView(event_date, 'filter.eventdate');
+					_this.viewAppendActiveFilterSorting(event_date, 'filter.eventdate');
 					filteredEventsCollection = new EventsCollection(_this.eventsCollection.where({ 'event_date': event_date }));
 
 				}else if(by === 's'){		// search by string
-					_this.appendActiveFilterSortingView(query, 'filter.s');
+					_this.viewAppendActiveFilterSorting(query, 'filter.s');
 					filteredEventsCollection = new EventsCollection(_this.eventsCollection.filterByString(query));
 				}
-				_this.appendEventsView(filteredEventsCollection);
-
+				_this.appendViewEvents(filteredEventsCollection);
+				_this.removeViewProgressbar();
 			});
 
 		},
-		appendEventsView: function(_collection){
-			var eventsView = new EventsView({ collection: _collection }, this);
-			$('.dest-bb-events').empty().append(eventsView.el);
+		// View Collection
+		appendViewEvents: function(_collection){
+			var viewEvents = new ViewEvents({ collection: _collection }, this);
+			$('.dest-bb-events').empty().append(viewEvents.el);
 		},
-		appendActiveFilterSortingView: function(by, type){
-			this.activesFilterSortingView = new ActiveFilterSortingView({ model : by }, this, type);
-			$('.dest-active-filters').empty().append(this.activesFilterSortingView.el);
+
+		// View ActiveFilterSorting
+		viewAppendActiveFilterSorting: function(by, type){
+			this.viewActivesFilterSorting = new ViewActiveFilterSorting({ model : by }, this, type);
+			$('.dest-active-filters').empty().append(this.viewActivesFilterSorting.el);
 		},
-		removeActiveFilterSortingView: function(){
-			if(this.activesFilterSortingView)
-				this.activesFilterSortingView.remove();
+		removeViewActiveFilterSorting: function(){
+			if(this.viewActivesFilterSorting)
+				this.viewActivesFilterSorting.remove();
+		},
+
+		// View Progressbar
+		appendViewProgressbar: function(){
+			this.viewProgressbar = new ViewProgressbar();
+			$('.dest-active-filters').empty().append(this.viewProgressbar.el);
+		},
+		removeViewProgressbar: function(){
+			if(this.viewProgressbar)
+				this.viewProgressbar.remove();
 		}
 	});
 return AppRouter;

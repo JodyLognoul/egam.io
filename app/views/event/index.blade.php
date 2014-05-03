@@ -45,11 +45,22 @@
 
 
 	<!-- Backbone.js -->
+	<!-- ### Active Filter, Sorting or Progress bar -->
 	<div class="col-md-12 dest-active-filters"></div>
-
+	
+	<!-- Active Filter, Sorting -->
 	<script class="active-filters-script" type="text/template">
-		<button type="button" class="btn btn-xs <%= buttonClass %>"><%= text %> <i class="glyphicon glyphicon-remove"></i></button>
+	<button type="button" class="btn btn-xs <%= buttonClass %>"><%= text %> <i class="glyphicon glyphicon-remove"></i></button>
 	</script>
+
+	<!-- Progress bar -->
+	<script class="progressbar-script" type="text/template">
+			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= value %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= value %>%">
+				<span class="sr-only">40% Complete (success)</span>
+			</div>
+	</script>
+
+	<!-- ### End -->
 
 	<div class="dest-bb-events"></div>
 	<script class="index-grid" type="text/template">
