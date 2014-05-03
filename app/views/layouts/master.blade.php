@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> eGamio</title>
+    <title> eGam.io</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico?v=3">
@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ URL::to('/')}}"><i class="glyphicon glyphicon-tower"></i> eGamio</a>
+                    <a class="navbar-brand" href="{{ URL::to('/')}}"><i class="glyphicon glyphicon-tower"></i> eGam.io</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav nav-pills">
