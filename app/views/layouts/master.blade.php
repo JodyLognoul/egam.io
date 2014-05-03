@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico?v=3">
+    @yield('styles')
 
     {{ HTML::style("js/vendor/bootstrap/dist/css/bootstrap.min.css") }}    
     {{ HTML::style("js/vendor/Bootflat/bootflat/css/bootflat.css") }}

@@ -3,6 +3,13 @@
 	[
 		{
 			"path": "/private/var/www/dev/gg-mobile-first"
+		},
+		{
+			"path": "/private/var/www/dev/gg-mobile-first/public/js/"
+		},
+		{
+			"path": "/private/var/www/dev/gg-mobile-first/public/js/app/event/index-map"
 		}
+
 	]
 }

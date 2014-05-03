@@ -10,9 +10,16 @@ class EventController extends \BaseController {
 	public function index()
 	{
 		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
-
-		$events = Event::all();
-		return View::make('event/index',compact('events'));
+		return View::make('event/index');
+	}
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function indexMap()
+	{
+		return View::make('event/index-map');
 	}
 
 	/**
