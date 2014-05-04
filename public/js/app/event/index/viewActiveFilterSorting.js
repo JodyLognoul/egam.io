@@ -26,7 +26,6 @@ define(['backbone','handlebars', 'underscore','moment'], function(Backbone, Hand
 			this.type = type;
 			this.qty = qty;
 			this.render();
-			console.log(qty);
 		},
 		events: {
 			'click .btn': 'clear',

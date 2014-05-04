@@ -4,9 +4,7 @@ define(['backbone','model'], function(Backbone, EventModel) {
 
 		model: EventModel,
 		url: '/api/event',
-
-		initialize: function(){
-		},
+		fetched: false,
 		strategies: {
 			id:			function (event) {return event.get("id"); },
 			title:		function (event) { return event.get("title"); },
@@ -14,6 +12,18 @@ define(['backbone','model'], function(Backbone, EventModel) {
 			host:		function (event) { return event.get("event_user")[0].username; },
 			places:		function (event) { return event.get("max_place"); },
 			eventdate:	function (event) { return event.get("event_date"); },
+		},
+		initialize: function(){
+			this.listenFetch();
+		},
+		listenFetch: function(){
+			var _this = this;
+			this.on('sync', function(){
+				_this.fetched = true;
+			});
+		},
+		isFetched: function(){
+			return this.fetched;
 		},
 		changeSort:function(sortProperty){
 			this.comparator = this.strategies[sortProperty];

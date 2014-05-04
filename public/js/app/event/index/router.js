@@ -1,6 +1,6 @@
 // /public/js/app/event/index/router.js
 
-define(['jquery', 'backbone','underscore','moment','collection','viewCollection','viewActiveFilterSorting','viewProgressbar'], function($, Backbone, _, moment, EventsCollection, ViewEvents, ViewActiveFilterSorting, ViewProgressbar){
+define(['jquery', 'backbone','underscore','moment','collection','viewCollection','viewActiveFilterSorting','viewProgressbar','controller'], function($, Backbone, _, moment, EventsCollection, ViewEvents, ViewActiveFilterSorting, ViewProgressbar,ControllerEventsIndex){
 
 	var AppRouter = Backbone.Router.extend({
 		routes: {
@@ -9,25 +9,22 @@ define(['jquery', 'backbone','underscore','moment','collection','viewCollection'
 			'filter/:by/:query'	:'filterRoute',
 		},
 		initialize: function(){
-			this.listen();
+			this.controller = new ControllerEventsIndex({router:this});
 			this.eventsCollection = new EventsCollection();
 		},
-		listen:function(){
-			document.addEventListener('datetimepickerEvents',this.datePickerAction.bind(this));
-		},
-		datePickerAction: function(e){
-			this.navigate('filter/eventdate/' + e.detail, {trigger: true});
-		},
 		defaultRoute: function(){
-			var _this = this;
-			this.appendViewProgressbar();
-			this.eventsCollection.fetch().then(function(){
+			this.controller.actionDefault();
+			
+			// var _this = this;
+			// this.appendViewProgressbar();
 
-				_this.removeViewActiveFilterSorting();
-				_this.eventsCollection.changeSort('id');
-				_this.appendViewEvents(_this.eventsCollection);
-				_this.removeViewProgressbar();
-			});
+			// this.eventsCollection.fetch().then(function(){
+
+			// 	_this.removeViewActiveFilterSorting();
+			// 	_this.eventsCollection.changeSort('id');
+			// 	_this.appendViewEvents(_this.eventsCollection);
+			// 	_this.removeViewProgressbar();
+			// });
 		},
 		sortRoute: function(dir, by){
 			var _this = this;
