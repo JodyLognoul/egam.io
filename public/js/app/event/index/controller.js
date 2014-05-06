@@ -48,8 +48,8 @@ define(['underscore','collection','viewCollection','viewProgressbar','viewActive
 					filteredCollection = new EventsCollection(this.collection.where({ 'event_date': event_date }));
 					this.appendViewActiveFilterSorting(event_date, 'filter.eventdate', filteredCollection.length);
 
-				}else if(by === 's'){				// search by string
-					filteredCollection = new EventsCollection(this.eventsCollection.filterByString(params[1]));
+				}else if(params[0] === 's'){				// search by string
+					filteredCollection = new EventsCollection(this.collection.filterByString(params[1]));
 					this.appendViewActiveFilterSorting(params[1], 'filter.s',filteredCollection.length);
 				}
 
