@@ -64,18 +64,6 @@ body
 .user-show
 	max-width: 440px
 
-.event-show
-	max-width: 600px
-	img
-		max-height: 150px
-
-.user-show,
-.event-show
-	padding: 15px
-	margin: 0 auto
-	img
-		margin-bottom: 15px
-
 .label
 	a
 		color: inherit
@@ -90,7 +78,8 @@ body
 .target span
 	margin: 30px 0 0 20px
 
-.example-title
+.page-title
+	margin-top: 0px
 	margin-bottom: 20px
 	font-weight: 700
 	font-size: 18px
@@ -99,9 +88,7 @@ body
 .date-n-host
 	margin-top: 5px
 
-.event-index
-	h2
-		margin-top: 0px 		
+.event-index		 		
 	.elem
 		h3
 			font-size: 14px
@@ -166,9 +153,31 @@ body
 #map
 	height: 300px	
 	margin-top: 10px
+.event-show .list-group-item:first-child 
+	border-top: none
 
+.event-show 
 
-
-
+	.col-md-4:nth-child(2)
+		border-right: 1px dotted #999
+		border-left: 1px dotted #999
+	
+	h4, p
+		font-size: 13px
+	p	
+		font-weight: 200	
+	h4
+		color: #777
+		margin-top: 0px
+		margin-bottom: 5px
+	h3
+		font-size: 13px	
+	.panel-footer-ind
+		padding: 10px
+		text-align: center
+		padding-top: 10px
+		border-top: 1px dotted #999
+		a
+			display: inline-block
 
 

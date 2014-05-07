@@ -93,9 +93,9 @@ class EventController extends \BaseController {
 	{
 		$event = Event::find($id);	
 	
-		if ( Auth::check() && $event->isHost(Auth::user()->id)) {
-			return Redirect::route('event.edit', array('event' => $id))->with('alert-modal','You are the owner of this event! You have been redirected to the eventedition!');
-		}
+		// if ( Auth::check() && $event->isHost(Auth::user()->id)) {
+		// 	return Redirect::route('event.edit', array('event' => $id))->with('alert-modal','You are the owner of this event! You have been redirected to the eventedition!');
+		// }
 		return View::make('event/show',compact('event'))->nest('modalGuestsEvent','user/childs/modalGuestsEvent',compact('event'));
 	}
 

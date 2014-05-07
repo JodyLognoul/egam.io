@@ -4,7 +4,7 @@
 
 <div class="event-index">
 	
-	<h2 class="example-title">Events Index</h2>
+	<h2 class="page-title">Events Index</h2>
 	<!-- Search Input -->
 	<!-- Filter -->
 	<div class="row filter-bar">
