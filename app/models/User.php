@@ -30,7 +30,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $qty!=0 ? $qty : '';
 	}
 
-    public function parties()
+    public function events()
     {
         return $this->belongsToMany('Event');
     }

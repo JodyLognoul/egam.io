@@ -7,11 +7,11 @@ body
 	padding-top: 70px
 
 // CLASS
-.form-profile,	
+	
 .form-signin
 	max-width: 440px
 
-.form-profile,
+
 .form-signin 
 	padding: 15px
 	margin: 0 auto
@@ -46,10 +46,6 @@ body
 .alert
 	margin-top: 20px
 
-.profile-inputs
-	margin: 20px 0
-
-.profile,
 .register
 	h3
 		margin-top: 0	
@@ -107,15 +103,6 @@ body
 	a
 		color: #8c8c8c
 
-
-	
-.panel-group-lists
-	.panel:first-child,
-	.panel:last-child
-		border-radius: 4px
-		-webkit-border-radius: 4px
-		-moz-border-radius: 4px
-
 .event-new
 	h3
 		font-size: 24px
@@ -156,22 +143,20 @@ body
 .event-show .list-group-item:first-child 
 	border-top: none
 
-.event-show 
-
-	.col-md-4:nth-child(2)
-		border-right: 1px dotted #999
-		border-left: 1px dotted #999
-	
-	h4, p
-		font-size: 13px
+.event-show 	
 	p	
 		font-weight: 200	
 	h4
-		color: #777
-		margin-top: 0px
-		margin-bottom: 5px
-	h3
-		font-size: 13px	
+		margin-bottom: 10px
+
+.profile,
+.event-show
+	h3, h4, p, a, label
+		font-size: 13px
+		font-weight: 200
+	.col-md-4:nth-child(2)
+		border-right: 1px dotted #999
+		border-left: 1px dotted #999	
 	.panel-footer-ind
 		padding: 10px
 		text-align: center
@@ -179,5 +164,24 @@ body
 		border-top: 1px dotted #999
 		a
 			display: inline-block
+	h4
+		color: #777
+		margin-top: 0px
 
-
+.profile
+	.submit
+		.col-md-12
+			text-align: center
+			padding: 10px
+	label
+		color: #777
+	input
+		font-size: 13px
+	.form-group
+		margin-bottom: 5px
+.myevents		
+	.panel-title
+		a:hover
+			color: white
+.myevents-actions
+	padding-top: 10px
