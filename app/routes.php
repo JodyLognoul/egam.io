@@ -12,7 +12,8 @@
 */
 
 // Homepage
-Route::get(			'/', 						array('as' => 'homepage', 					'uses' => 'EventController@landing'));
+Route::get(			'/welcome', 				array('as' => 'landing', 					'uses' => 'DefaultController@landing'));
+Route::get(			'/', 						array('as' => 'homepage', 					'uses' => 'EventController@index'));
 
 // Event
 Route::resource(	'event', 'EventController');

@@ -150,7 +150,7 @@ class UserController extends \BaseController {
 			'confirmed' => 0);
 		
 		if( Auth::attempt($credentials,true) ){
-			return Redirect::intended('/');
+			return Redirect::route('event.index');
 		}else{
 			Input::flashExcept('password');
 			return Redirect::intended('/')->with('error','The login or the password you entered is not correct :/');			
@@ -176,7 +176,7 @@ class UserController extends \BaseController {
 	public function logout()
 	{
 		Auth::logout();
-		return Redirect::intended('/');			
+		return Redirect::route('homepage');			
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /*
 Syntax error: Invalid CSS after "...          true ": expected selector or at-rule, was "!global;"
-        on line 8 of vendor/bootflat/scss/bootflat/_global.scss
-        from line 6 of ./vendor/bootflat/scss/bootflat.scss
+        on line 8 of css/vendor/bootflat/scss/bootflat/_global.scss
+        from line 6 of css/vendor/bootflat/scss/bootflat.scss
 
 3: $modules:                     () !default;
 4: 
@@ -16,8 +16,8 @@ Syntax error: Invalid CSS after "...          true ": expected selector or at-ru
 13: $white:                       #FFF !default;
 
 Backtrace:
-vendor/bootflat/scss/bootflat/_global.scss:8
-./vendor/bootflat/scss/bootflat.scss:6
+css/vendor/bootflat/scss/bootflat/_global.scss:8
+css/vendor/bootflat/scss/bootflat.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1147:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:28:in `parse'
@@ -56,4 +56,4 @@ vendor/bootflat/scss/bootflat/_global.scss:8
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...          true \": expected selector or at-rule, was \"!global;\"\A         on line 8 of vendor/bootflat/scss/bootflat/_global.scss\A         from line 6 of ./vendor/bootflat/scss/bootflat.scss\A \A 3: $modules:                     () !default;\A 4: \A 5: $experimental:                true !default;\A 6: \A 7: // prefix elements\A 8: $prefix-webkit:               true !global;\A 9: $prefix-moz:                  true !global;\A 10: $prefix-spec:                 true !global;\A 11: \A 12: // color elements\A 13: $white:                       #FFF !default;"; }
+  content: "Syntax error: Invalid CSS after \"...          true \": expected selector or at-rule, was \"!global;\"\A         on line 8 of css/vendor/bootflat/scss/bootflat/_global.scss\A         from line 6 of css/vendor/bootflat/scss/bootflat.scss\A \A 3: $modules:                     () !default;\A 4: \A 5: $experimental:                true !default;\A 6: \A 7: // prefix elements\A 8: $prefix-webkit:               true !global;\A 9: $prefix-moz:                  true !global;\A 10: $prefix-spec:                 true !global;\A 11: \A 12: // color elements\A 13: $white:                       #FFF !default;"; }

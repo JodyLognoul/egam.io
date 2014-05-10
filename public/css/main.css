@@ -13,6 +13,9 @@ body {
   opacity: 0.95;
   font-weight: 200; }
 
+.container {
+  min-height: 100%; }
+
 .alert {
   margin-top: 20px; }
 
@@ -42,6 +45,8 @@ body {
 .date-n-host {
   margin-top: 5px; }
 
+.event-index .panel-body {
+  background-color: #f1f2f6; }
 .event-index .elem h3 {
   font-size: 14px; }
 .event-index .elem p {
@@ -103,15 +108,13 @@ body {
 .event-show h4 {
   margin-bottom: 10px; }
 
-.profile h3, .profile h4, .profile p, .profile a, .profile label,
-.event-show h3,
+.profile h4, .profile p, .profile a, .profile label,
 .event-show h4,
 .event-show p,
 .event-show a,
 .event-show label {
   font-size: 13px; }
-.profile h3, .profile p, .profile a, .profile label,
-.event-show h3,
+.profile p, .profile a, .profile label,
 .event-show p,
 .event-show a,
 .event-show label {
@@ -149,3 +152,7 @@ body {
 
 .myevents-actions {
   padding-top: 10px; }
+
+.panel-title {
+  font-size: 13px;
+  font-weight: 200; }
