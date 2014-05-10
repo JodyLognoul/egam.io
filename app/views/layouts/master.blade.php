@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     {{ HTML::style("css/vendor/datetimepicker/jquery.datetimepicker.css") }}
     {{ HTML::style("css/main.css") }}
 </head>
-<body>
+<body class="body">
     <!-- TODO - browsehappy.com -->
     
     <!-- Content -->
@@ -29,14 +29,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ URL::to('/')}}"><i class="glyphicon glyphicon-tower"></i> eGam.io</a>
+                    <a class="navbar-brand" href="{{ URL::to('/')}}">eGamio</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav nav-pills">
-                        <li class="">{{ link_to_route('event.create','New event',null,array('class'=>'')) }}</li>
-                        <li class="">{{ link_to_route('user.profile','Dashboard',null,array('class'=>'')) }}</li>
                         @if(Auth::check()) 
-                        <li class=""><a href="{{ route('notification.index') }}">Notifications <span class="badge badge-warning">{{ Auth::user()->unreadNotificationsQty() }}</span></a></li>
+                            <li class="">{{ link_to_route('event.create','New',null,array('class'=>'')) }}</li>
+                            <li class="">{{ link_to_route('user.profile','Dashboard',null,array('class'=>'')) }}</li>
+                            <li class=""><a href="{{ route('notification.index') }}">Notifications <span class="badge badge-warning">{{ Auth::user()->unreadNotificationsQty() }}</span></a></li>
                         @endif 
                     </ul>
                     @if( Auth::check() )
@@ -51,17 +51,6 @@
                         </li>
                     </ul>
 
-                    @else
-                    {{ Form::open(array('route' => 'user.login','class' => 'navbar-form navbar-right') ) }}
-                    <div class="form-group">
-                        {{ Form::email('email', Input::old('email'), array('class' => 'form-control','placeholder' => 'Email','autofocus' => "")) }}    
-                    </div>
-                    <div class="form-group">
-                        {{ Form::password('password', array('class' => 'form-control','placeholder' => 'Password')) }}
-                    </div>
-                    {{ Form::submit('Login', array('class' => 'btn btn-primary' )) }}
-                    {{ link_to_route('user.register', 'Register', array(), array('class' => 'btn btn-success')) }}
-                    {{ Form::close() }}
                     @endif
                 </div>
                 <!--/.navbar-collapse -->
@@ -112,7 +101,7 @@
       <div class="container">
         <div class="clearfix">
           <div class="footer-logo">
-            <a class="navbar-brand" href="{{ URL::to('/')}}"><i class="glyphicon glyphicon-tower"></i> GUESTGAME</a>
+            <a class="navbar-brand" href="{{ URL::to('/')}}"><i class="glyphicon glyphicon-tower"></i> eGamio</a>
         </div>
         <dl class="footer-nav">
             <dt class="nav-title">PORTFOLIO</dt>

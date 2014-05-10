@@ -1,7 +1,7 @@
 /*
 Syntax error: Invalid CSS after "...          true ": expected selector or at-rule, was "!global;"
-        on line 8 of public/css/vendor/bootflat/scss/bootflat/_global.scss
-        from line 6 of public/css/./vendor/bootflat/scss/bootflat.scss
+        on line 8 of vendor/bootflat/scss/bootflat/_global.scss
+        from line 6 of ./vendor/bootflat/scss/bootflat.scss
 
 3: $modules:                     () !default;
 4: 
@@ -16,8 +16,8 @@ Syntax error: Invalid CSS after "...          true ": expected selector or at-ru
 13: $white:                       #FFF !default;
 
 Backtrace:
-public/css/vendor/bootflat/scss/bootflat/_global.scss:8
-public/css/./vendor/bootflat/scss/bootflat.scss:6
+vendor/bootflat/scss/bootflat/_global.scss:8
+./vendor/bootflat/scss/bootflat.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1147:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/scss/parser.rb:28:in `parse'
@@ -44,17 +44,16 @@ public/css/./vendor/bootflat/scss/bootflat.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:235:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin.rb:107:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/exec.rb:463:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/exec.rb:326:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapter.rb:198:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/darwin.rb:38:in `block in start'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...          true \": expected selector or at-rule, was \"!global;\"\A         on line 8 of public/css/vendor/bootflat/scss/bootflat/_global.scss\A         from line 6 of public/css/./vendor/bootflat/scss/bootflat.scss\A \A 3: $modules:                     () !default;\A 4: \A 5: $experimental:                true !default;\A 6: \A 7: // prefix elements\A 8: $prefix-webkit:               true !global;\A 9: $prefix-moz:                  true !global;\A 10: $prefix-spec:                 true !global;\A 11: \A 12: // color elements\A 13: $white:                       #FFF !default;"; }
+  content: "Syntax error: Invalid CSS after \"...          true \": expected selector or at-rule, was \"!global;\"\A         on line 8 of vendor/bootflat/scss/bootflat/_global.scss\A         from line 6 of ./vendor/bootflat/scss/bootflat.scss\A \A 3: $modules:                     () !default;\A 4: \A 5: $experimental:                true !default;\A 6: \A 7: // prefix elements\A 8: $prefix-webkit:               true !global;\A 9: $prefix-moz:                  true !global;\A 10: $prefix-spec:                 true !global;\A 11: \A 12: // color elements\A 13: $white:                       #FFF !default;"; }
