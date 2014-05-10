@@ -34,6 +34,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav nav-pills">
                         <li class="">{{ link_to_route('event.create','New event',null,array('class'=>'')) }}</li>
+                        <li class="">{{ link_to_route('user.profile','Dashboard',null,array('class'=>'')) }}</li>
                         @if(Auth::check()) 
                         <li class=""><a href="{{ route('notification.index') }}">Notifications <span class="badge badge-warning">{{ Auth::user()->unreadNotificationsQty() }}</span></a></li>
                         @endif 

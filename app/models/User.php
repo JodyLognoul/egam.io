@@ -5,7 +5,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-    protected $guarded = array('id', 'password');
+	protected $guarded = array('id', 'password');
 
 	/**
 	 * The database table used by the model.
@@ -24,16 +24,32 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function unreadNotificationsQty(){
 		$qty = DB::table('notifications')
-					->where('user_id',$this->id)
-					->where('seen',false)
-					->count();
+		->where('user_id',$this->id)
+		->where('seen',false)
+		->count();
 		return $qty!=0 ? $qty : '';
 	}
 
-    public function events()
-    {
-        return $this->belongsToMany('Event');
-    }
+
+	/**
+	 * Get events I'm the host
+	 *
+	 * @return array
+	 */
+	public function eventsHost()
+	{
+		return $this->belongsToMany('Event')->where('role','like','host');
+	}
+
+	/**
+	 * Get events I'm the guest
+	 *
+	 * @return array
+	 */
+	public function eventsGuest()
+	{
+		return $this->belongsToMany('Event')->where('role','like','guest');
+	}
 
 
 	/**

@@ -16,6 +16,7 @@
 	</div>
 	<div class="panel-body row">
 		<div class="col-md-4"><!-- Col 1 -->
+			<h4><i class="glyphicon glyphicon-info-sign"></i> <span class="pull-right">My informations</span></h4>
 			<!-- Surname -->
 			<div class="form-group">
 				{{ Form::label('surname', 'Surname',array('class' => 'col-sm-3 control-label')) }}
@@ -58,9 +59,9 @@
 			</div>			
 		</div>
 		<div class="col-md-4"><!-- Col 2 -->
-			<h4><i class="glyphicon glyphicon-tasks"></i> Events I'm the host <i class="pull-right glyphicon glyphicon-star"></i></h4>
+			<h4><i class="glyphicon glyphicon-star"></i><span class="pull-right">Events I'm the host</span></h4>
 			<div class="myevents panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
-				@foreach (Auth::user()->events as $i => $event)
+				@foreach (Auth::user()->eventsHost as $i => $event)
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -69,7 +70,7 @@
 							</a>
 						</h4>
 					</div>
-					<div id="collapse{{ $event->id }}" class="panel-collapse collapse {{ $i == 0?'in':''}}">
+					<div id="collapse{{ $event->id }}" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p><i class="glyphicon glyphicon-home"></i> {{ $event->host()->username }}</p>
 							<p><i class="glyphicon glyphicon-globe"></i> {{ $event->address->full}}</p>
@@ -77,7 +78,7 @@
 							<p><i class="glyphicon glyphicon-time"></i> {{ $event->event_time }}</p>
 							<div class="row">
 								<div class="myevents-actions col-md-12">
-									<a href="" class="gg-tooltip btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Open"><i class="glyphicon glyphicon-eye-open"></i></a>	
+									<a href="{{ URL::to('event', array('id' => $event->id )) }}" class="gg-tooltip btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Open"><i class="glyphicon glyphicon-eye-open"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-info" data-toggle="tooltip" data-original-title="Edit"><i class="glyphicon glyphicon-edit"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-warning" data-toggle="tooltip" data-original-title="Share"><i class="glyphicon glyphicon-share"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Cancel"><i class="glyphicon glyphicon-remove-circle"></i></a>	
@@ -88,7 +89,36 @@
 				</div>
 				@endforeach
 			</div>
-			<h4><i class="glyphicon glyphicon-tasks"></i> Events I'm the guest <i class="glyphicon glyphicon-star-empty pull-right"></i></h4>
+			<h4><i class="glyphicon glyphicon-star-empty"></i><span class="pull-right">Events I'm the guest</span></h4>
+			<div class="myevents panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
+				@foreach (Auth::user()->eventsGuest as $i => $event)
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion2" class="list-group-item-info" href="#collapse{{ $event->id }}">
+								{{ $event->title }}
+							</a>
+						</h4>
+					</div>
+					<div id="collapse{{ $event->id }}" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p><i class="glyphicon glyphicon-home"></i> {{ $event->host()->username }}</p>
+							<p><i class="glyphicon glyphicon-globe"></i> {{ $event->address->full}}</p>
+							<p><i class="glyphicon glyphicon-calendar"></i> {{ $event->event_date }}</p>
+							<p><i class="glyphicon glyphicon-time"></i> {{ $event->event_time }}</p>
+							<div class="row">
+								<div class="myevents-actions col-md-12">
+									<a href="{{ URL::to('event', array('id' => $event->id )) }}" class="gg-tooltip btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Open"><i class="glyphicon glyphicon-eye-open"></i></a>	
+									<a href="" class="gg-tooltip btn btn-sm btn-info" data-toggle="tooltip" data-original-title="Edit"><i class="glyphicon glyphicon-edit"></i></a>	
+									<a href="" class="gg-tooltip btn btn-sm btn-warning" data-toggle="tooltip" data-original-title="Share"><i class="glyphicon glyphicon-share"></i></a>	
+									<a href="{{ URL::route('event.remove.user', array('id' => $event->id, 'uid' => Auth::user()->id )) }}" class="gg-tooltip btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Leave"><i class="glyphicon glyphicon-log-out"></i></a>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endforeach
+			</div>
 		</div>
 		<div class="col-md-4"><!-- Col 3 -->
 

@@ -7,6 +7,17 @@ class EventController extends \BaseController {
 	 *
 	 * @return Response
 	 */
+	public function landing()
+	{
+		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
+		return View::make('default/landing');
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
 	public function index()
 	{
 		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
@@ -162,6 +173,25 @@ class EventController extends \BaseController {
 		}
 
 		return Redirect::route('event.show',array('event' => $event_id))->with('message', '<span class="glyphicon glyphicon-ok"></span>  You successfully joined the event!');
+	}
+	/**
+	 * Remove an user from an event
+	 *
+	 * @param  int  $id, int $uid
+	 * @return Response
+	 */
+	public function removeUser($event_id, $uid)
+	{
+		$event = Event::find( $event_id );
+
+		if ($event->isHost(Auth::user()->id) ) {
+			return Redirect::route('event.show',array('event' => $event_id))->with('error', 'You are already in this event!');
+		}else{
+			$event->users()->detach(Auth::user()->id);
+			$event->save();
+		}
+		// return Redirect::route('event.show',array('event' => $event_id))->with('message', '<span class="glyphicon glyphicon-ok"></span>  You have left this event!');
+		return Redirect::back()->with('message', '<span class="glyphicon glyphicon-ok"></span>  You have left this event!');
 	}
 
 }

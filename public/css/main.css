@@ -2,8 +2,10 @@ html {
   overflow-y: scroll; }
 
 body {
-  background-color: #eeeeee;
-  padding-top: 70px; }
+  padding-top: 70px;
+  background: url(../images/A_Game_Of_Thrones_board_game_detail.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.95; }
 
 .form-signin {
   max-width: 440px; }
@@ -141,7 +143,12 @@ body {
 .event-show p,
 .event-show a,
 .event-show label {
-  font-size: 13px;
+  font-size: 13px; }
+.profile h3, .profile p, .profile a, .profile label,
+.event-show h3,
+.event-show p,
+.event-show a,
+.event-show label {
   font-weight: 200; }
 .profile .col-md-4:nth-child(2),
 .event-show .col-md-4:nth-child(2) {
@@ -176,3 +183,6 @@ body {
 
 .myevents-actions {
   padding-top: 10px; }
+
+.landing {
+  height: 800px; }
