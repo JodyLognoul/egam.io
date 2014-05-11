@@ -13,6 +13,9 @@ body {
   opacity: 0.95;
   font-weight: 200; }
 
+.dark-green {
+  color: #8cc152; }
+
 .container {
   min-height: 100%; }
 
