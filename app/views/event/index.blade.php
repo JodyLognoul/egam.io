@@ -5,7 +5,7 @@
 <div class="event-index">
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">Events Index</h3>
+			<h3 class="panel-title"><i class="glyphicon glyphicon-list pull-right"></i> Events</h3>
 		</div>
 		<div class="panel-body">
 			<div class="row filter-bar">

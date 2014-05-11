@@ -11,12 +11,12 @@
 		<div class="panel">
 			<div class="panel-heading">
 				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" class="collapsed">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-login" class="collapsed">
 						Sign in
 					</a>
 				</h4>
 			</div>
-			<div id="collapseFour" class="panel-collapse collapse in" style="height: auto;">
+			<div id="collapse-login" class="panel-collapse collapse in" style="height: auto;">
 				<div class="panel-body">
 					{{ Form::open(array('route' => 'user.login','class' => '', 'role' => 'form') ) }}
 					<div class="form-group">
@@ -33,12 +33,12 @@
 		<div class="panel">
 			<div class="panel-heading">
 				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFive" class="">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-register" class="btn-register">
 						Register
 					</a>
 				</h4>
 			</div>
-			<div id="collapseFive" class="panel-collapse collapse" style="height: 0;">
+			<div id="collapse-register" class="panel-collapse collapse" style="height: 0;">
 				<div class="panel-body">
 					{{ Form::open(array('route' => 'user.store','class' => '', 'role' => 'form')) }}
 						<div class="form-group">
@@ -60,5 +60,16 @@
 		</div>
 	</div>
 </div>
+@stop
+
+
+@section('scripts')
+<script>
+// jQuery to enable register
+var url = document.location.toString();
+if (url.match('#') && url.split('#')[1] === 'register') {
+	$('.btn-register').trigger('click');
+} 
+</script>
 @stop
 

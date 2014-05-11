@@ -4,7 +4,7 @@
 <div class="event-show">
 	<div class="panel panel-success"><!-- Informations -->
 		<div class="panel-heading">
-			<h3 class="panel-title">Event Detail - <i>{{ $event->title}}</i>{{ link_to_route('event.index','Back',null, array('class' => 'pull-right')) }}</h3>
+			<h3 class="panel-title">Event Detail - <i>{{ $event->title}}</i><i class="glyphicon glyphicon-eye-open pull-right"></i></h3>
 		</div>
 		<div class="panel-body row">
 			<div class="col-md-4"><!-- Col 1 -->
@@ -40,7 +40,7 @@
 
 		</div>
 		<div class="panel-footer-ind"><!-- Footer -->
-				{{ link_to_route('event.index','Back to the list',null, array('class' => 'btn btn-sm btn-success')) }}
+				<a href="{{ URL::previous() }}" class="btn btn-sm btn-success">Back</a>
 				@if( Auth::check() && !$event->takePart(Auth::user()->id) )
 				{{ link_to_route('event.join','Join the party',array('id' => $event->id), array('class' => 'btn btn-sm btn-warning')) }}
 				@endif

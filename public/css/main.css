@@ -48,6 +48,10 @@ body {
 .date-n-host {
   margin-top: 5px; }
 
+.event-new .panel:first-child {
+  border-radius: 0;
+  border-top: 1px solid #e6e9ed; }
+
 .event-index .panel-body {
   background-color: #f1f2f6; }
 .event-index .elem h3 {
@@ -65,11 +69,6 @@ body {
   background-color: #333333; }
   .footer-custom a {
     color: #8c8c8c; }
-
-.event-new h3 {
-  font-size: 24px;
-  margin-top: 0px;
-  font-weight: 300; }
 
 .bootstrap-datetimepicker-widget {
   background-color: inherit; }
@@ -159,3 +158,13 @@ body {
 .panel-title {
   font-size: 13px;
   font-weight: 200; }
+
+.notification-index li {
+  font-weight: 200;
+  font-size: 13px; }
+.notification-index h4 {
+  font-size: 13px; }
+.notification-index .list-group-item {
+  color: #434a54; }
+  .notification-index .list-group-item i {
+    font-size: 18px; }

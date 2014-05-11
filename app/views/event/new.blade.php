@@ -4,8 +4,14 @@
 <div class="event-new">
 	<!-- start -->
 	{{ Form::open(array('route' => 'event.store','class' => 'form-horizontal', 'role' => 'form')) }}
-
-	<div class="panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h3 class="panel-title">New Event<i class="glyphicon glyphicon-plus pull-right"></i></h3>
+		</div>
+		<div class="panel-body">
+			Panel content
+		</div>
+		<div class="panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
 		<div class="panel">
 			<div class="panel-heading">
 				<h4 class="panel-title">
@@ -172,6 +178,8 @@
 			</div>
 		</div>
 	</div>
+	</div>
+	
 	{{ Form::close() }}	
 
 	<!-- end -->

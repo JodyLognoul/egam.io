@@ -53,7 +53,7 @@ class UserController extends \BaseController {
 		if ($validation->fails())
 		{			
 			Input::flashExcept('password');
-			return Redirect::route('user.create')->withErrors($validation);
+			return Redirect::to(URL::route('landing').'#register')->withErrors($validation);
 		}
 
 		$user = new User;		 

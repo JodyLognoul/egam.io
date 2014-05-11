@@ -1,32 +1,40 @@
 @extends('layouts/master')
 
 @section('content')
-<h1>Notifications Index</h1>
-<div class="table-responsive">
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Message</th>
-				<th>Link</th>
-				<th class="text-center">Mark as view</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach ($notifications as $notification)
-			
-			<tr class="{{ $notification->seen?'':'success' }}">
-				<td>{{ $notification->message }}</td>
-				<td><span class="glyphicon glyphicon-calendar"></span> {{ link_to_route('event.show',$notification->event->name , array('event' => $notification->event_id ), null) }}</td>
-				<td class="text-center">
-					@if( ! $notification->seen)
-					<a href="{{ Route('notification.seen',array('id' => $notification->id )) }}"><span class="glyphicon glyphicon-eye-open"></span></a>
-					@endif
-				</td>
-			</tr>
-			@endforeach
-			
-		</tbody>
-	</table>
+<div class="notification-index">
+	
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">My Notifications <i class="glyphicon glyphicon-exclamation-sign pull-right"></i></h3>
+		</div>
+		<div class="panel-body">
+			<ul class="list-group">
+				<div class="row">
+					<h4 class="col-md-5">Message</h4>
+					<h4 class="col-md-5">Event</h4>
+					<h4 class="col-md-2 text-center">Set as seen</h4>
+				</div>
+				@foreach ($notifications as $notification)
+				<li class="list-group-item {{ $notification->seen?'':'list-group-item-warning' }}">
+					<div class="row">
+						<div class="col-md-5">
+							{{ $notification->message }}
+						</div>
+						<div class="col-md-5">
+							<a href="{{ URL::route('event.show',array('event' => $notification->event->id )) }}">{{ $notification->event->title }}</a>
+						</div>
+						<div class="col-md-2 text-center">
+							@if( ! $notification->seen)
+							<a href="{{ Route('notification.seen',array('id' => $notification->id )) }}"><i class="glyphicon glyphicon-eye-open"></i></a>
+							@endif
+						</div>
+					</div>
+				</li>
+				@endforeach
+			</ul>
+		</div>
+
+	</div>
 </div>
 
 @stop
