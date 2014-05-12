@@ -27,7 +27,6 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{ URL::route('homepage')}}">e<span class="dark-green">G</span>amio</a>
                 </div>

@@ -77,11 +77,7 @@
 								<div class="address-result"></div>
 								<script class="address-success-script" type="text/template">
 									<span class="help-block">Perfect! The address will appear like that: </span>
-									<p><%= route.value %></p>
-									<p><%= street_number.value %></p>
-									<p><%= postal_code.value %></p>
-									<p><%= locality.value %></p>
-									<p><%= country.value %></p>
+									<p><%= route.value %> <%= street_number.value %>, <%= postal_code.value %> <%= locality.value %> <%= country.value %></p>
 								</script>
 								<script class="address-errors-script" type="text/template">
 									<span class="help-block">Hummm this address is not precise enought :( Theses fields are missing :</span>
