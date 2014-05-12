@@ -1,5 +1,9 @@
 @extends('layouts/master')
 
+@section('styles')
+    {{ HTML::style("css/addresspicker.css") }}
+@stop
+
 @section('content')
 <div class="event-new">
 	<!-- start -->
@@ -12,177 +16,254 @@
 			Panel content
 		</div>
 		<div class="panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapsetitle" class="collapsed">
-						<i class="glyphicon glyphicon-pencil"></i> Title and description
-						<span class="badge pull-right">1</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapsetitle" class="panel-collapse collapse in" style="height: auto;">
-				<div class="panel-body">
-					<!-- Title -->
-					<div class="form-group">
-						{{ Form::label('title', 'title', array('class' => 'col-sm-2 control-label')) }}
-						<div class="col-sm-10">
-							{{ Form::text('title', Input::old('title'), array('class' => 'form-control','placeholder' => 'My beautiful party ...','autofocus' => "")) }}
-							<span class="text-danger">{{ $errors->first('title') }}</span>
-						</div>
-					</div>
-					
-					<!-- Description -->
-					<div class="form-group">
-						{{ Form::label('description', 'Description', array('class' => 'col-sm-2 control-label')) }}
-						<div class="col-sm-10">
-							{{ Form::textarea('description', Input::old('Description'), array('class' => 'form-control','placeholder' => 'Join me for a nice moment ....','autofocus' => "",'rows' => '3')) }}
-							<span class="text-danger">{{ $errors->first('description') }}</span>
-						</div>
-					</div>
-
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseAddress" class="btn btn-warning pull-right btn-sm">
-						Next <i class="glyphicon glyphicon-arrow-down"></i>
-					</a>
+			<div class="panel"><!-- collapse-title -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-title" class="collapse-link-title collapsed">
+							<i class="glyphicon glyphicon-pencil"></i> Title and description
+							<span class="badge pull-right">1</span>
+						</a>
+					</h4>
 				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseAddress" class="collapsed">
-						<i class="glyphicon glyphicon-map-marker"></i> Address
-						<span class="badge pull-right">2</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseAddress" class="panel-collapse collapse" style="height: auto;">
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-xs-12 col-md-6">
-							<!-- Address -->
-							{{ Form::textarea('address', Input::old('address'), array('class' => 'form-control','placeholder' => '42, rue sur la fontain 4000 Liège Belgique','autofocus' => "",'rows' => '6')) }}
-							<span class="text-danger">{{ $errors->first('Address') }}</span>
+				<div id="collapse-title" class="panel-collapse collapse in" style="height: auto;">
+					<div class="panel-body">
+						<!-- Title -->
+						<div class="form-group">
+							{{ Form::label('title', 'title', array('class' => 'col-sm-2 control-label')) }}
+							<div class="col-sm-10">
+								{{ Form::text('title', Input::old('title'), array('class' => 'form-control','placeholder' => 'My beautiful party ...','autofocus' => "")) }}
+								<span class="text-danger">{{ $errors->first('title') }}</span>
+							</div>
 						</div>
-						<div class="col-xs-12 col-md-6">
-							<img data-src="holder.js/140x140" class="img-thumbnail" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
-						</div>
-					</div>
 
-					<!-- Next -->
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseDate" class="btn btn-warning pull-right btn-sm">
-						Next <i class="glyphicon glyphicon-arrow-down"></i>
-					</a>
-
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseDate" class="">
-						<i class="glyphicon glyphicon-calendar"></i> Date and time
-						<span class="badge pull-right">3</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseDate" class="panel-collapse collapse" style="height: auto;">
-				<div class="panel-body">
-					<!-- Event Date -->
-					<div class="form-group">
-						{{ Form::label('event_date', 'Choose a date and the time', array('class' => 'col-sm-3 control-label')) }}
-						<div class="col-sm-3">
-							{{ Form::text('event_date', Input::old('event_date'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
-							<span class="text-danger">{{ $errors->first('event_date') }}</span>
+						<!-- Description -->
+						<div class="form-group">
+							{{ Form::label('description', 'Description', array('class' => 'col-sm-2 control-label')) }}
+							<div class="col-sm-10">
+								{{ Form::textarea('description', Input::old('Description'), array('class' => 'form-control','placeholder' => 'Join me for a nice moment ....','autofocus' => "",'rows' => '3')) }}
+								<span class="text-danger">{{ $errors->first('description') }}</span>
+							</div>
 						</div>
-					</div>
 
-					<!-- Next -->
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseSocial" class="btn btn-warning pull-right btn-sm">
-						Next <i class="glyphicon glyphicon-arrow-down"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseSocial" class="">
-						<i class="glyphicon glyphicon-user"></i> Social 
-						<span class="badge pull-right">4</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseSocial" class="panel-collapse collapse" style="height: auto;">
-				<div class="panel-body">
-					<!-- Max places -->
-					<div class="row">
-						<div class="col-xs-1">
-							{{ Form::selectRange('max_place', 1, 27, null, array('class' => 'form-control','autofocus' => "")) }}
-							<span class="text-danger">{{ $errors->first('max_place') }}</span>
-
-						</div>
-					</div>	
-					<!-- Next -->
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapsePrivacy" class="btn btn-warning pull-right btn-sm">
-						Next <i class="glyphicon glyphicon-arrow-down"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapsePrivacy" class="">
-						<i class="glyphicon glyphicon-eye-open"></i> Privacy
-						<span class="badge pull-right">5</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapsePrivacy" class="panel-collapse collapse" style="height: auto;">
-				<div class="panel-body">
-					<label class="checkbox-inline">
-						<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-					</label>
-					<!-- Next -->
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseEnd" class="btn btn-warning pull-right btn-sm">
-						Next <i class="glyphicon glyphicon-arrow-down"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseEnd" class="">
-						Finish 
-						<span class="badge badge-success pull-right">end</span>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseEnd" class="panel-collapse collapse in" style="height: auto;">
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-xs-12 text-center">
-							{{ link_to_route('event.index','Back to the list', null, array('class' => 'btn btn-default')) }}
-							{{ Form::submit('Create', array('class' => 'btn btn-success' )) }}
-						</div>
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-address" class="btn btn-warning pull-right btn-sm btn-next">
+							Next <i class="glyphicon glyphicon-arrow-down"></i>
+						</a>
 					</div>
 				</div>
 			</div>
+			<div class="panel"><!-- collapse-address -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-address" class="collapse-link-address collapsed">
+							<i class="glyphicon glyphicon-map-marker"></i> Address
+							<span class="badge pull-right">2</span>
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-address" class="panel-collapse collapse" style="height: auto;">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<!-- Name at the address -->
+								<span class="help-block">The name at the address</span>
+								{{ Form::text('Name', Auth::user()->name.' '.Auth::user()->surname, array('class' => 'form-control input-address-name','placeholder' => 'The name at this address','autofocus' => "")) }}
+								
+								<!-- Address -->
+								<span class="help-block">The address where the event takes place</span>
+								{{ Form::text('address', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Ex: 42, rue sur la fontain 4000 Liège Belgique','autofocus' => "")) }}
+								<span class="text-danger">{{ $errors->first('Address') }}</span>
+												
+								<!-- Address Result -->
+								<div class="address-result"></div>
+								<script class="address-success-script" type="text/template">
+									<span class="help-block">Perfect! The address will appear like that: </span>
+									<p><%= route.value %></p>
+									<p><%= street_number.value %></p>
+									<p><%= postal_code.value %></p>
+									<p><%= locality.value %></p>
+									<p><%= country.value %></p>
+								</script>
+								<script class="address-errors-script" type="text/template">
+									<span class="help-block">Hummm this address is not precise enought :( Theses fields are missing :</span>
+									<ul class="address-errors text-danger">
+										<% _.each(errors, function(error) { %> 
+											<li><%= error.msg %></li>
+										<% }); %>	
+									</ul>
+								</script>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<div class="map-dest"></div>
+							</div>
+						</div>
+
+						<!-- Next -->
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="btn btn-warning pull-right btn-sm btn-next">
+							Next <i class="glyphicon glyphicon-arrow-down"></i>
+						</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel"><!-- collapse-date -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="collapse-link-date">
+							<i class="glyphicon glyphicon-calendar"></i> Date and time
+							<span class="badge pull-right">3</span>
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-date" class="panel-collapse collapse" style="height: auto;">
+					<div class="panel-body">
+						<!-- Event Date -->
+						<div class="form-group">
+							{{ Form::label('event_date', 'Choose a date and the time', array('class' => 'col-sm-3 control-label')) }}
+							<div class="col-sm-3">
+								{{ Form::text('event_date', Input::old('event_date'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
+								<span class="text-danger">{{ $errors->first('event_date') }}</span>
+							</div>
+						</div>
+
+						<!-- Next -->
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-social" class="btn btn-warning pull-right btn-sm btn-next">
+							Next <i class="glyphicon glyphicon-arrow-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="panel"><!-- collapse-social -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-social" class="collapse-link-social">
+							<i class="glyphicon glyphicon-user"></i> Social 
+							<span class="badge pull-right">4</span>
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-social" class="panel-collapse collapse" style="height: auto;">
+					<div class="panel-body">
+						<!-- Max places -->
+						<div class="row">
+							<div class="col-xs-1">
+								{{ Form::selectRange('max_place', 1, 27, null, array('class' => 'form-control','autofocus' => "")) }}
+								<span class="text-danger">{{ $errors->first('max_place') }}</span>
+
+							</div>
+						</div>	
+						<!-- Next -->
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-privacy" class="btn btn-warning pull-right btn-sm btn-next">
+							Next <i class="glyphicon glyphicon-arrow-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="panel"><!-- collapse-privacy -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-privacy" class="collapse-link-privacy">
+							<i class="glyphicon glyphicon-eye-open"></i> Privacy
+							<span class="badge pull-right">5</span>
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-privacy" class="panel-collapse collapse" style="height: auto;">
+					<div class="panel-body">
+						<label class="checkbox-inline">
+							<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+						</label>
+						<!-- Next -->
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-end" class="btn btn-warning pull-right btn-sm btn-next">
+							Next <i class="glyphicon glyphicon-arrow-down"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="panel"><!-- collapse-end -->
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-end" class="collapse-link-end">
+							<i class="glyphicon glyphicon-ok"></i> Finish 
+							<span class="badge badge-success pull-right">end</span>
+						</a>
+					</h4>
+				</div>
+				<div id="collapse-end" class="panel-collapse collapse in" style="height: auto;">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								{{ link_to_route('event.index','Back to the list', null, array('class' => 'btn btn-default')) }}
+								{{ Form::submit('Create', array('class' => 'btn btn-success' )) }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 	</div>
 	
 	{{ Form::close() }}	
 
 	<!-- end -->
 </div>
+@stop
+
+@section('scripts')
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script>
+{{ HTML::script("js/vendor/typeahead.js/dist/typeahead.bundle.js") }}
+{{ HTML::script("js/vendor/addresspicker/typeahead-addresspicker.js") }}
+{{ HTML::script("js/vendor/underscore-amd/underscore-min.js") }}
+
+<script>
+	// instantiate the addressPicker suggestion engine (based on bloodhound)
+	var addressPicker = new AddressPicker({map: {id: '.map-dest'}});
+
+	// instantiate the typeahead UI
+	$('.input-address').typeahead(null, {
+	  displayKey: 'description',
+	  source: addressPicker.ttAdapter()
+	});
+
+	// Bind some event to update map on autocomplete selection
+	$('.input-address').bind("typeahead:selected", addressPicker.updateMap);
+	$('.input-address').bind("typeahead:cursorchanged", addressPicker.updateMap);
+
+	// 
+	$(addressPicker).on('addresspicker:selected', function (event, result) {
+		var addr = {
+			route 			: { value:result.nameForType('route'), msg:'The street name'},
+			street_number	: { value:result.nameForType('street_number'), msg:'The street number'},
+			postal_code		: { value:result.nameForType('postal_code'), msg:'The postal code'},
+			locality		: { value:result.nameForType('locality'), msg:'The Locality'},
+			country			: { value:result.nameForType('country'), msg:'The Country'}
+		};
+		var addr_err = _.filter(addr, function(addr){
+			return  ! addr.value;
+		});
+
+		if (addr_err.length ===  0) {
+			$('.address-result').html(_.template( $('.address-success-script').html(), addr ));
+		} else {
+			$('.address-result').html(_.template( $('.address-errors-script').html(), {errors : addr_err} ));
+		}
+
+	});
+</script>
+
+<script>
+// jQuery to enable register
+var url = document.location.toString();
+if (url.match('#')) {
+	$('.collapse-link-' + url.split('#')[1]).trigger('click');
+} 
+</script>
+
 @stop
 

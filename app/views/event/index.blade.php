@@ -35,7 +35,7 @@
 				</div>
 				<div class="col-md-9">
 					<div class="input-group form-search">
-						<input type="text" class="form-control search-query">
+						<input type="text" class="form-control search-query" placeholder="Search by name, address or host name!">
 						<span class="input-group-btn">
 							<button type="submit" class="btn btn-primary" data-type="last">Search</button>
 						</span>

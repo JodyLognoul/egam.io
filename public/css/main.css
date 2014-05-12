@@ -1,10 +1,8 @@
+body, html {
+  height: 100%; }
+
 html {
   overflow-y: scroll; }
-
-body, html {
-  height: 100%;
-  padding: 0;
-  margin: 0; }
 
 body {
   padding-top: 70px;
@@ -51,6 +49,10 @@ body {
 .event-new .panel:first-child {
   border-radius: 0;
   border-top: 1px solid #e6e9ed; }
+.event-new .twitter-typeahead {
+  width: 100%; }
+.event-new .btn-next {
+  margin-top: 10px; }
 
 .event-index .panel-body {
   background-color: #f1f2f6; }
@@ -157,7 +159,7 @@ body {
 
 .panel-title {
   font-size: 13px;
-  font-weight: 200; }
+  font-weight: 400; }
 
 .notification-index li {
   font-weight: 200;
@@ -165,6 +167,30 @@ body {
 .notification-index h4 {
   font-size: 13px; }
 .notification-index .list-group-item {
+  padding: 5px 15px;
   color: #434a54; }
   .notification-index .list-group-item i {
     font-size: 18px; }
+
+.map-dest {
+  height: 300px; }
+
+.address-info {
+  margin-top: 10px; }
+
+.help-block {
+  margin-left: 13px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 200;
+  color: #656d78; }
+
+.input-address-name {
+  margin-bottom: 20px; }
+
+.address-result {
+  margin-top: 20px; }
+  .address-result p {
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0 10px; }
