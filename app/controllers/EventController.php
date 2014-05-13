@@ -51,6 +51,7 @@ class EventController extends \BaseController {
 			'title' 			=> 'required',
 			'description' 		=> 'required',
 			'event_date'		=> 'required',
+			'event_time'		=> 'required',
 			'max_place' 		=> 'required',
 			'address'			=> 'required'
 		);
@@ -70,6 +71,7 @@ class EventController extends \BaseController {
 		$event->current_place = 1;
 		$event->max_place = $inputs['max_place'];
 		$event->event_date = new DateTime($inputs['event_date']);
+		$event->event_time = new DateTime($inputs['event_time']);
 		// 'D d M Y H:i'
 
 
