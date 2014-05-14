@@ -12,6 +12,7 @@
 		"moment":			null,
 		"bootstrap":		null,
 		"Bootflat":			null,
-		"typeahead.js":		null
+		"typeahead.js":		null,
+		"Hover":		null
 	}
 }

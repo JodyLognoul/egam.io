@@ -13,6 +13,7 @@
     {{ HTML::style("js/vendor/bootstrap/dist/css/bootstrap.min.css") }}    
     {{ HTML::style("js/vendor/Bootflat/bootflat/css/bootflat.css") }}
     {{ HTML::style("css/vendor/datetimepicker/jquery.datetimepicker.css") }}
+    {{ HTML::style("js/vendor/Hover/css/hover-min.css") }}
     {{ HTML::style("css/main.css") }}
 </head>
 <body class="body">

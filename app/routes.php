@@ -25,6 +25,12 @@ Route::controller(	'api/event', 'EventApiController');
 
 
 // User
+// Facebook
+Route::get(		'login-with-facebook', 		array('as' => 'user.login.with.facebook', 	'uses' => 'UserController@loginWithFacebook'));
+
+// Google
+Route::get(		'login-with-google', 		array('as' => 'user.login.with.google', 	'uses' => 'UserController@loginWithGoogle'));
+ 
 Route::resource(	'user', 'UserController');
 Route::get(			'login', 					array('as' => 'user.login.page', 			'uses' => 'UserController@loginPage'));
 Route::post(		'login', 					array('as' => 'user.login', 				'uses' => 'UserController@login'));

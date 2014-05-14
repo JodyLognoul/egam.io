@@ -4,8 +4,6 @@ class UserControllerTest extends TestCase {
 	// STORE()
 	public function testStoreFail()
 	{
-		$this->be( User::find(1) );
-
 		$response = $this->action('POST', 'UserController@store',array(
 			'email'    => '',
 			'username' => '12',
@@ -16,8 +14,6 @@ class UserControllerTest extends TestCase {
 	
 	public function testStoreFailByUniqueEmail()
 	{
-		$this->be( User::find(1) );
-
 		$response = $this->action('POST', 'UserController@store',array(
 			'email'    => 'lognoulj@gmail.com',
 			'username' => 'Narcotic88',
@@ -25,16 +21,18 @@ class UserControllerTest extends TestCase {
 		));
 		$this->assertRedirectedTo(URL::route('landing').'#register');
 	}
-	public function off_testStoreSuccess()
+	public function testStoreSuccess()
 	{
-		$this->be( User::find(1) );
-
 		$response = $this->action('POST', 'UserController@store',array(
-			'email'    => '',
-			'username' => '',
-			'password'  => ''
+			'email'    => 'phpunit@gmail.com',
+			'username' => 'phpunit',
+			'password'  => 'phpunit'
 		));
+		
+		User::where('username','phpunit')->delete();
+
 		$this->assertRedirectedToRoute('homepage');
+
 	}
 
 }
