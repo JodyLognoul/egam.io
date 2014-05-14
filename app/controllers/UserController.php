@@ -162,7 +162,7 @@ class UserController extends \BaseController {
 		$user->date_register = $date->format('Y-m-d H:i:s');
 		$user->email 	= $inputs['email'];
 		$user->username = $inputs['username'];
-		$user->password = Hash::make( $inputs['password'] );		
+		$user->password = Hash::make( $inputs['password'] );	
 
 		$user->save();
 

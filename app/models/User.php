@@ -21,6 +21,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
+	public function getImageAttribute(){
+		if(! $this->attributes['image'] ){
+			return 'http://www.gravatar.com/avatar/' . md5($this->attributes['image']) . '?s=32';
+		}
+		return $this->attributes['image']; 
+	}
 
 	public function unreadNotificationsQty(){
 		$qty = DB::table('notifications')

@@ -17,6 +17,7 @@
     {{ HTML::style("css/main.css") }}
 </head>
 <body class="body">
+
     <!-- TODO - browsehappy.com -->
     
     <!-- Content -->
@@ -42,9 +43,8 @@
                     </ul>
                     @if( Auth::check() )
                     
-                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><img src="{{Auth::user()->image}}" alt="..." class="img-profile"></li>
+                        <li><img src="{{ Auth::user()->image }}" alt="..." class="img-profile"></li>
                         <li class="dropdown nav-profile-username">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <b class="caret"></b></a>
                             <ul class="dropdown-menu">

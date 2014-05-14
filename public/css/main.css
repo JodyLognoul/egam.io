@@ -11,6 +11,9 @@ body {
   opacity: 0.95;
   font-weight: 200; }
 
+.navbar-fixed-top {
+  border-width: 0; }
+
 .dark-green {
   color: #8cc152; }
 
@@ -200,4 +203,4 @@ body {
 
 .img-profile {
   height: 32px;
-  margin-top: 10px; }
+  margin-top: 9px; }
