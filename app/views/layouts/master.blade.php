@@ -41,8 +41,11 @@
                         @endif 
                     </ul>
                     @if( Auth::check() )
+                    
+                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                        <li><img src="{{Auth::user()->image}}" alt="..." class="img-profile"></li>
+                        <li class="dropdown nav-profile-username">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>{{ link_to_route('user.profile', 'Profile') }}</li>

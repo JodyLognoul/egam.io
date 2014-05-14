@@ -32,7 +32,6 @@ class UserControllerTest extends TestCase {
 		User::where('username','phpunit')->delete();
 
 		$this->assertRedirectedToRoute('homepage');
-
 	}
 
 }

@@ -3,6 +3,7 @@
 class UserController extends \BaseController {
 
 	public function loginWithFacebook(){
+		
 		// get data from input
 		$code = Input::get( 'code' );
 
@@ -20,17 +21,32 @@ class UserController extends \BaseController {
         	// Send a request with it
 			$result = json_decode( $fb->request( '/me' ), true );
 
-			$message = 'Your unique facebook user id is: ' . $result['id'] . ' and your name is ' . $result['name'];
-			echo $message. "<br/>";
+			$user = DB::table('users')->where('email', $result['email'])->first();
+			
+			if( ! $user ){
+				// Create the user
+				$date = new DateTime();
+				$user = new User;		 
 
-        	//Var_dump
-        	//display whole array().
-			dd($result);
-
+				$user->date_register = $date->format('Y-m-d H:i:s');
+				$user->email 			= $result['email'];
+				$user->username 		= $result['name'];
+				$user->image 			= 'https://graph.facebook.com/'.$result['id'].'/picture?type=large';
+				$user->surname  		= $result['first_name'];
+				$user->name 			= $result['last_name'];
+				$user->gender 			= $result['gender'];
+				$user->social_uid 		= $result['id'];
+				$user->social_provider 	= 'facebook';
+				$user->confirmed 		= true;
+				$user->save(); 
+			}
+			// Connect the user
+			Auth::loginUsingId($user->id);
+			return Redirect::route('homepage');
 		}
     	// if not ask for permission first
 		else {
-        // get fb authorization
+        	// get fb authorization
 			$url = $fb->getAuthorizationUri();
 
         	// return to facebook login url
@@ -39,7 +55,53 @@ class UserController extends \BaseController {
 	}
 
 	public function loginWithGoogle(){
+	    // get data from input
+		$code = Input::get( 'code' );
 
+	    // get google service
+		$googleService = OAuth::consumer( 'Google' );
+
+	    // check if code is valid
+
+	    // if code is provided get user data and sign in
+		if ( !empty( $code ) ) {
+
+	        // This was a callback request from google, get the token
+			$token = $googleService->requestAccessToken( $code );
+
+	        // Send a request with it
+			$result = json_decode( $googleService->request( 'https://www.googleapis.com/oauth2/v1/userinfo' ), true );
+			$user = DB::table('users')->where('email', $result['email'])->first();
+
+			if( ! $user ){
+				// Create the user
+				$date = new DateTime();
+				$user = new User;		 
+
+				$user->date_register = $date->format('Y-m-d H:i:s');
+				$user->email 			= $result['email'];
+				$user->username 		= $result['name'];
+				$user->surname  		= $result['given_name'];
+				$user->name 			= $result['family_name'];
+				$user->gender 			= $result['gender'];
+				$user->image 			= $result['picture'];
+				$user->social_uid 		= $result['id'];
+				$user->social_provider 	= 'google';
+				$user->confirmed 		= true;
+				$user->save(); 
+			}
+			// Connect the user
+			Auth::loginUsingId($user->id);
+			return Redirect::route('homepage');
+		}
+    	// if not ask for permission first
+		else {
+        // get googleService authorization
+			$url = $googleService->getAuthorizationUri();
+
+        // return to facebook login url
+			return Redirect::to( (string)$url );
+		}
 	}
 
 	/**

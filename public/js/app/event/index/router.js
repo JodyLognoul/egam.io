@@ -10,6 +10,7 @@ define(['jquery', 'backbone','underscore','moment','collection','viewCollection'
 		},
 		routes: {
 			''					: 'defaultRoute',
+			'_=_'				: 'defaultRoute',
 			'sort/:dir/:by'		: 'sortRoute',
 			'filter/:by/:query'	: 'filterRoute',
 		},

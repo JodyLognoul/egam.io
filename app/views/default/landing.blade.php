@@ -20,7 +20,7 @@
 				<div class="panel-body">
 					<div class="social-media-buttons text-center">
 						<a href="{{ URL::route('user.login.with.facebook') }}" class="rotate"><img src="{{ URL::asset('images/facebook_circle_color.svg') }}" alt=""></a>
-						<a href="" class="rotate"><img src="{{ URL::asset('images/google_circle_color.svg') }}" alt=""></a>
+						<a href="{{ URL::route('user.login.with.google') }}" class="rotate"><img src="{{ URL::asset('images/google_circle_color.svg') }}" alt=""></a>
 					</div>				
 				</div>
 			</div>
