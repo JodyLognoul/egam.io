@@ -46,7 +46,7 @@ class EventController extends \BaseController {
 	public function store()
 	{
 		$inputs = Input::all();		
-
+		dd($inputs);
 		$rules = array(
 			'title' 			=> 'required',
 			'description' 		=> 'required',
@@ -77,7 +77,12 @@ class EventController extends \BaseController {
 
 		// Get address 
 		$address = new Address;		
-		$address->full = $inputs['address'];
+		$address->full     = $inputs['address'];
+		$address->str_name = $inputs['route'];
+		$address->str_no   = $inputs['street_number'];
+		$address->cp       = $inputs['postal_code'];
+		$address->city     = $inputs['locality'];
+		$address->country  = $inputs['country'];
 		$address->save();
 
 		// Link address -> event

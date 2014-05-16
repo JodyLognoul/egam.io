@@ -41,7 +41,9 @@ Route::get(			'profile/general', 			array('as' => 'user.profile.general', 		'use
 Route::get(			'profile/parties', 			array('as' => 'user.profile.parties', 		'uses' => 'UserController@profileParties', 'before' => 'auth'));
 Route::get(			'profile/notifications', 	array('as' => 'user.profile.notifications', 'uses' => 'UserController@profileNotifications', 'before' => 'auth'));
 Route::get(			'profile/security', 		array('as' => 'user.profile.security', 		'uses' => 'UserController@profileSecurity', 'before' => 'auth'));
-Route::post(		'picture', 					array('as' => 'user.picture.upload', 		'uses' => 'UserController@pictureUpload'));
+
+// Media
+Route::post(		'picture', 					array('as' => 'media.picture.upload', 		'uses' => 'MediaController@upload'));
 
 // Notification
 Route::resource(	'notification', 'NotificationController');

@@ -34,6 +34,10 @@ class ChoiceFormField extends FormField
      * @var array
      */
     private $options;
+    /**
+     * @var bool
+     */
+    private $validationDisabled = false;
 
     /**
      * Returns true if the field should be included in the submitted values.
@@ -206,7 +210,7 @@ class ChoiceFormField extends FormField
             throw new \LogicException(sprintf('A ChoiceFormField can only be created from an input or select tag (%s given).', $this->node->nodeName));
         }
 
-        if ('input' == $this->node->nodeName && 'checkbox' != strtolower($this->node->getAttribute('type')) && 'radio' != strtolower($this->node->getAttribute('type'))) {
+        if ('input' == $this->node->nodeName && 'checkbox' != $this->node->getAttribute('type') && 'radio' != $this->node->getAttribute('type')) {
             throw new \LogicException(sprintf('A ChoiceFormField can only be created from an input tag with a type of checkbox or radio (given type is %s).', $this->node->getAttribute('type')));
         }
 
@@ -215,7 +219,7 @@ class ChoiceFormField extends FormField
         $this->multiple = false;
 
         if ('input' == $this->node->nodeName) {
-            $this->type = strtolower($this->node->getAttribute('type'));
+            $this->type = $this->node->getAttribute('type');
             $optionValue = $this->buildOptionValue($this->node);
             $this->options[] = $optionValue;
 
@@ -280,6 +284,10 @@ class ChoiceFormField extends FormField
      */
     public function containsOption($optionValue, $options)
     {
+        if ($this->validationDisabled) {
+            return true;
+        }
+
         foreach ($options as $option) {
             if ($option['value'] == $optionValue) {
                 return true;
@@ -303,5 +311,17 @@ class ChoiceFormField extends FormField
         }
 
         return $values;
+    }
+
+    /**
+     * Disables the internal validation of the field.
+     *
+     * @return self
+     */
+    public function disableValidation()
+    {
+        $this->validationDisabled = true;
+
+        return $this;
     }
 }

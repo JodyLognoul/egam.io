@@ -17,7 +17,13 @@
 	<div class="panel-body row">
 		<div class="col-md-4"><!-- Col 1 -->
 			<h4><i class="glyphicon glyphicon-info-sign"></i> <span class="pull-right">My informations</span></h4>
-			<!-- Surname -->
+			<!-- Picture -->
+			<div class="form-group">
+				{{ Form::label('picture', 'Picture',array('class' => 'col-sm-3 control-label')) }}
+				<div class="col-sm-4">
+					<img src="{{ Auth::user()->image }}" class="img-rounded" height="100" alt="">
+				</div>
+			</div><!-- Surname -->
 			<div class="form-group">
 				{{ Form::label('surname', 'Surname',array('class' => 'col-sm-3 control-label')) }}
 				<div class="col-sm-9">

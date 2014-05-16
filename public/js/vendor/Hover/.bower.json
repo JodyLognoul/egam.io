@@ -24,11 +24,11 @@
     "test",
     "tests"
   ],
-  "_release": "e699c968a8",
+  "_release": "0cb2937b12",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "e699c968a805b488eadcf9fe296267f105723bfd"
+    "commit": "0cb2937b120e217a789c3402c3e4ca8f4ba8cdf9"
   },
   "_source": "git://github.com/IanLunn/Hover.git",
   "_target": "*",

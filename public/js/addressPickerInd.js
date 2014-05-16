@@ -26,6 +26,13 @@ $(addressPicker).on('addresspicker:selected', function (event, result) {
 
 	if (addr_err.length ===  0) {
 		$('.address-result').html(_.template( $('.address-success-script').html(), addr ));
+		$('.address-result')
+			.append('<input type="hidden" name="route" 			value="' + addr.route.value + '"/>')
+			.append('<input type="hidden" name="street_number" 	value="' + addr.street_number.value + '"/>')
+			.append('<input type="hidden" name="postal_code" 	value="' + addr.postal_code.value + '"/>')
+			.append('<input type="hidden" name="locality" 		value="' + addr.locality.value + '"/>')
+			.append('<input type="hidden" name="country" 		value="' + addr.country.value + '"/>')
+			;
 	} else {
 		$('.address-result').html(_.template( $('.address-errors-script').html(), {errors : addr_err} ));
 	}

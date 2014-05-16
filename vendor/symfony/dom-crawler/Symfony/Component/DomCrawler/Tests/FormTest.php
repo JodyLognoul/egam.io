@@ -343,6 +343,26 @@ class FormTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+    public function testDisableValidation()
+    {
+        $form = $this->createForm('<form>
+            <select name="foo[bar]">
+                <option value="bar">bar</option>
+            </select>
+            <select name="foo[baz]">
+                <option value="foo">foo</option>
+            </select>
+            <input type="submit" />
+        </form>');
+
+        $form->disableValidation();
+
+        $form['foo[bar]']->select('foo');
+        $form['foo[baz]']->select('bar');
+        $this->assertEquals('foo', $form['foo[bar]']->getValue(), '->disableValidation() disables validation of all ChoiceFormField.');
+        $this->assertEquals('bar', $form['foo[baz]']->getValue(), '->disableValidation() disables validation of all ChoiceFormField.');
+    }
+
     public function testOffsetUnset()
     {
         $form = $this->createForm('<form><input type="text" name="foo" value="foo" /><input type="submit" /></form>');
@@ -629,13 +649,6 @@ class FormTest extends \PHPUnit_Framework_TestCase
         $nodes = $dom->getElementsByTagName('form');
         $form = new Form($nodes->item(0), 'http://example.com');
         $this->assertSame($nodes->item(0), $form->getFormNode(), '->getFormNode() returns the form node associated with this form');
-    }
-
-    public function testTypeAttributeIsCaseInsensitive()
-    {
-        $form = $this->createForm('<form method="post"><input type="IMAGE" name="example" /></form>');
-        $this->assertTrue($form->has('example.x'), '->has() returns true if the image input was correctly turned into an x and a y fields');
-        $this->assertTrue($form->has('example.y'), '->has() returns true if the image input was correctly turned into an x and a y fields');
     }
 
     /**

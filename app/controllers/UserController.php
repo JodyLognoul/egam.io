@@ -105,16 +105,6 @@ class UserController extends \BaseController {
 	}
 
 	/**
-	 * REceive the pictures from ajax request
-	 *
-	 * @return null
-	 */
-	public function pictureUpload()
-	{
-		dd(Input::file('picture'));
-	}
-
-	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
