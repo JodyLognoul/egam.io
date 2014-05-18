@@ -1,6 +1,14 @@
 @extends('layouts/master')
 
+@section('styles')
+
+{{ HTML::style("js/vendor/lightbox/css/lightbox.css") }}
+
+@stop
+
+
 @section('content')
+
 <div class="event-show">
 	<div class="panel panel-success"><!-- Informations -->
 		<div class="panel-heading">
@@ -28,8 +36,26 @@
 				<p class="text-bordered">{{ $event->event_date }}</p>
 				<h4><i class="glyphicon glyphicon-time"></i> Time</h4>
 				<p class="text-bordered">{{ $event->event_time }}</p>
+				<!-- Pictures -->
 				<h4><i class="glyphicon glyphicon-picture"></i> Pictures</h4>
-				{{ HTML::image('images/got.jpg', $event->name, array('class' => 'img-responsive img-thumbnail')) }}
+				<div id="carousel-generic-event" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						@foreach ($event->pictures as $picture)
+						<li data-target="#carousel-generic-event" data-slide-to="{{ $picture->id }}" class="active"></li>
+						@endforeach
+					</ol>
+					<div class="carousel-inner">
+						@foreach ($event->pictures as $i => $picture)
+						<div class="item {{$i == 0?'active':''}}"><img src="{{ URL::asset('uploads') }}/{{ $picture->folder}}/{{ $picture->name }}/xs.jpeg" alt="@{{ title }}" class="img-responsive"></div>
+						@endforeach
+					</div>
+					<a class="left carousel-control" href="#carousel-generic-event" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-generic-event" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
 			</div>
 			<div class="col-md-4"><!-- Col 3 -->
 				<h4><i class="glyphicon glyphicon-globe"></i> Address</h4>
@@ -40,10 +66,10 @@
 
 		</div>
 		<div class="panel-footer-ind"><!-- Footer -->
-				<a href="{{ URL::previous() }}" class="btn btn-sm btn-success">Back</a>
-				@if( Auth::check() && !$event->takePart(Auth::user()->id) )
-				{{ link_to_route('event.join','Join the party',array('id' => $event->id), array('class' => 'btn btn-sm btn-warning')) }}
-				@endif
+			<a href="{{ URL::previous() }}" class="btn btn-sm btn-success">Back</a>
+			@if( Auth::check() && !$event->takePart(Auth::user()->id) )
+			{{ link_to_route('event.join','Join the party',array('id' => $event->id), array('class' => 'btn btn-sm btn-warning')) }}
+			@endif
 		</div>
 	</div>
 
@@ -51,5 +77,9 @@
 
 
 {{ $modalGuestsEvent }}
+@stop
+
+@section('scripts')
+{{ HTML::script("js/vendor/lightbox/js/lightbox.min.js") }}
 @stop
 

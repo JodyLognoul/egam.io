@@ -20,6 +20,7 @@ Route::resource(	'event', 'EventController');
 Route::get(			'join/{id}', 				array('as' => 'event.join',		 			'uses' => 'EventController@join'));
 Route::get(			'remove/{id}/{uid}', 		array('as' => 'event.remove.user',			'uses' => 'EventController@removeUser'));
 Route::get(			'map', 						array('as' => 'event.index.map',			'uses' => 'EventController@indexMap'));
+
 // -- API
 Route::controller(	'api/event', 'EventApiController');
 

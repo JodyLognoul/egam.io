@@ -19,7 +19,7 @@ define(['backbone','handlebars', 'underscore','moment'], function(Backbone, Hand
 		},
 
 		// Templates
-		template: _.template( $('.active-filters-script').html() ),
+		template: Handlebars.compile( $('.active-filters-script').html() ),
 
 		initialize: function(model, router, type, qty){
 			this.router = router;

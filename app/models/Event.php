@@ -5,6 +5,9 @@ class Event extends Eloquent{
     public function getEventTimeAttribute( $value ){
         return date("H:i", strtotime( $value ));
     }
+    public function pictures(){
+        return $this->hasMany('Picture');
+    }
 	public function address()
     {
         return $this->belongsTo('Address');

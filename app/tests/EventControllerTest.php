@@ -38,8 +38,9 @@ class EventControllerTest extends TestCase {
 			'description' 		=> 'PHPUnit Description',
 			'event_date'		=> '2014-05-11',
 			'event_time'		=> '02:15',
+			'uniqid'			=> 'event_5378880ed468c',
 			'max_place' 		=> '8',
-			'address'			=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
+			'address_full'		=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
 		$this->assertRedirectedToRoute('homepage');
 	}
 

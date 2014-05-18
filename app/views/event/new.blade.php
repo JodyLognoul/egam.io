@@ -85,6 +85,7 @@
 								<!-- Address Result -->
 								<div class="form-group">
 									<div class="address-result"></div>
+									<input type="hidden" name="address_full" value="42, rue sur la fontain 4000 Liège Belgique">
 								</div>
 								<script class="address-success-script" type="text/template">
 									<span class="help-block text-bordered">Perfect! The address will appear like that: </span>
@@ -118,7 +119,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-pictures" class="collapse-link-pictures">
-								<i class="glyphicon glyphicon-calendar"></i> Pictures
+								<i class="glyphicon glyphicon-picture"></i> Pictures
 								<span class="badge pull-right">3</span>
 							</a>
 						</h4>
@@ -126,6 +127,7 @@
 					<div id="collapse-pictures" class="panel-collapse collapse" style="height: auto;">
 						<div class="panel-body">
 							<div class="pictures-dest dropzone"></div>
+							<input class="uniqid" type="hidden" name="uniqid" value="{{ $uniqid }}">
 	
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="btn btn-warning pull-right btn-sm btn-next">
@@ -256,9 +258,13 @@
 
 <script>
 Dropzone.autoDiscover = false;
-$("div.pictures-dest").dropzone({ 
+var myDropzone = new Dropzone("div.pictures-dest", { 
 	url: "/picture" ,
 	addRemoveLinks: true
+});
+
+myDropzone.on("sending", function(file, xhr, formData) {
+  formData.append("uniqid", $('.uniqid').val());
 });
 
 </script>

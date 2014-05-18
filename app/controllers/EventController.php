@@ -16,7 +16,8 @@ class EventController extends \BaseController {
 	public function index()
 	{
 		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
-		return View::make('event/index');
+		
+		return View::make('event/index')->with('test','SALUT LOL!');
 	}
 	/**
 	 * Display a listing of the resource.
@@ -35,7 +36,7 @@ class EventController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('event/new');
+		return View::make('event/new')->with('uniqid',uniqid('event_'));
 	}
 
 	/**
@@ -46,14 +47,14 @@ class EventController extends \BaseController {
 	public function store()
 	{
 		$inputs = Input::all();		
-		dd($inputs);
+
 		$rules = array(
 			'title' 			=> 'required',
 			'description' 		=> 'required',
 			'event_date'		=> 'required',
-			'event_time'		=> 'required',
+			// 'event_time'		=> 'required',
 			'max_place' 		=> 'required',
-			'address'			=> 'required'
+			'address_full'		=> 'required'
 		);
 
 		$validation = Validator::make($inputs, $rules);
@@ -71,18 +72,17 @@ class EventController extends \BaseController {
 		$event->current_place = 1;
 		$event->max_place = $inputs['max_place'];
 		$event->event_date = new DateTime($inputs['event_date']);
-		$event->event_time = new DateTime($inputs['event_time']);
-		// 'D d M Y H:i'
+		$event->event_time = new DateTime($inputs['event_date']);
 
 
 		// Get address 
 		$address = new Address;		
-		$address->full     = $inputs['address'];
-		$address->str_name = $inputs['route'];
-		$address->str_no   = $inputs['street_number'];
-		$address->cp       = $inputs['postal_code'];
-		$address->city     = $inputs['locality'];
-		$address->country  = $inputs['country'];
+		$address->full = $inputs['address_full'];
+		// $address->str_name = $inputs['route'];
+		// $address->str_no   = $inputs['street_number'];
+		// $address->cp       = $inputs['postal_code'];
+		// $address->city     = $inputs['locality'];
+		// $address->country  = $inputs['country'];
 		$address->save();
 
 		// Link address -> event
@@ -92,6 +92,15 @@ class EventController extends \BaseController {
 		// Link current user -> event as HOST
 		$event->users()->attach( Auth::user(),array('role' => 'host' ) );
 		$event->save();
+
+		// Link pictures
+		$folder = $inputs['uniqid'];
+		
+		$pictures = Picture::where('folder',$folder)->get();
+		foreach ($pictures as $picture) {
+			$picture->event_id = $event->id;
+			$picture->save();
+		}
 
 		return Redirect::route('homepage')->with('message', '<span class="glyphicon glyphicon-ok"></span>  Your eventis well published! See the details <a href="#" class="alert-link">here</a> !');
 	}

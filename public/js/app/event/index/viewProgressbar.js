@@ -7,7 +7,7 @@ define(['backbone','handlebars', 'underscore','moment'], function(Backbone, Hand
 		tagName: "div",
 
 		// Templates
-		template: _.template( $('.progressbar-script').html() ),
+		template: Handlebars.compile( $('.progressbar-script').html() ),
 
 		initialize: function(){
 			var val = 1;

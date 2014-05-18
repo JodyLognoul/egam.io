@@ -13,6 +13,7 @@ $('.input-address').bind("typeahead:cursorchanged", addressPicker.updateMap);
 
 // 
 $(addressPicker).on('addresspicker:selected', function (event, result) {
+	console.log(result);
 	var addr = {
 		route 			: { value:result.nameForType('route'), msg:'The street name'},
 		street_number	: { value:result.nameForType('street_number'), msg:'The street number'},

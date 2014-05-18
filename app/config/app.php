@@ -107,6 +107,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Artdarek\OAuth\OAuthServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 	),
 
 	/*
@@ -173,6 +174,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'OAuth'			  => 'Artdarek\OAuth\Facade\OAuth',
+		'Image' 		  => 'Intervention\Image\Facades\Image',
 	),
 
 );

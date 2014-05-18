@@ -15,9 +15,14 @@ class CreatePicturesTable extends Migration {
 			
 			// Fields			
 			$table->increments('id');			
-			$table->string('url');							// message
-			$table->string('path');							// message
-			$table->string('name');							// message
+			$table->string('url')->nullable();				// url
+			$table->string('path')->nullable();				// path
+			$table->string('name');							// name
+			$table->string('folder');						// folder
+
+			$table->integer('event_id')->unsigned()->nullable();		// event_id
+
+			$table->foreign('event_id')->references('id')->on('events');
 
 			// Other
 			$table->timestamps();

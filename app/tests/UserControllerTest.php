@@ -15,7 +15,7 @@ class UserControllerTest extends TestCase {
 	public function testStoreFailByUniqueEmail()
 	{
 		$response = $this->action('POST', 'UserController@store',array(
-			'email'    => 'lognoulj@gmail.com',
+			'email'    => 'narcotic@gmail.com',
 			'username' => 'Narcotic88',
 			'password'  => 'Narcotic88'
 		));
