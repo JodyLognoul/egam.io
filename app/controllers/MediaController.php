@@ -4,7 +4,7 @@ class MediaController extends \BaseController {
 
 	const LG_WIDTH 	= 1200;
 	const MD_WIDTH 	= 800;
-	const SM_WIDTH 	= 400;
+	const SM_WIDTH 	= 348;
 	const XS_WIDTH 	= 200;
 
 	/**
@@ -22,7 +22,7 @@ class MediaController extends \BaseController {
 
 		$file = Input::file('file');
 
-		mkdir($path, 0777, true);
+		mkdir($path, 0775, true);
 
 		// LG_WIDTH
 		Image::make($file->getRealPath())->resize(self::LG_WIDTH, null, true)->save($path . 'lg.jpeg' );

@@ -46,7 +46,7 @@
 					</ol>
 					<div class="carousel-inner">
 						@foreach ($event->pictures as $i => $picture)
-						<div class="item {{$i == 0?'active':''}}"><img src="{{ URL::asset('uploads') }}/{{ $picture->folder}}/{{ $picture->name }}/xs.jpeg" alt="@{{ title }}" class="img-responsive"></div>
+						<div class="item {{$i == 0?'active':''}}"><a href="{{ $picture->url }}md.jpeg" data-lightbox="image-1" data-title="My caption"><img src="{{ $picture->url }}sm.jpeg" alt="@{{ title }}" class="img-responsive"></a></div>
 						@endforeach
 					</div>
 					<a class="left carousel-control" href="#carousel-generic-event" data-slide="prev">
