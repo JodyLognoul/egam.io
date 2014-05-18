@@ -39,6 +39,7 @@ class MediaController extends \BaseController {
 		$picture = new Picture;
 		$picture->folder = $folder;
 		$picture->name = $fileName;
+		$picture->url = URL::asset('uploads').'/'.$folder.'/'.$fileName.'/';
 		$picture->save();
 	}
 

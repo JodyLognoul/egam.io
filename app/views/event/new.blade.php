@@ -249,7 +249,7 @@
 
 @section('scripts')
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script> -->
 {{ HTML::script("js/vendor/typeahead.js/dist/typeahead.bundle.js") }}
 {{ HTML::script("js/vendor/addresspicker/typeahead-addresspicker.js") }}
 {{ HTML::script("js/vendor/underscore-amd/underscore-min.js") }}
