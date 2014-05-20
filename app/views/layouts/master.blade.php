@@ -143,7 +143,6 @@
 {{ HTML::script("js/vendor/bootstrap/dist/js/bootstrap.min.js") }}
 {{ HTML::script("js/vendor/datetimepicker/jquery.datetimepicker.js") }}
 {{ HTML::script("js/NewPicturePreview.js") }}
-<script>$('#alert-modal').modal('show');</script>
 <script>
 $('.gg-tooltip').tooltip();
 $('.row-profile-pictures').newPicturePreview();

@@ -124,7 +124,7 @@ class EventController extends \BaseController {
 	public function show($id)
 	{
 		$event = Event::find($id);			
-		return View::make('event/show',compact('event'))->nest('modalGuestsEvent','user/childs/modalGuestsEvent',compact('event'));
+		return View::make('event/show',compact('event'));
 	}
 
 	/**
@@ -147,18 +147,46 @@ class EventController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$event = Event::find($id);
-		$event->title = Input::get('title');
-		$event->description = Input::get('description');
-		$event->current_place = Input::get('maxplaces');
-		$event->event_date = date('Y-n-j', strtotime(Input::get('eventdate-year').'-'.Input::get('eventdate-month').'-'.Input::get('eventdate-day'))); //
-		$event->save();
 
-		// Get address 
-		$address = Address::find($event->address->id);		
-		$address->full = Input::get('address');
-		$address->save();
-		return Redirect::route('event.edit', array('event' => $id))->with('message', 'event updated!');
+		$inputs = Input::all();		
+
+		$rules = array(
+			'title' 			=> 'min:8|max:64',
+			'description' 		=> 'min:16|max:1024',
+			'uniqid'			=> '',
+			'event_date'		=> 'after:now',
+			'max_place' 		=> '',
+			'address_full'		=> 'min:8'
+		);
+
+		$validation = Validator::make($inputs, $rules);
+		if ($validation->fails())
+		{
+			$fails = $validation->messages();
+			$modal = 
+					$fails->has('max_place') 		? '#social':
+					$fails->has('event_date') 		? '#date':
+					$fails->has('pictures') 		? '#pictures':
+					$fails->has('address_full') 	? '#address':
+					$fails->has('description') 		? 'description':
+					$fails->has('title') 			? 'title':
+					'';
+			
+			Input::flash();
+			return Redirect::route('event.show',array('id' => $id))->withErrors($validation)->with('modal', $modal);
+		}
+			
+		$event = Event::find($id);
+		if (Input::has('title'))
+		{
+			$event->title = Input::get('title');
+		}
+		if (Input::has('description'))
+		{
+			$event->description = Input::get('description');
+		}
+		$event->save();
+		return Redirect::route('event.show', array('event' => $id))->with('message', 'The event updated successfully!');
 	}
 
 	/**

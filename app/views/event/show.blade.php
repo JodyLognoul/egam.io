@@ -6,15 +6,13 @@
 
 @stop
 
-
 @section('content')
 
 <div class="event-show">
 	@if( $event->isHost(Auth::user()))
-	<div class="header-info well">
-		<a href="" class="btn btn-xs btn-danger pull-right">Cancel the event</a>
-		
-		<p><i class="glyphicon glyphicon-info-sign"></i> Your are the host of this event. (To modify some fields, use the button <a href="" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-pencil"></i></a> )</p>
+	<div class="alert alert-warning alert-dismissable alert-info-ind">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<p><i class="glyphicon glyphicon-info-sign"></i> Your are the <strong>host</strong> of this event. If you want to modify some informations, use the button <button class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-pencil"></i></button> above each informations.</p>
 	</div>
 	@endif
 	<div class="panel panel-success"><!-- Informations -->
@@ -25,13 +23,13 @@
 			<div class="col-md-4"><!-- Col 1 -->
 				<h4>Title
 					@if( $event->isHost(Auth::user()))
-					<a href="" class="btn btn-default btn-xs pull-right gg-tooltip" data-original-title="Modify the title"><i class="glyphicon glyphicon-pencil"></i></a>
+					<a href="" data-toggle="modal" data-target="#modal-modify-title" class="btn btn-default btn-xs pull-right gg-tooltip" data-original-title="Modify the title"><i class="glyphicon glyphicon-pencil"></i></a>
 					@endif
 				</h4>
 				<p>{{ $event->title }}</p>
 				<h4>Description
 					@if( $event->isHost(Auth::user()))
-					<a href="" class="btn btn-default btn-xs pull-right gg-tooltip" data-original-title="Modify the description"><i class="glyphicon glyphicon-pencil"></i></a>
+					<a href=""  data-toggle="modal" data-target="#modal-modify-description" class="btn btn-default btn-xs pull-right gg-tooltip" data-original-title="Modify the description"><i class="glyphicon glyphicon-pencil"></i></a>
 					@endif
 				</h4>
 				<p>{{ $event->description }}</p>
@@ -108,14 +106,20 @@
 			@endif
 		</div>
 	</div>
-
 </div>
 
+@include('event/modals/guest-of-event')
+@include('event/modals/modify-title')
+@include('event/modals/modify-description')
 
-{{ $modalGuestsEvent }}
 @stop
 
 @section('scripts')
-{{ HTML::script("js/vendor/lightbox/js/lightbox.min.js") }}
+	{{ HTML::script("js/vendor/lightbox/js/lightbox.min.js") }}
+	<script>
+	@if( Session::has('modal') )
+		$("#modal-modify-{{Session::get('modal')}}").modal('show');
+    @endif
+	</script>
 @stop
 

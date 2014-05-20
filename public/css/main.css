@@ -213,9 +213,21 @@ body {
   height: 32px;
   margin-top: 9px; }
 
-.header-info p {
-  padding: 0;
-  margin: 0; }
-.header-info a {
-  font-size: 11px;
-  font-weight: 400; }
+.alert-info-ind {
+  margin-top: 0; }
+  .alert-info-ind a {
+    font-size: 11px;
+    font-weight: 400; }
+
+.modal-ind .modal-dialog {
+  margin-top: 10%; }
+.modal-ind .modal-content {
+  border-radius: 0; }
+.modal-ind .alert {
+  margin-top: 0;
+  margin-bottom: 0; }
+.modal-ind .text-warning {
+  margin-top: 4px; }
+
+.text-input-error {
+  font-size: 12px; }
