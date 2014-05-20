@@ -38,20 +38,20 @@ class Event extends Eloquent{
     				->where('role', 'host')
     				->first();
     }
-    public function isGuest($userid){
+    public function isGuest(User $user){
         foreach ($this->guests() as $guest) {
-            if( $guest->id == $userid){
+            if( $guest->id == $user->id){
                 return true;
             }
         }
         return false;
             
     }
-    public function isHost($userid){
-        return $this->host()->id == $userid;
+    public function isHost(User $user){
+        return $this->host()->id == $user->id;
     }
-    public function takePart($userid){
-        return $this->isHost($userid)||$this->isGuest($userid);
+    public function takePart(User $user){
+        return $this->isHost($user) || $this->isGuest($user);
     }
 }
 

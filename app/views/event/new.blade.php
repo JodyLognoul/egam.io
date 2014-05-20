@@ -77,7 +77,7 @@
 								<div class="form-group">
 									<!-- Address -->
 									<div class="col-sm-10">
-										{{ Form::text('address', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Ex: 42, rue sur la fontain 4000 Liège Belgique','autofocus' => "")) }}
+										{{ Form::text('address_full', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Ex: 42, rue sur la fontain 4000 Liège Belgique', 'autofocus' => "")) }}
 										<span class="help-block text-bordered">The address where the event takes place</span>
 										<span class="text-danger">{{ $errors->first('Address') }}</span>
 									</div>
@@ -85,7 +85,6 @@
 								<!-- Address Result -->
 								<div class="form-group">
 									<div class="address-result"></div>
-									<input type="hidden" name="address_full" value="42, rue sur la fontain 4000 Liège Belgique">
 								</div>
 								<script class="address-success-script" type="text/template">
 									<span class="help-block text-bordered">Perfect! The address will appear like that: </span>

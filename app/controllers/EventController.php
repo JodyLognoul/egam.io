@@ -49,20 +49,30 @@ class EventController extends \BaseController {
 		$inputs = Input::all();		
 
 		$rules = array(
-			'title' 			=> 'required',
-			'description' 		=> 'required',
-			'event_date'		=> 'required',
-			// 'event_time'		=> 'required',
+			'title' 			=> 'required|min:8|max:64',
+			'description' 		=> 'required|min:16|max:1024',
+			'uniqid'			=> 'required',
+			'event_date'		=> 'required|after:now',
 			'max_place' 		=> 'required',
-			'address_full'		=> 'required'
+			'address_full'		=> 'required|min:8'
 		);
 
 		$validation = Validator::make($inputs, $rules);
-
 		if ($validation->fails())
-		{			
+		{
+			$fails = $validation->messages();
+			$collapse = 
+						$fails->has('max_place') 		? '#social':
+						$fails->has('event_date') 		? '#date':
+						$fails->has('pictures') 		? '#pictures':
+						$fails->has('address_full') 	? '#address':
+						$fails->has('description') 		? '':
+						$fails->has('title') 			? '':
+						'';
+
+			
 			Input::flash();
-			return Redirect::route('event.create')->withErrors($validation);
+			return Redirect::to(URL::route('event.create').$collapse)->withErrors($validation);
 		}
 
 		// Get event
@@ -113,11 +123,7 @@ class EventController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$event = Event::find($id);	
-	
-		// if ( Auth::check() && $event->isHost(Auth::user()->id)) {
-		// 	return Redirect::route('event.edit', array('event' => $id))->with('alert-modal','You are the owner of this event! You have been redirected to the eventedition!');
-		// }
+		$event = Event::find($id);			
 		return View::make('event/show',compact('event'))->nest('modalGuestsEvent','user/childs/modalGuestsEvent',compact('event'));
 	}
 

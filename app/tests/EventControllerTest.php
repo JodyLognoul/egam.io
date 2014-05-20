@@ -13,6 +13,20 @@ class EventControllerTest extends TestCase {
 		$events = $response->original->getData()['events'];
 		$this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $events);
 	}
+	
+	// Title size < 8
+	public function testStoreFailOnTitle(){
+		$this->be( User::find(1) );
+		$response = $this->action('POST', 'EventController@store',array('title' => '1234567', 'description'=> 'PHPUnit Description', 'event_date'=> 'Wed 21 May 2015 10:51', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_place'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
+		$this->assertRedirectedToRoute('event.create');
+	}
+
+	// Date < now
+	public function testStoreFailOnEventDate(){
+		$this->be( User::find(1) );
+		$response = $this->action('POST', 'EventController@store',array('event_date'=> 'Wed 21 May 2010 10:51', 'title' => '12345678', 'description'=> 'PHPUnit Description', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_place'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
+		$this->assertRedirectedToRoute('event.create');
+	}
 
 	// STORE()
 	public function testStoreFail()
@@ -23,9 +37,8 @@ class EventControllerTest extends TestCase {
 			'title' 			=> '',
 			'description' 		=> '',
 			'event_date'		=> '',
-			'event_time'		=> '',
 			'max_place' 		=> '',
-			'address'			=> ''));
+			'address_full'		=> ''));
 		$this->assertRedirectedToRoute('event.create');
 	}
 
@@ -36,10 +49,9 @@ class EventControllerTest extends TestCase {
 		$response = $this->action('POST', 'EventController@store',array(
 			'title' 			=> 'PHPUnit Title',
 			'description' 		=> 'PHPUnit Description',
-			'event_date'		=> '2014-05-11',
-			'event_time'		=> '02:15',
+			'event_date'		=> 'Wed 21 May 2015 10:51',
 			'uniqid'			=> 'tests/event_5378c98b19bc0',
-			'max_place' 		=> '8',
+			'max_place' 		=> '10',
 			'address_full'		=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
 		$this->assertRedirectedToRoute('homepage');
 	}
