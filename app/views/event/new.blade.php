@@ -148,11 +148,11 @@
 						<div class="panel-body">
 							<!-- Event Date -->
 							<div class="form-group">
-								{{ Form::label('event_date', 'Choose a date and the time', array('class' => 'col-sm-2 control-label')) }}
+								{{ Form::label('event_datetime', 'Choose a date and the time', array('class' => 'col-sm-2 control-label')) }}
 								<div class="col-sm-10">
-									{{ Form::text('event_date', Input::old('event_date'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
+									{{ Form::text('event_datetime', Input::old('event_datetime'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
 									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-									<span class="text-danger">{{ $errors->first('event_date') }}</span>
+									<span class="text-danger">{{ $errors->first('event_datetime') }}</span>
 								</div>
 							</div>
 
@@ -176,11 +176,11 @@
 						<div class="panel-body">
 							<!-- Max places -->
 							<div class="row">
-								{{ Form::label('event_date', 'Max Places', array('class' => 'col-sm-2 control-label')) }}
+								{{ Form::label('max_places', 'Max Places', array('class' => 'col-sm-2 control-label')) }}
 								<div class="col-sm-10">
-									{{ Form::selectRange('max_place', 1, 27, null, array('class' => 'form-control','autofocus' => "")) }}
+									{{ Form::selectRange('max_places', 1, 27, null, array('class' => 'form-control','autofocus' => "")) }}
 									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-									<span class="text-danger">{{ $errors->first('max_place') }}</span>
+									<span class="text-danger">{{ $errors->first('max_places') }}</span>
 								</div>
 							</div>	
 							<!-- Next -->

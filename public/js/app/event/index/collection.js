@@ -10,8 +10,8 @@ define(['backbone','model'], function(Backbone, EventModel) {
 			title:		function (event) { return event.get("title"); },
 			address:	function (event) { return event.get("address").full; },
 			host:		function (event) { return event.get("event_user")[0].username; },
-			places:		function (event) { return event.get("max_place"); },
-			eventdate:	function (event) { return event.get("event_date"); },
+			places:		function (event) { return event.get("max_places"); },
+			eventdate:	function (event) { return event.get("event_datetime"); },
 		},
 		initialize: function(){
 			this.listenFetch();

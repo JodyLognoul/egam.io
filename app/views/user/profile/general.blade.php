@@ -80,12 +80,11 @@
 						<div class="panel-body">
 							<p><i class="glyphicon glyphicon-home"></i> {{ $event->host()->username }}</p>
 							<p><i class="glyphicon glyphicon-globe"></i> {{ $event->address->full}}</p>
-							<p><i class="glyphicon glyphicon-calendar"></i> {{ $event->event_date }}</p>
-							<p><i class="glyphicon glyphicon-time"></i> {{ $event->event_time }}</p>
+							<p><i class="glyphicon glyphicon-calendar"></i> {{ $event->eventDate() }}</p>
+							<p><i class="glyphicon glyphicon-time"></i> {{ $event->eventTime() }}</p>
 							<div class="row">
 								<div class="myevents-actions col-md-12">
 									<a href="{{ URL::to('event', array('id' => $event->id )) }}" class="gg-tooltip btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Open"><i class="glyphicon glyphicon-eye-open"></i></a>	
-									<a href="" class="gg-tooltip btn btn-sm btn-info" data-toggle="tooltip" data-original-title="Edit"><i class="glyphicon glyphicon-edit"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-warning" data-toggle="tooltip" data-original-title="Share"><i class="glyphicon glyphicon-share"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Cancel"><i class="glyphicon glyphicon-remove-circle"></i></a>	
 								</div>
@@ -110,14 +109,13 @@
 						<div class="panel-body">
 							<p><i class="glyphicon glyphicon-home"></i> {{ $event->host()->username }}</p>
 							<p><i class="glyphicon glyphicon-globe"></i> {{ $event->address->full}}</p>
-							<p><i class="glyphicon glyphicon-calendar"></i> {{ $event->event_date }}</p>
-							<p><i class="glyphicon glyphicon-time"></i> {{ $event->event_time }}</p>
+							<p><i class="glyphicon glyphicon-calendar"></i> {{ $event->eventDate() }}</p>
+							<p><i class="glyphicon glyphicon-time"></i> {{ $event->eventTime() }}</p>
 							<div class="row">
 								<div class="myevents-actions col-md-12">
 									<a href="{{ URL::to('event', array('id' => $event->id )) }}" class="gg-tooltip btn btn-sm btn-primary" data-toggle="tooltip" data-original-title="Open"><i class="glyphicon glyphicon-eye-open"></i></a>	
-									<a href="" class="gg-tooltip btn btn-sm btn-info" data-toggle="tooltip" data-original-title="Edit"><i class="glyphicon glyphicon-edit"></i></a>	
 									<a href="" class="gg-tooltip btn btn-sm btn-warning" data-toggle="tooltip" data-original-title="Share"><i class="glyphicon glyphicon-share"></i></a>	
-									<a href="{{ URL::route('event.remove.user', array('id' => $event->id, 'uid' => Auth::user()->id )) }}" class="gg-tooltip btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Leave"><i class="glyphicon glyphicon-log-out"></i></a>	
+									<a href="{{ URL::route('event.leave', array('eid' => $event->id)) }}" class="gg-tooltip btn btn-sm btn-danger" data-toggle="tooltip" data-original-title="Leave"><i class="glyphicon glyphicon-log-out"></i></a>	
 								</div>
 							</div>
 						</div>

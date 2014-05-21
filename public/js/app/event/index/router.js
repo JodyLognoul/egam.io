@@ -1,6 +1,6 @@
 // /public/js/app/event/index/router.js
 
-define(['jquery', 'backbone','underscore','moment','collection','viewCollection','viewActiveFilterSorting','controller'], function($, Backbone, _, moment, EventsCollection, ViewEvents, ViewActiveFilterSorting,ControllerEventsIndex){
+define(['jquery', 'backbone','underscore','collection','controller'], function($, Backbone, _, EventsCollection, ControllerEventsIndex){
 
 	var AppRouter = Backbone.Router.extend({
 

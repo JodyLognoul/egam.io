@@ -42,11 +42,10 @@ define(['underscore','collection','viewCollection','viewProgressbar','viewActive
 				// param[0] egale a 'by'  voir (public/js/app/event/index/router.js)
 				// param[1] egale a 'query' voir (public/js/app/event/index/router.js)
 
-				if( params[0] === 'eventdate' ){	// search by event_date
-					var event_date = moment(params[1]).format('YYYY-MM-DD');
-
-					filteredCollection = new EventsCollection(this.collection.where({ 'event_date': event_date }));
-					this.appendViewActiveFilterSorting(event_date, 'filter.eventdate', filteredCollection.length);
+				if( params[0] === 'eventdate' ){	// search by event_datetime
+					var event_datetime = moment(params[1]).format('YYYY-MM-DD');
+					filteredCollection = new EventsCollection(this.collection.where({ 'event_datetime': event_datetime }));
+					this.appendViewActiveFilterSorting(event_datetime, 'filter.eventdate', filteredCollection.length);
 
 				}else if(params[0] === 's'){				// search by string
 					filteredCollection = new EventsCollection(this.collection.filterByString(params[1]));

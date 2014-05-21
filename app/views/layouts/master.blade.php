@@ -142,10 +142,9 @@
 {{ HTML::script("js/vendor/jquery/dist/jquery.min.js") }}
 {{ HTML::script("js/vendor/bootstrap/dist/js/bootstrap.min.js") }}
 {{ HTML::script("js/vendor/datetimepicker/jquery.datetimepicker.js") }}
-{{ HTML::script("js/NewPicturePreview.js") }}
+{{! HTML::script("js/NewPicturePreview.js") }}
 <script>
 $('.gg-tooltip').tooltip();
-$('.row-profile-pictures').newPicturePreview();
 $('.datetimepicker').datetimepicker({
     format:'D d M Y H:i',
     step: '15',

@@ -2,8 +2,13 @@
 
 class Event extends Eloquent{
 	
-    public function getEventTimeAttribute( $value ){
-        return date("H:i", strtotime( $value ));
+    public function eventTime(){
+        $date = new DateTime($this->attributes['event_datetime']);
+        return $date->format('H:i');
+    }
+    public function eventDate(){
+        $date = new DateTime($this->attributes['event_datetime']);
+        return $date->format('D d M Y');
     }
     public function pictures(){
         return $this->hasMany('Picture');
@@ -22,7 +27,9 @@ class Event extends Eloquent{
     {
         return $this->belongsToMany('User');
     }
-
+    public function guestsQty(){
+        return $this->guests()->count();
+    }
     public function guests()
     {
         return $this->belongsToMany('User')

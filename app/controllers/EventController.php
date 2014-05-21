@@ -17,7 +17,7 @@ class EventController extends \BaseController {
 	{
 		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
 		
-		return View::make('event/index')->with('test','SALUT LOL!');
+		return View::make('event/index');
 	}
 	/**
 	 * Display a listing of the resource.
@@ -52,8 +52,8 @@ class EventController extends \BaseController {
 			'title' 			=> 'required|min:8|max:64',
 			'description' 		=> 'required|min:16|max:1024',
 			'uniqid'			=> 'required',
-			'event_date'		=> 'required|after:now',
-			'max_place' 		=> 'required',
+			'event_datetime'		=> 'required|after:now',
+			'max_places' 		=> 'required',
 			'address_full'		=> 'required|min:8'
 		);
 
@@ -62,8 +62,8 @@ class EventController extends \BaseController {
 		{
 			$fails = $validation->messages();
 			$collapse = 
-						$fails->has('max_place') 		? '#social':
-						$fails->has('event_date') 		? '#date':
+						$fails->has('max_places') 		? '#social':
+						$fails->has('event_datetime') 		? '#date':
 						$fails->has('pictures') 		? '#pictures':
 						$fails->has('address_full') 	? '#address':
 						$fails->has('description') 		? '':
@@ -80,9 +80,8 @@ class EventController extends \BaseController {
 		$event->title = $inputs['title'];
 		$event->description = $inputs['description'];
 		$event->current_place = 1;
-		$event->max_place = $inputs['max_place'];
-		$event->event_date = new DateTime($inputs['event_date']);
-		$event->event_time = new DateTime($inputs['event_date']);
+		$event->max_places = $inputs['max_places'];
+		$event->event_datetime = new DateTime($inputs['event_datetime']);
 
 
 		// Get address 
@@ -154,8 +153,8 @@ class EventController extends \BaseController {
 			'title' 			=> 'min:8|max:64',
 			'description' 		=> 'min:16|max:1024',
 			'uniqid'			=> '',
-			'event_date'		=> 'after:now',
-			'max_place' 		=> '',
+			'event_datetime'		=> 'after:now',
+			'max_places' 		=> '',
 			'address_full'		=> 'min:8'
 		);
 
@@ -164,10 +163,10 @@ class EventController extends \BaseController {
 		{
 			$fails = $validation->messages();
 			$modal = 
-					$fails->has('max_place') 		? '#social':
-					$fails->has('event_date') 		? '#date':
-					$fails->has('pictures') 		? '#pictures':
-					$fails->has('address_full') 	? '#address':
+					$fails->has('max_places') 		? 'max-places':
+					$fails->has('event_datetime') 		? 'datetime':
+					$fails->has('pictures') 		? '':
+					$fails->has('address_full') 	? '':
 					$fails->has('description') 		? 'description':
 					$fails->has('title') 			? 'title':
 					'';
@@ -177,14 +176,16 @@ class EventController extends \BaseController {
 		}
 			
 		$event = Event::find($id);
+
 		if (Input::has('title'))
-		{
 			$event->title = Input::get('title');
-		}
+		
 		if (Input::has('description'))
-		{
 			$event->description = Input::get('description');
-		}
+
+		if (Input::has('max_places'))
+			$event->max_places = Input::get('max_places');
+
 		$event->save();
 		return Redirect::route('event.show', array('event' => $id))->with('message', 'The event updated successfully!');
 	}
@@ -210,7 +211,7 @@ class EventController extends \BaseController {
 	{
 		$event = Event::find( $event_id );
 
-		if ($event->takePart(Auth::user()->id) ) {
+		if ($event->takePart(Auth::user()) ) {
 			return Redirect::route('event.show',array('event' => $event_id))->with('error', 'You are already in this event!');
 		}else{
 			$event->users()->attach( Auth::user(),array('role' => 'guest' ) );
@@ -220,23 +221,53 @@ class EventController extends \BaseController {
 		return Redirect::route('event.show',array('event' => $event_id))->with('message', '<span class="glyphicon glyphicon-ok"></span>  You successfully joined the event!');
 	}
 	/**
-	 * Remove an user from an event
+	 * Remove the current user from an event
+	 *
+	 * @param  int  $eid
+	 * @return Response
+	 */
+	public function cancel($eid)
+	{
+		$event = Event::find($eid);
+		if ($event->isHost(Auth::user()))
+		{
+			foreach ($event->guests() as $guest) {
+				$this->removeUser($event, $guest->id);	// Detach the guests
+			}
+			$event->status = 'CANCELED';
+			$event->save();
+			return Redirect::route('event.index')->with('message', 'The event is successfully cancel!');
+		}
+		return Redirect::route('event.show',array('id' => $eid))->with('error', 'You are not the host of this event, you can not cancel it!');
+	}
+
+	/**
+	 * Remove the current user from an event
+	 *
+	 * @param  int  $eid
+	 * @return Response
+	 */
+	public function leave($eid)
+	{
+		$event = Event::find($eid);
+		$user = Auth::user();
+		if ($event->isGuest($user)) {
+			$this->removeUser($event, $user->id);
+			$event->save();
+			return Redirect::back()->with('message', '<span class="glyphicon glyphicon-ok"></span>  You have left this event!');
+		}
+		return Redirect::back()->with('error','Your not a guest of this event!');
+	}
+
+	/**
+	 * Remove an user from an event, and notify them
 	 *
 	 * @param  int  $id, int $uid
 	 * @return Response
 	 */
-	public function removeUser($event_id, $uid)
+	private function removeUser(Event $event, $uid)
 	{
-		$event = Event::find( $event_id );
-
-		if ($event->isHost(Auth::user()->id) ) {
-			return Redirect::route('event.show',array('event' => $event_id))->with('error', 'You are already in this event!');
-		}else{
-			$event->users()->detach(Auth::user()->id);
-			$event->save();
-		}
-		// return Redirect::route('event.show',array('event' => $event_id))->with('message', '<span class="glyphicon glyphicon-ok"></span>  You have left this event!');
-		return Redirect::back()->with('message', '<span class="glyphicon glyphicon-ok"></span>  You have left this event!');
+		$event->users()->detach($uid); // TOOD : Notify all the guests
 	}
 
 }

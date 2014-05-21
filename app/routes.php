@@ -18,7 +18,8 @@ Route::get(			'/', 						array('as' => 'homepage', 					'uses' => 'EventControll
 // Event
 Route::resource(	'event', 'EventController');
 Route::get(			'join/{id}', 				array('as' => 'event.join',		 			'uses' => 'EventController@join'));
-Route::get(			'remove/{id}/{uid}', 		array('as' => 'event.remove.user',			'uses' => 'EventController@removeUser'));
+Route::get(			'leave/{eid}',	 			array('as' => 'event.leave',				'uses' => 'EventController@leave'));
+Route::get(			'cancel/{eid}', 			array('as' => 'event.cancel',				'uses' => 'EventController@cancel'));
 Route::get(			'map', 						array('as' => 'event.index.map',			'uses' => 'EventController@indexMap'));
 
 // -- API

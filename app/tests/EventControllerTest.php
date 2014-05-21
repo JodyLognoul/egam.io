@@ -17,14 +17,14 @@ class EventControllerTest extends TestCase {
 	// Title size < 8
 	public function testStoreFailOnTitle(){
 		$this->be( User::find(1) );
-		$response = $this->action('POST', 'EventController@store',array('title' => '1234567', 'description'=> 'PHPUnit Description', 'event_date'=> 'Wed 21 May 2015 10:51', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_place'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
+		$response = $this->action('POST', 'EventController@store',array('title' => '1234567', 'description'=> 'PHPUnit Description', 'event_datetime'=> 'Wed 21 May 2015 10:51', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_places'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
 		$this->assertRedirectedToRoute('event.create');
 	}
 
 	// Date < now
 	public function testStoreFailOnEventDate(){
 		$this->be( User::find(1) );
-		$response = $this->action('POST', 'EventController@store',array('event_date'=> 'Wed 21 May 2010 10:51', 'title' => '12345678', 'description'=> 'PHPUnit Description', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_place'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
+		$response = $this->action('POST', 'EventController@store',array('event_datetime'=> 'Wed 21 May 2010 10:51', 'title' => '12345678', 'description'=> 'PHPUnit Description', 'event_time'=> '02:15', 'uniqid'=> 'tests/event_5378c98b19bc0', 'max_places'=> '8', 'address_full'=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
 		$this->assertRedirectedToRoute('event.create');
 	}
 
@@ -36,8 +36,8 @@ class EventControllerTest extends TestCase {
 		$response = $this->action('POST', 'EventController@store',array(
 			'title' 			=> '',
 			'description' 		=> '',
-			'event_date'		=> '',
-			'max_place' 		=> '',
+			'event_datetime'	=> '',
+			'max_places' 		=> '',
 			'address_full'		=> ''));
 		$this->assertRedirectedToRoute('event.create');
 	}
@@ -49,9 +49,9 @@ class EventControllerTest extends TestCase {
 		$response = $this->action('POST', 'EventController@store',array(
 			'title' 			=> 'PHPUnit Title',
 			'description' 		=> 'PHPUnit Description',
-			'event_date'		=> 'Wed 21 May 2015 10:51',
+			'event_datetime'	=> 'Wed 21 May 2015 10:51',
 			'uniqid'			=> 'tests/event_5378c98b19bc0',
-			'max_place' 		=> '10',
+			'max_places' 		=> '10',
 			'address_full'		=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));
 		$this->assertRedirectedToRoute('homepage');
 	}

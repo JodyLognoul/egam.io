@@ -89,7 +89,7 @@
 		</div>
 		<div class="row date-n-host">
 			<div class="col-md-4">
-				<span class="label label-primary pull-left">@{{ event_date }}</span>
+				<span class="label label-primary pull-left">@{{ event_datetime }}</span>
 			</div>
 			<div class="col-md-8">
 				<span class="label label-warning pull-right">						
@@ -100,8 +100,8 @@
 		<div class="caption text-center">
 			<h3><span class="glyphicon glyphicon-tag"></span> @{{ title }}</h3>
 			<p><span class="glyphicon glyphicon-map-marker"></span> <a href="http://www.google.com/maps?q=@{{ address.full}}" target="_blank" class="text-info">@{{ address.full }}</a></p>
-			<p><span class="glyphicon glyphicon-time"></span> @{{ event_time }}</p>
-			<p><span class="glyphicon glyphicon-user"></span> @{{ max_place }}</p>
+			<p><span class="glyphicon glyphicon-time"></span> @{{ event_datetime }}</p>
+			<p><span class="glyphicon glyphicon-user"></span> @{{ max_places }}</p>
 
 			<p><a href="{{ url('event') }}/@{{id}}" class="btn btn-success btn-xs btn-block" role="button">View</a></p>
 

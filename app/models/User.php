@@ -44,7 +44,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function eventsHost()
 	{
-		return $this->belongsToMany('Event')->where('role','like','host');
+		return $this->belongsToMany('Event')->where('role','like','host')->where('status','like','PENDING');
 	}
 
 	/**

@@ -10,19 +10,7 @@ class EventApiController extends BaseController {
 				$query->where('role','host');
 			},
 			'address'))
-		->get()
-		->toJson();
-	}
-	public function getIndexFitler()
-	{
-		return Event::with(array(
-			'event_user' => function($query)
-			{
-				$query->where('role','host');
-			},
-			'address'))
-		->where('title','Petite soirée jeu entre amis et autres!')
-		->Where('id','1')
+		->where('status','like','PENDING')
 		->get()
 		->toJson();
 	}
