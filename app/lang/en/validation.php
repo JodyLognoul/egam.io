@@ -93,6 +93,8 @@ return array(
 	|
 	*/
 
-	'attributes' => array(),
+	'attributes' => array(
+		'email' => 'email address'
+	),
 
 );
