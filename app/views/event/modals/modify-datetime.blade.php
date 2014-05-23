@@ -9,8 +9,8 @@
             </div>
             <div class="modal-body">
                 <div class="form-group has-feedback">
-                {{ Form::text('event_date', Input::old('event_date'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
-                <span class="text-danger">{{ $errors->first('event_date') }}</span>
+                {{ Form::text('event_datetime', Input::old('event_datetime'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}                
+                <span class="text-danger">{{ $errors->first('event_datetime') }}</span>
                 <span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
                 </div>
             </div>

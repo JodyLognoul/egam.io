@@ -80,9 +80,6 @@ body
 	a
 		color: #8c8c8c
 
-.bootstrap-datetimepicker-widget
-	background-color: inherit
-
 .filter-bar .col-md-3,
 .filter-bar .col-md-9
 	margin-bottom: 10px
@@ -214,7 +211,7 @@ body
 	.modal-dialog
 		margin-top: 10%
 	.modal-content
-		border-radius: 0
+		border-radius: 4px
 	.alert
 		margin-top: 0				
 		margin-bottom: 0				
@@ -223,3 +220,27 @@ body
 		font-size: 12px
 .text-input-error
 	font-size: 12px		
+
+.bootstrap-datetimepicker-widget
+	border: 1px solid #ccc
+	background-color: #fff
+	li
+		a
+			color: #434A54
+			background-color: #fff
+			border: none
+			&:hover
+				background-color: #fff
+				color: #A0D468
+
+	td.active, 
+	td.active:hover
+		color: #fff
+		background-color: #A0D468
+	.btn-primary, 
+	.btn-primary:active, 
+	.btn-primary.active, 
+	.btn-primary.disabled, 
+	.btn-primary[disabled]
+		background-color: #A0D468
+		border-color: #A0D468

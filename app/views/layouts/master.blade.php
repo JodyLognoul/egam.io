@@ -12,7 +12,8 @@
 
     {{ HTML::style("js/vendor/bootstrap/dist/css/bootstrap.min.css") }}    
     {{ HTML::style("js/vendor/Bootflat/bootflat/css/bootflat.css") }}
-    {{ HTML::style("css/vendor/datetimepicker/jquery.datetimepicker.css") }}
+    {{ HTML::style("js/vendor/bootstrap3-datetimepicker/build/css/bootstrap-datetimepicker.css") }}
+
     {{ HTML::style("css/main.css") }}
 </head>
 <body class="body">
@@ -141,25 +142,10 @@
 <!-- Scripts -->
 {{ HTML::script("js/vendor/jquery/dist/jquery.min.js") }}
 {{ HTML::script("js/vendor/bootstrap/dist/js/bootstrap.min.js") }}
-{{ HTML::script("js/vendor/datetimepicker/jquery.datetimepicker.js") }}
-{{! HTML::script("js/NewPicturePreview.js") }}
+{{ HTML::script("js/vendor/moment/min/moment-with-langs.min.js") }}
+{{ HTML::script("js/vendor/bootstrap3-datetimepicker/build/js/bootstrap-datetimepicker.min.js") }}
 <script>
 $('.gg-tooltip').tooltip();
-$('.datetimepicker').datetimepicker({
-    format:'D d M Y H:i',
-    step: '15',
-    lang: 'fr',
-    minDate: 0
-});
-$('.datepicker').datetimepicker({
-    format:'d m y',
-    lang: 'fr',
-    timepicker: false,
-    closeOnDateSelect: true,
-    onSelectDate: function(current_date, $input){
-        document.dispatchEvent(new CustomEvent('datetimepickerEvents', {"detail" : current_date.dateFormat('Y-m-d')} ));
-    }
-});
 </script>
 @yield('scripts')
 

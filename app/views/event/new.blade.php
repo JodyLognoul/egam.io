@@ -150,7 +150,8 @@
 							<div class="form-group">
 								{{ Form::label('event_datetime', 'Choose a date and the time', array('class' => 'col-sm-2 control-label')) }}
 								<div class="col-sm-10">
-									{{ Form::text('event_datetime', Input::old('event_datetime'), array('class' => 'form-control datetimepicker','placeholder' => '','autofocus' => "")) }}
+									<a class="btn btn-success btn-lg datetimepicker"><i class="glyphicon glyphicon-calendar"></i></a>
+									{{! Form::text('event_datetime', Input::old('event_datetime'), array('class' => 'form-control datetimepicker-preopen','placeholder' => '','autofocus' => "")) }}
 									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 									<span class="text-danger">{{ $errors->first('event_datetime') }}</span>
 								</div>
@@ -256,6 +257,10 @@
 {{ HTML::script("js/addressPickerInd.js") }}
 
 <script>
+$('.datetimepicker').datetimepicker();
+</script>
+<script>
+// Dropzone
 Dropzone.autoDiscover = false;
 var myDropzone = new Dropzone("div.pictures-dest", { 
 	url: "/picture" ,
