@@ -49,7 +49,7 @@ class EventControllerTest extends TestCase {
 		$response = $this->action('POST', 'EventController@store',array(
 			'title' 			=> 'PHPUnit Title',
 			'description' 		=> 'PHPUnit Description',
-			'event_datetime'	=> 'Thu 29 May 2014 02:15',
+			'event_datetime'	=> 'Thu, 10 Jul 2014 11:05',
 			'uniqid'			=> 'tests/event_5378c98b19bc0',
 			'max_places' 		=> '10',
 			'address_full'		=> '29, Seftigenstrasse, 3007, Bern, Switzerland'));

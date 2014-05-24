@@ -13,14 +13,14 @@
 	{{ Form::open(array('route' => 'event.store','class' => 'form-horizontal', 'role' => 'form')) }}
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">New Event<i class="glyphicon glyphicon-plus pull-right"></i></h3>
+			<h3 class="panel-title">New Event<i class="fa fa-plus pull-right"></i></h3>
 		</div>
 		<div class="panel-group panel-group-lists collapse in" id="accordion2" style="height: auto;">
 			<div class="panel"><!-- collapse-title -->
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-title" class="collapse-link-title collapsed">
-							<i class="glyphicon glyphicon-pencil"></i> Title and description
+							<i class="fa fa-tag"></i> Title and description
 							<span class="badge pull-right">1</span>
 						</a>
 					</h4>
@@ -48,7 +48,7 @@
 						</div>
 
 						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-address" class="btn btn-warning pull-right btn-sm btn-next">
-							Next <i class="glyphicon glyphicon-arrow-down"></i>
+							Next <i class="fa fa-arrow-down"></i>
 						</a>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-address" class="collapse-link-address collapsed">
-							<i class="glyphicon glyphicon-map-marker"></i> Address
+							<i class="fa fa-map-marker"></i> Address
 							<span class="badge pull-right">2</span>
 						</a>
 					</h4>
@@ -108,7 +108,7 @@
 
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-pictures" class="btn btn-warning pull-right btn-sm btn-next">
-								Next <i class="glyphicon glyphicon-arrow-down"></i>
+								Next <i class="fa fa-arrow-down"></i>
 							</a>
 
 						</div>
@@ -118,7 +118,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-pictures" class="collapse-link-pictures">
-								<i class="glyphicon glyphicon-picture"></i> Pictures
+								<i class="fa fa-photo"></i> Pictures
 								<span class="badge pull-right">3</span>
 							</a>
 						</h4>
@@ -130,7 +130,7 @@
 	
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="btn btn-warning pull-right btn-sm btn-next">
-								Next <i class="glyphicon glyphicon-arrow-down"></i>
+								Next <i class="fa fa-arrow-down"></i>
 							</a>
 						</div>
 					</div>
@@ -139,7 +139,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="collapse-link-date">
-								<i class="glyphicon glyphicon-calendar"></i> Date and time
+								<i class="fa fa-calendar-o"></i> Date and time
 								<span class="badge pull-right">3</span>
 							</a>
 						</h4>
@@ -148,18 +148,23 @@
 						<div class="panel-body">
 							<!-- Event Date -->
 							<div class="form-group">
-								{{ Form::label('event_datetime', 'Choose a date and the time', array('class' => 'col-sm-2 control-label')) }}
+								<div class="col-sm-2">
+									<a class="btn btn-success btn-lg pull-right datetimepicker"><i class="fa fa-calendar"></i></i></a>
+								</div>
 								<div class="col-sm-10">
-									<a class="btn btn-success btn-lg datetimepicker"><i class="glyphicon glyphicon-calendar"></i></a>
-									{{! Form::text('event_datetime', Input::old('event_datetime'), array('class' => 'form-control datetimepicker-preopen','placeholder' => '','autofocus' => "")) }}
-									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+									<blockquote>
+										<p class="dest-date">Fri 13 aout 2014</p>
+										<footer class="dest-time">18h30</footer>
+									</blockquote>
+									{{ Form::hidden('event_datetime', Input::old('event_datetime'), array('class' => 'form-control dest-datetime-input','placeholder' => '','autofocus' => "")) }}
 									<span class="text-danger">{{ $errors->first('event_datetime') }}</span>
+									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 								</div>
 							</div>
 
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-social" class="btn btn-warning pull-right btn-sm btn-next">
-								Next <i class="glyphicon glyphicon-arrow-down"></i>
+								Next <i class="fa fa-arrow-down"></i>
 							</a>
 						</div>
 					</div>
@@ -168,7 +173,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-social" class="collapse-link-social">
-								<i class="glyphicon glyphicon-user"></i> Social 
+								<i class="fa fa-users"></i> Social 
 								<span class="badge pull-right">4</span>
 							</a>
 						</h4>
@@ -186,7 +191,7 @@
 							</div>	
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-privacy" class="btn btn-warning pull-right btn-sm btn-next">
-								Next <i class="glyphicon glyphicon-arrow-down"></i>
+								Next <i class="fa fa-arrow-down"></i>
 							</a>
 						</div>
 					</div>
@@ -195,7 +200,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-privacy" class="collapse-link-privacy">
-								<i class="glyphicon glyphicon-eye-open"></i> Privacy
+								<i class="fa fa-eye"></i> Privacy
 								<span class="badge pull-right">5</span>
 							</a>
 						</h4>
@@ -213,7 +218,7 @@
 							</label>
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-end" class="btn btn-warning pull-right btn-sm btn-next">
-								Next <i class="glyphicon glyphicon-arrow-down"></i>
+								Next <i class="fa fa-arrow-down"></i>
 							</a>
 						</div>
 					</div>
@@ -222,7 +227,7 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-end" class="collapse-link-end">
-								<i class="glyphicon glyphicon-ok"></i> Finish 
+								<i class="fa fa-check"></i> Finish 
 								<span class="badge badge-success pull-right">end</span>
 							</a>
 						</h4>
@@ -257,7 +262,20 @@
 {{ HTML::script("js/addressPickerInd.js") }}
 
 <script>
-$('.datetimepicker').datetimepicker();
+$('.datetimepicker').datetimepicker({
+	minuteStepping: 5,
+	icons: {
+	    time: "fa fa-clock-o",
+	    date: "fa fa-calendar",
+	    up: "fa fa-arrow-up",
+	    down: "fa fa-arrow-down"
+	}
+}).on("dp.change",function (e) {
+	var day = moment(e.date._d);
+	$('.dest-date').html(day.format("dddd, MMMM Do YYYY"));
+	$('.dest-time').html(day.format("h:mm a"));
+	$('.dest-datetime-input').val(day.format("ddd, DD MMM YYYY HH:mm"));
+});
 </script>
 <script>
 // Dropzone

@@ -18,6 +18,7 @@
     "imager.js":                    null,
     "dropzone":                     null,
     "lightbox":                     null,
-    "vex":                          null
+    "vex":                          null,
+    "fontawesome":                  null
   }
 }

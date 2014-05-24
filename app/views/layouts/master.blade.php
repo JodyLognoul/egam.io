@@ -12,6 +12,7 @@
 
     {{ HTML::style("js/vendor/bootstrap/dist/css/bootstrap.min.css") }}    
     {{ HTML::style("js/vendor/Bootflat/bootflat/css/bootflat.css") }}
+    {{ HTML::style("js/vendor/fontawesome/css/font-awesome.min.css") }}
     {{ HTML::style("js/vendor/bootstrap3-datetimepicker/build/css/bootstrap-datetimepicker.css") }}
 
     {{ HTML::style("css/main.css") }}
@@ -44,7 +45,7 @@
                     @if( Auth::check() )
                     
                     <ul class="nav navbar-nav navbar-right">
-                        <li><img src="{{! Auth::user()->image }}" alt="..." class="img-profile img-rounded"></li>
+                        <li><img src="{{ Auth::user()->image }}" alt="..." class="img-profile img-rounded"></li>
                         <li class="dropdown nav-profile-username">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
