@@ -79,17 +79,17 @@
 									<div class="col-sm-10">
 										{{ Form::text('address_full', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Ex: 42, rue sur la fontain 4000 Liège Belgique', 'autofocus' => "")) }}
 										<span class="help-block text-bordered">The address where the event takes place</span>
-										<span class="text-danger">{{ $errors->first('Address') }}</span>
+										<span class="text-danger error-address">{{ $errors->first('address_full') }}</span>
 									</div>
 								</div>													
 								<!-- Address Result -->
 								<div class="form-group">
 									<div class="address-result"></div>
 								</div>
+
 								<script class="address-success-script" type="text/template">
-									<span class="help-block text-bordered">Perfect! The address will appear like that: </span>
 									<blockquote>
-										<p><%= route.value %> <%= street_number.value %>, <%= postal_code.value %> <%= locality.value %> <%= country.value %> <i class="glyphicon glyphicon-ok-sign text-success"></i></p>
+										<p><%= route.value %> <%= street_number.value %>, <%= postal_code.value %> <%= locality.value %> <%= country.value %></p>
 									</blockquote>
 								</script>
 								<script class="address-errors-script" type="text/template">
@@ -148,17 +148,14 @@
 						<div class="panel-body">
 							<!-- Event Date -->
 							<div class="form-group">
-								<div class="col-sm-2">
-									<a class="btn btn-success btn-lg pull-right datetimepicker"><i class="fa fa-calendar"></i></i></a>
+								<div class="col-sm-1">
+									<a class="datetimepicker btn btn-success btn-lg"><i class="fa fa-calendar"></i></i><input type="hidden"></a>
 								</div>
-								<div class="col-sm-10">
-									<blockquote>
-										<p class="dest-date">Fri 13 aout 2014</p>
-										<footer class="dest-time">18h30</footer>
-									</blockquote>
+								<div class="col-sm-11">
+									<div class="dest-date-time"></div>
+									<span class="help-block text-bordered">Use the button <i class="fa fa-calendar"></i> to choose the date and time of your event.</span>
+									<span class="text-danger error-date">{{ $errors->first('event_datetime') }}</span>
 									{{ Form::hidden('event_datetime', Input::old('event_datetime'), array('class' => 'form-control dest-datetime-input','placeholder' => '','autofocus' => "")) }}
-									<span class="text-danger">{{ $errors->first('event_datetime') }}</span>
-									<span class="help-block text-bordered">A block of help text that breaks onto a new line and may extend beyond one line.</span>
 								</div>
 							</div>
 
@@ -254,7 +251,7 @@
 
 @section('scripts')
 
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script>
 {{ HTML::script("js/vendor/typeahead.js/dist/typeahead.bundle.js") }}
 {{ HTML::script("js/vendor/addresspicker/typeahead-addresspicker.js") }}
 {{ HTML::script("js/vendor/underscore-amd/underscore-min.js") }}
@@ -262,8 +259,16 @@
 {{ HTML::script("js/addressPickerInd.js") }}
 
 <script>
+var inputDatetime = $('.dest-datetime-input').val();
+if( inputDatetime ){
+	var day = moment(inputDatetime);
+	$('.dest-date-time').html('<blockquote><p>' + day.format("dddd, Do MMMM YYYY") + '</p><footer>' + day.format("h:mm a") + '</footer></blockquote><blockquote><p class="dest-datetime-rem"><i class="fa fa-clock-o"></i> ' + day.fromNow() + '</p></blockquote>');
+}
 $('.datetimepicker').datetimepicker({
+	minDate: moment().format(),
+	defaultDate: moment($('.dest-datetime-input').val()).format(),
 	minuteStepping: 5,
+    language: 'en',
 	icons: {
 	    time: "fa fa-clock-o",
 	    date: "fa fa-calendar",
@@ -272,9 +277,9 @@ $('.datetimepicker').datetimepicker({
 	}
 }).on("dp.change",function (e) {
 	var day = moment(e.date._d);
-	$('.dest-date').html(day.format("dddd, MMMM Do YYYY"));
-	$('.dest-time').html(day.format("h:mm a"));
-	$('.dest-datetime-input').val(day.format("ddd, DD MMM YYYY HH:mm"));
+	$('.error-date').empty();
+	$('.dest-date-time').html('<blockquote><p>' + day.format("dddd, Do MMMM YYYY") + '</p><footer>' + day.format("h:mm a") + '</footer></blockquote><blockquote><p class="dest-datetime-rem"><i class="fa fa-clock-o"></i> ' + day.fromNow() + '</p></blockquote>');
+	$('.dest-datetime-input').val(day.format());
 });
 </script>
 <script>

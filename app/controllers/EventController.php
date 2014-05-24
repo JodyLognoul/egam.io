@@ -63,7 +63,7 @@ class EventController extends \BaseController {
 			$fails = $validation->messages();
 			$collapse = 
 						$fails->has('max_places') 		? '#social':
-						$fails->has('event_datetime') 		? '#date':
+						$fails->has('event_datetime') 	? '#date':
 						$fails->has('pictures') 		? '#pictures':
 						$fails->has('address_full') 	? '#address':
 						$fails->has('description') 		? '':

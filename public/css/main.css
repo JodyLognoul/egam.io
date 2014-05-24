@@ -194,11 +194,10 @@ body {
   border-radius: 2px; }
 
 .address-result {
-  margin-top: 20px; }
+  padding-left: 15px; }
   .address-result p {
     font-size: 20px;
-    font-weight: 200;
-    margin: 0 10px; }
+    font-weight: 200; }
 
 .social-media-buttons img {
   height: 48px; }
@@ -246,3 +245,9 @@ body {
   .bootstrap-datetimepicker-widget .btn-primary[disabled] {
     background-color: #a0d468;
     border-color: #a0d468; }
+
+.dest-date {
+  font-weight: bold; }
+
+.dest-datetime-rem {
+  font-size: 16px; }
