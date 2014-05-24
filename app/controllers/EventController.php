@@ -36,7 +36,8 @@ class EventController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('event/new')->with('uniqid',uniqid('event_'));
+		$uniqid = Request::old('uniqid') ? : uniqid('event_');
+		return View::make('event/new')->with('uniqid', $uniqid);
 	}
 
 	/**
@@ -72,7 +73,7 @@ class EventController extends \BaseController {
 
 			
 			Input::flash();
-			return Redirect::to(URL::route('event.create').$collapse)->withErrors($validation);
+			return Redirect::to(URL::route('event.create').$collapse)->withErrors($validation)->with('isRedirect', true);
 		}
 
 		// Get event
