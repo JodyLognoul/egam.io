@@ -36,10 +36,10 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav nav-pills">
                         @if(Auth::check()) 
-                            <li class=""><a href="{{ URL::route('event.create') }}"><span class="dark-green">O</span>rganise</a></li>
-                            <li class=""><a href="{{ URL::route('event.index') }}"><span class="dark-green">E</span>vents</a></li>
-                            <li class=""><a href="{{ URL::route('user.profile') }}"><span class="dark-green">D</span>ashboard</a></li>
-                            <li class=""><a href="{{ URL::route('notification.index') }}"><span class="dark-green">N</span>otifications <span class="badge badge-warning">{{ Auth::user()->unreadNotificationsQty() }}</span></a></li>
+                            <li class=""><a href="{{ URL::route('event.create') }}"></span>Organise</a></li>
+                            <li class=""><a href="{{ URL::route('event.index') }}">Events</a></li>
+                            <li class=""><a href="{{ URL::route('user.profile') }}">Dashboard</a></li>
+                            <li class=""><a href="{{ URL::route('notification.index') }}">Notifications <span class="badge badge-warning">{{ Auth::user()->unreadNotificationsQty() }}</span></a></li>
                         @endif 
                     </ul>
                     @if( Auth::check() )

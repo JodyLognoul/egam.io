@@ -3,10 +3,10 @@
 class EventController extends \BaseController {
 
 	public function __construct()
-    {
-        $this->beforeFilter('auth');
-        $this->beforeFilter('csrf', array('on' => 'post'));
-    }
+	{
+		$this->beforeFilter('auth');
+		$this->beforeFilter('csrf', array('on' => 'post'));
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -15,8 +15,8 @@ class EventController extends \BaseController {
 	 */
 	public function index()
 	{
+
 		// App::make('Notify')->notifyHost(Event::find(1), 'Your event as been list!');
-		
 		return View::make('event/index');
 	}
 	/**
@@ -37,7 +37,9 @@ class EventController extends \BaseController {
 	public function create()
 	{
 		$uniqid = Request::old('uniqid') ? : uniqid('event_');
-		return View::make('event/new')->with('uniqid', $uniqid);
+
+		$existingPictures =  file_exists('uploads/' . $uniqid) ? implode(';', array_diff( scandir( 'uploads/' . $uniqid ), Array( '.', '..' ))) : null;
+		return View::make('event/new')->with(array('existingPictures' => $existingPictures, 'uniqid' => $uniqid));
 	}
 
 	/**
@@ -56,20 +58,20 @@ class EventController extends \BaseController {
 			'event_datetime'		=> 'required|after:now',
 			'max_places' 		=> 'required',
 			'address_full'		=> 'required|min:8'
-		);
+			);
 
 		$validation = Validator::make($inputs, $rules);
 		if ($validation->fails())
 		{
 			$fails = $validation->messages();
 			$collapse = 
-						$fails->has('max_places') 		? '#social':
-						$fails->has('event_datetime') 	? '#date':
-						$fails->has('pictures') 		? '#pictures':
-						$fails->has('address_full') 	? '#address':
-						$fails->has('description') 		? '':
-						$fails->has('title') 			? '':
-						'';
+			$fails->has('max_places') 		? '#social':
+			$fails->has('event_datetime') 	? '#date':
+			$fails->has('pictures') 		? '#pictures':
+			$fails->has('address_full') 	? '#address':
+			$fails->has('description') 		? '':
+			$fails->has('title') 			? '':
+			'';
 
 			
 			Input::flash();
@@ -157,25 +159,25 @@ class EventController extends \BaseController {
 			'event_datetime'		=> 'after:now',
 			'max_places' 		=> '',
 			'address_full'		=> 'min:8'
-		);
+			);
 
 		$validation = Validator::make($inputs, $rules);
 		if ($validation->fails())
 		{
 			$fails = $validation->messages();
 			$modal = 
-					$fails->has('max_places') 		? 'max-places':
-					$fails->has('event_datetime') 		? 'datetime':
-					$fails->has('pictures') 		? '':
-					$fails->has('address_full') 	? '':
-					$fails->has('description') 		? 'description':
-					$fails->has('title') 			? 'title':
-					'';
+			$fails->has('max_places') 		? 'max-places':
+			$fails->has('event_datetime') 		? 'datetime':
+			$fails->has('pictures') 		? '':
+			$fails->has('address_full') 	? '':
+			$fails->has('description') 		? 'description':
+			$fails->has('title') 			? 'title':
+			'';
 			
 			Input::flash();
 			return Redirect::route('event.show',array('id' => $id))->withErrors($validation)->with('modal', $modal);
 		}
-			
+
 		$event = Event::find($id);
 
 		if (Input::has('title'))

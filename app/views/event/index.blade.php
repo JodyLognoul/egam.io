@@ -1,6 +1,7 @@
 @extends('layouts/master')
 
 @section('content')
+
 <div class="event-index">
 	<div class="panel panel-success">
 		<div class="panel-heading">

@@ -70,14 +70,14 @@
 								<div class="form-group">
 									<!-- Name at the address -->
 									<div class="col-sm-10">
-										{{ Form::text('Name', Auth::user()->name.' '.Auth::user()->surname, array('class' => 'form-control input-address-name','placeholder' => 'The name at this address','autofocus' => "")) }}
+										{{ Form::text('Name', Auth::user()->name.' '.Auth::user()->surname, array('class' => 'form-control input-address-name','placeholder' => 'The name at this address','focus' => true)) }}
 										<span class="help-block text-bordered">The name at the address</span>
 									</div>
 								</div>
 								<div class="form-group">
 									<!-- Address -->
 									<div class="col-sm-10">
-										{{ Form::text('address_full', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Ex: 42, rue sur la fontain 4000 Liège Belgique', 'autofocus' => "")) }}
+										{{ Form::text('address_full', Input::old('address'), array('class' => 'input-address form-control','placeholder' => 'Type here ...', 'focus' => 'focus')) }}
 										<span class="help-block text-bordered">The address where the event takes place</span>
 										<span class="text-danger error-address">{{ $errors->first('address_full') }}</span>
 									</div>
@@ -127,6 +127,7 @@
 						<div class="panel-body">
 							<div class="pictures-dest dropzone"></div>
 							<input class="uniqid" type="hidden" name="uniqid" value="{{ $uniqid }}">
+							<input class="existing-pictures" type="hidden" name="existingPictures" value="{{ $existingPictures }}">
 	
 							<!-- Next -->
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapse-date" class="btn btn-warning pull-right btn-sm btn-next">
@@ -247,62 +248,17 @@
 
 		<!-- end -->
 	</div>
+
 @stop
 
 @section('scripts')
 
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI31ZBJbrhST7-RK-crm0XC2wY6vNlj7I&sensor=true&libraries=places" type="text/javascript"></script>
 {{ HTML::script("js/vendor/typeahead.js/dist/typeahead.bundle.js") }}
 {{ HTML::script("js/vendor/addresspicker/typeahead-addresspicker.js") }}
 {{ HTML::script("js/vendor/underscore-amd/underscore-min.js") }}
 {{ HTML::script("js/vendor/dropzone/downloads/dropzone.min.js") }}
-{{ HTML::script("js/addressPickerInd.js") }}
-
-<script>
-var inputDatetime = $('.dest-datetime-input').val();
-if( inputDatetime ){
-	var day = moment(inputDatetime);
-	$('.dest-date-time').html('<blockquote><p>' + day.format("dddd, Do MMMM YYYY") + '</p><footer>' + day.format("h:mm a") + '</footer></blockquote><blockquote><p class="dest-datetime-rem"><i class="fa fa-clock-o"></i> ' + day.fromNow() + '</p></blockquote>');
-}
-$('.datetimepicker').datetimepicker({
-	minDate: moment().format(),
-	defaultDate: moment($('.dest-datetime-input').val()).format(),
-	minuteStepping: 5,
-    language: 'en',
-	icons: {
-	    time: "fa fa-clock-o",
-	    date: "fa fa-calendar",
-	    up: "fa fa-arrow-up",
-	    down: "fa fa-arrow-down"
-	}
-}).on("dp.change",function (e) {
-	var day = moment(e.date._d);
-	$('.error-date').empty();
-	$('.dest-date-time').html('<blockquote><p>' + day.format("dddd, Do MMMM YYYY") + '</p><footer>' + day.format("h:mm a") + '</footer></blockquote><blockquote><p class="dest-datetime-rem"><i class="fa fa-clock-o"></i> ' + day.fromNow() + '</p></blockquote>');
-	$('.dest-datetime-input').val(day.format());
-});
-</script>
-<script>
-// Dropzone
-Dropzone.autoDiscover = false;
-var myDropzone = new Dropzone("div.pictures-dest", { 
-	url: "/picture" ,
-	addRemoveLinks: true
-});
-
-myDropzone.on("sending", function(file, xhr, formData) {
-  formData.append("uniqid", $('.uniqid').val());
-});
-
-</script>
-
-<script>
-// jQuery to enable register
-var url = document.location.toString();
-if (url.match('#')) {
-	$('.collapse-link-' + url.split('#')[1]).trigger('click');
-} 
-</script>
+{{ HTML::script("js/page/event/new.js") }}
 
 @stop
 
