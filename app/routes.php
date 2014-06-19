@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: http://localhost:9000');
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get(			'cancel/{eid}', 			array('as' => 'event.cancel',				'uses' => 'Eve
 Route::get(			'map', 						array('as' => 'event.index.map',			'uses' => 'EventController@indexMap'));
 
 // -- API
-Route::controller(	'api/event', 'EventApiController');
+Route::resource(	'api/event', 'EventApiController');
 
 
 // User

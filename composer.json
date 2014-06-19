@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"artdarek/oauth-4-laravel": "dev-master",
-		"intervention/image": "dev-master"
+		"intervention/image": "dev-master",
+		"zurb/foundation": "v5.2.3"
 	},
 	"require-dev": {
         "mockery/mockery": "dev-master@dev"
