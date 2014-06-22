@@ -520,10 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/routes.php",
+			"file": "app/views/default/landing.blade.php",
 			"settings":
 			{
-				"buffer_size": 3064,
+				"buffer_size": 3684,
 				"line_ending": "Unix"
 			}
 		}
@@ -944,6 +944,22 @@
 	},
 	"file_history":
 	[
+		"/private/var/www/dev/egam.io/public/css/sass/landing.sass",
+		"/private/var/www/dev/egam.io/public/.sass-cache/f23febdd5a4685c0be6e83e0a80f25284341743b/landing.sassc",
+		"/private/var/www/dev/egam.io/public/.sass-cache/c81e3266a8c85223d48d9c3b6ded9463636359ab/landing.sassc",
+		"/private/var/www/dev/egam.io/public/.sass-cache/a4e4f8494d336101eb645eeca4a4eb9aa379fc64/landing.sassc",
+		"/private/var/www/dev/egam.io/app/lang/en/landing.php",
+		"/private/var/www/dev/egam.io/public/css/landing.css",
+		"/private/var/www/dev/egam.io/.sass-cache/a4e4f8494d336101eb645eeca4a4eb9aa379fc64/landing.sassc",
+		"/private/var/www/dev/egam.io/app/storage/logs/log-apache2handler-2014-04-18.txt",
+		"/private/var/www/dev/egam.io/bower.json",
+		"/private/var/www/dev/egam.io/app/routes.php",
+		"/private/var/www/dev/egam.io/egam.io.sublime-project",
+		"/private/var/www/dev/egam.io/public/.htaccess",
+		"/private/var/www/dev/egam.io/app/controllers/EventApiController.php",
+		"/private/var/www/dev/egam.io/app/controllers/PhotoController.php",
+		"/private/var/www/dev/egam.io/public/js/addressPickerInd.js",
+		"/private/var/www/dev/egam.io/app/config/app.php",
 		"/private/var/www/dev/egam.io/app/views/layouts/master.blade.php",
 		"/private/var/www/dev/egam.io/app/views/event/index.blade.php",
 		"/private/var/www/dev/egam.io/public/index.php",
@@ -955,7 +971,6 @@
 		"/private/var/www/dev/egam.io/vendor/laravel/framework/src/Illuminate/Foundation/Providers/MaintenanceServiceProvider.php",
 		"/private/var/www/dev/egam.io/vendor/symfony/finder/Symfony/Component/Finder/Expression/ValueInterface.php",
 		"/private/var/www/dev/egam.io/vendor/zurb/foundation/doc/includes/tabs/examples_tabs_vertical_intro.html",
-		"/private/var/www/dev/egam.io/bower.json",
 		"/private/var/www/dev/egam.io/vendor/d11wtq/boris/lib/Boris/EvalWorker.php",
 		"/private/var/www/dev/egam.io/build.sh",
 		"/private/var/www/dev/egam.io/public/js/app/event/index/viewCollection.js",
@@ -965,7 +980,6 @@
 		"/private/var/www/dev/egam.io/app/start/local.php",
 		"/private/var/www/dev/egam.io/Guardfile",
 		"/private/var/www/dev/egam.io/composer.json",
-		"/private/var/www/dev/egam.io/egam.io.sublime-project",
 		"/Users/jody/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/private/var/www/dev/gg-mobile-first/public/css/vendor/bootflat/css/bootflat.css",
 		"/private/var/www/dev/gg-mobile-first/public/css/main.css",
@@ -1057,21 +1071,7 @@
 		"/private/var/www/dev/gg-mobile-first/.bowerrc",
 		"/private/var/www/dev/gg-mobile-first/public/js/.bowerrc",
 		"/private/var/www/dev/gg-mobile-first/app/controllers/UserController.php",
-		"/private/var/www/dev/gg-mobile-first/app/views/notification/index.blade.php",
-		"/private/var/www/dev/gg-mobile-first/app/views/event/show.blade.php",
-		"/private/var/www/dev/gg-mobile-first/app/views/user/childs/modalGuestsEvent.blade.php",
-		"/private/var/www/dev/gg-mobile-first/app/tests/EventControllerTest.php",
-		"/Users/jody/Downloads/bootstrap-combined.min.css",
-		"/private/var/www/dev/gg-mobile-first/vendor/doctrine/dbal/lib/Doctrine/DBAL/Event/SchemaCreateTableEventArgs.php",
-		"/private/var/www/dev/gg-mobile-first/composer.json",
-		"/private/var/www/dev/gg-mobile-first/app/config/app.php",
-		"/private/var/www/dev/gg-mobile-first/app/controllers/NotificationController.php",
-		"/private/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php",
-		"/private/var/www/dev/gg-mobile-first/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
-		"/private/var/www/dev/gg-mobile-first/app/controllers/BaseController.php",
-		"/private/var/www/dev/gg-mobile-first/app/controllers/HomeController.php",
-		"/private/var/www/dev/gg-mobile-first/app/database/seeds/DatabaseSeeder.php",
-		"/private/var/www/dev/gg-mobile-first/app/database/migrations/2013_12_04_095057_create_notification_table.php"
+		"/private/var/www/dev/gg-mobile-first/app/views/notification/index.blade.php"
 	],
 	"find":
 	{
@@ -1337,19 +1337,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/routes.php",
+					"file": "app/views/default/landing.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3064,
+						"buffer_size": 3684,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								64,
-								64
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1357,18 +1357,30 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1377,32 +1389,21 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close"
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1472,6 +1473,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"landing",
+				"app/views/default/landing.blade.php"
+			],
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"apicontr",
+				"app/controllers/EventApiController.php"
+			],
 			[
 				"routes",
 				"app/routes.php"
@@ -1579,10 +1592,6 @@
 			[
 				"evencon",
 				"app/controllers/EventController.php"
-			],
-			[
-				"route",
-				"app/routes.php"
 			],
 			[
 				"bu",
@@ -1975,14 +1984,6 @@
 			[
 				"partsho",
 				"app/views/party/show.blade.php"
-			],
-			[
-				"parnew",
-				"app/views/party/new.blade.php"
-			],
-			[
-				"mast",
-				"app/views/layouts/master.blade.php"
 			]
 		],
 		"width": 0.0
@@ -2013,7 +2014,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 257.0,
 	"status_bar_visible": true,
 	"template_settings":

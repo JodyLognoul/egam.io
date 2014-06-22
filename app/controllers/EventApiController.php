@@ -23,7 +23,7 @@ class EventApiController extends BaseController {
 			'address'))
 		->where('id', $eid)
 		->where('status','like','PENDING')
-		->get()
+		->first()
 		->toJson();
 	}
 }
